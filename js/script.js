@@ -78,7 +78,7 @@ const translations = {
         "titre_profil": "Profil",
         "bio_profil": "Étudiant en deuxième année de BUT Informatique à l'Université d'Annecy, spécialisé dans l'administration, la gestion et l'exploitation des données (Parcours C). Je cherche à appliquer mes compétences en développement logiciel et manipulation de données lors d'un stage d'avril à juin 2026, tout en contribuant à des projets innovants.",
 
-        "competences-titre": "Compétence Technique", 
+        "competences-titre": "Compétence Techniques", 
         "comp-soft": "Savoir-être",
         "soft-time": "Bonne gestion du temps & Ponctuel",
         "soft-analytic": "Précis et Analytique",
@@ -264,4 +264,5 @@ function closeMenu() {
         icon.classList.remove('fa-xmark');
         icon.classList.add('fa-bars');
     }
+
 }
