@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatih TÜRK - Portfolio Data</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="background">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+    </div>
+
+    <nav class="glass-nav">
+        <a href="#" class="logo">Fatih<span class="dot">.</span>Data</a>
+        
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="#hero" onclick="closeMenu()" data-lang="nav_home">Home</a></li>
+            <li><a href="#skills" onclick="closeMenu()" data-lang="nav_skills">Skills</a></li>
+            <li><a href="#education" onclick="closeMenu()" data-lang="titre_edu">Education</a></li>
+            <li><a href="#experience" onclick="closeMenu()" data-lang="titre_pro_exp">Experience</a></li>
+            <li><a href="#projects" onclick="closeMenu()" data-lang="nav_projects">Projects</a></li>
+            <li><a href="#contact" onclick="closeMenu()" data-lang="nav_contact">Contact</a></li>
+            <li class="mobile-only">
+                <a href="assets/CV_international.pdf" download>Download CV</a>
+            </li>
+        </ul>   
+
+        <div class="nav-actions">
+            <a href="assets/CV_international.pdf" target="_blank" download class="btn-small btn-outline desktop-only"><i class="fa-solid fa-download"></i> CV</a>
+            <button id="lang-switch">FR</button>
+            
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <span class="badge-glass" data-lang="hero_badge">✨ Available April - June 2026</span>
+                <h1>Fatih TÜRK</h1>
+                
+                <h2 class="gradient-text"><span id="typed-text"></span></h2>
+                
+                <p class="subtitle" data-lang="profil-p">
+                    Second-year CS Student (Data Track). I aim to apply my data architecture rigor to software development.
+                </p>
+                
+                <div class="hero-actions">
+                    <a href="#projects" class="btn-primary" data-lang="nav_projects_btn">View my projects</a>
+                    <a href="assets/CV_international.pdf" download class="btn-glass" data-lang="profil-btn-cv">
+                        Download CV <i class="fa-solid fa-file-arrow-down"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-card glass-card">
+                <img src="assets/imgPROFIL.png" alt="Fatih TÜRK">
+            </div>
+        </section>
+
+        <section id="profile" class="section">
+            <div class="glass-card profile-simple">
+                <h2 data-lang="titre_profil">Profile</h2>
+                <p class="profile-bio" data-lang="bio_profil">
+                    Second-year Computer Science student pursuing a Bachelor's Degree of Technology at the University of Annecy, specializing in data administration, management, and exploitation (Track C). 
+                    I am seeking to apply my skills in software development and data manipulation during an internship from April to June 2026, while contributing to innovative projects.
+                </p>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="section-header">
+                <h2 data-lang="competences-titre">Technical Skill</h2>
+            </div>
+            
+            <div class="skills-layout-advanced">
+                <div class="skill-column glass-card">
+                    <h3><i class="fa-solid fa-database accent-icon"></i> Data & Backend</h3>
+                    
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span><i class="devicon-postgresql-plain"></i> SQL / PostgreSQL</span>
+                            <span class="percentage">90%</span>
+                        </div>
+                        <div class="progress-container"><div class="progress-fill" style="width:90%"></div></div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span><i class="devicon-python-plain"></i> Python (Data)</span>
+                            <span class="percentage">85%</span>
+                        </div>
+                        <div class="progress-container"><div class="progress-fill" style="width:85%"></div></div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span><i class="devicon-csharp-plain"></i> C# .NET</span>
+                            <span class="percentage">80%</span>
+                        </div>
+                        <div class="progress-container"><div class="progress-fill" style="width:80%"></div></div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span><i class="fa-solid fa-chart-pie"></i> Power BI</span>
+                            <span class="percentage">75%</span>
+                        </div>
+                        <div class="progress-container"><div class="progress-fill" style="width:75%"></div></div>
+                    </div>
+                </div>
+
+                <div class="skill-column glass-card">
+                    <h3><i class="fa-solid fa-globe accent-icon"></i> Web & Tools</h3>
+                    
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span><i class="devicon-html5-plain"></i> HTML / CSS / JS</span>
+                            <span class="percentage">85%</span>
+                        </div>
+                        <div class="progress-container"><div class="progress-fill" style="width:85%"></div></div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span><i class="devicon-php-plain"></i> PHP / Laravel</span>
+                            <span class="percentage">80%</span>
+                        </div>
+                        <div class="progress-container"><div class="progress-fill" style="width:80%"></div></div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span><i class="devicon-linux-plain"></i> Linux / Bash</span>
+                            <span class="percentage">70%</span>
+                        </div>
+                        <div class="progress-container"><div class="progress-fill" style="width:70%"></div></div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span><i class="devicon-git-plain"></i> Git / GitHub</span>
+                            <span class="percentage">75%</span>
+                        </div>
+                        <div class="progress-container"><div class="progress-fill" style="width:75%"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="soft-skills-row glass-card">
+                <h3 data-lang="comp-soft"><i class="fa-solid fa-user-check accent-icon"></i> Soft Skills</h3>
+                <div class="tags-cloud">
+                    <span class="tag-glass" data-lang="soft-time"><i class="fa-solid fa-clock"></i> Good time management skills & Punctual</span>
+                    <span class="tag-glass" data-lang="soft-analytic"><i class="fa-solid fa-magnifying-glass"></i> Precise and Analytical</span>
+                    <span class="tag-glass" data-lang="soft-focus"><i class="fa-solid fa-bullseye"></i> Task-oriented and Focused</span>
+                    <span class="tag-glass" data-lang="soft-team"><i class="fa-solid fa-users"></i> Teamwork</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <div class="section-header">
+                <h2 data-lang="titre_edu">Education</h2>
+            </div>
+
+            <div class="education-grid">
+                <div class="glass-card timeline-card highlight">
+                    <span class="date">2024 - 2027</span>
+                    <h4 data-lang="titre_but">CS Bachelor (BUT Informatique)</h4>
+                    <h5>IUT Annecy (USMB)</h5>
+                    <p data-lang="desc_but">Data Specialization (Track C). DB Administration, Algorithms, Development.</p>
+                </div>
+
+                <div class="glass-card timeline-card">
+                    <span class="date">2021 - 2024</span>
+                    <h4 data-lang="titre_bac">High School Diploma (STI2D)</h4>
+                    <h5>Lycée Louis Lachenal</h5>
+                    <p data-lang="desc_bac">Specialized in Information Systems and Digital Technologies.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-lang="titre_pro_exp">Work Experience</h2>
+                </div>
+                
+                <div class="education-grid"> 
+                    <div class="glass-card timeline-card highlight"> 
+                        <span class="date">2025 - 2026</span>
+                        <h4 data-lang="job_sgbd">University Project (DBMS)</h4>
+                        <h5>USMB Annecy</h5>
+                        <p data-lang="desc_sgbd">Creation of data models (CDM/PDM) and development of complex SQL scripts.</p>
+                    </div>
+
+                    <div class="glass-card timeline-card">
+                        <span class="date" data-lang="date_ete_25">Summer 2025</span>
+                        <h4 data-lang="job_leclerc">Retail Associate</h4>
+                        <h5>E.Leclerc - Seynod, France</h5>
+                        <p data-lang="desc_leclerc">Stock management, inventory, customer assistance.</p>
+                    </div>
+
+                    <div class="glass-card timeline-card">
+                        <span class="date" data-lang="date_ete_24">Summer 2024</span>
+                        <h4 data-lang="job_mcdo">Crew Member</h4>
+                        <h5>McDonald's - Annecy, France</h5>
+                        <p data-lang="desc_mcdo">Order preparation, cleaning, and teamwork.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="section-header row">
+                <h2 data-lang="projets-titre">Recent Projects</h2>
+                <div class="tech-filters">
+                    <button class="active" data-filter="all">All</button>
+                    <button data-filter="C#">C# / .NET</button>
+                    <button data-filter="SQL">SQL / Data</button>
+                    <button data-filter="JavaScript">JavaScript</button>
+                    <button data-filter="PHP">PHP / Laravel</button>
+                    <button data-filter="HTML">HTML / CSS</button>
+                </div>
+            </div>
+            <div class="projects-grid" id="projects-container">
+                </div>
+        </section>
+
+        <section id="languages" class="section">
+            <div class="section-header">
+                <h2 data-lang="langues-titre">Languages</h2>
+            </div>
+            <div class="grid-4">
+                <div class="glass-card lang-card">
+                    <span class="flag">🇫🇷</span>
+                    <h3 data-lang="lang-fr">French</h3>
+                    <p data-lang="lang-native">Native Speaker</p>
+                </div>
+                <div class="glass-card lang-card">
+                    <span class="flag">🇹🇷</span>
+                    <h3 data-lang="lang-tr">Turkish</h3>
+                    <p data-lang="lang-native">Native Speaker</p>
+                </div>
+                <div class="glass-card lang-card">
+                    <span class="flag">🇬🇧</span>
+                    <h3 data-lang="lang-en">English</h3>
+                    <p>B1 - Intermediate</p>
+                </div>
+                <div class="glass-card lang-card">
+                    <span class="flag">🇪🇸</span>
+                    <h3 data-lang="lang-es">Spanish</h3>
+                    <p>A2 - Elementary</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="interets" class="section" style="padding-top:0;">
+            <div class="section-header">
+                <h2 data-lang="interets-titre">Interests</h2>
+            </div>
+            <div class="grid-3">
+                <div class="glass-card interest-card">
+                    <div class="icon-box bg-purple"><i class="fa-solid fa-book-open"></i></div>
+                    <h3>Manga</h3>
+                    <p>One Piece, Chainsaw Man</p>
+                </div>
+                <div class="glass-card interest-card">
+                    <div class="icon-box bg-blue"><i class="fa-solid fa-gamepad"></i></div>
+                    <h3 data-lang="hobby-games">Video Games</h3>
+                    <p>FPS, Construction games</p>
+                </div>
+                <div class="glass-card interest-card">
+                    <div class="icon-box bg-green"><i class="fa-solid fa-futbol"></i></div>
+                    <h3 data-lang="hobby-sport">Football</h3>
+                    <p><strong>E.S Seynod</strong></p>
+                    <span class="date-badge">2020 - 2022</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="references" class="section">
+            <div class="section-header">
+                <h2 data-lang="ref-titre">References</h2>
+            </div>
+            <div class="split-view">
+                <div class="glass-card timeline-card">
+                    <h4>Stéphanie VIBRAC</h4>
+                    <h5 style="color:var(--accent);" data-lang="role-ref1">English Lecturer, International  Coordinator</h5>
+                    <p><a href="mailto:stephanie.vibrac@etu.univ-smb.fr" style="color:var(--text-mute);">stephanie.vibrac@etu.univ-smb.fr</a></p>
+                </div>
+                <div class="glass-card timeline-card">
+                    <h4>Vincent COUTURIER</h4>
+                    <h5 style="color:var(--accent);" data-lang="role-ref2">SQL and OOP teacher, Researcher at university of Savoy</h5>
+                    <p><a href="mailto:luc.damas@etu.univ-smb.fr" style="color:var(--text-mute);">vincent.couturier@etu.univ-smb.fr</a></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="glass-card contact-box">
+                <div class="contact-left">
+                    <h2 data-lang="contact-titre">Contact Me</h2>
+                    <p data-lang="contact-p">Available to discuss internship opportunities.</p>
+                    
+                    <div class="info-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>fatih.turk@etu.univ-smb.fr</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Annecy, France</span>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://github.com/fatiht7" target="_blank" class="btn-social">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/fatih-türk-b6b760368/" target="_blank" class="btn-social">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <form action="https://formspree.io/f/xblngrqe" method="POST" class="glass-form">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <textarea name="message" placeholder="Message" rows="4" required></textarea>
+                    <button type="submit" class="btn-primary full" data-lang="form-send">Send</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer>
+        <p>© 2025 Fatih TÜRK.</p>
+    </footer>
+
+    <div id="project-modal" class="modal-overlay">
+        <div class="glass-card modal-card">
+            <button class="close-btn" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+            <img id="modal-img" src="">
+            <div class="modal-content">
+                <h2 id="modal-title"></h2>
+                <div id="modal-techs" class="tags-row"></div>
+                <p id="modal-desc"></p>
+                <div id="modal-links" class="links-row"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
