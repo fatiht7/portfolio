@@ -1,65 +1,267 @@
 const projectsData = [
     {
         id: 1,
-        title: "Web Application Laravel",
-        date: "2025-2026",
-        image: "assets/previewLeboncoin.png",
-        techs: ["PHP", "Laravel", "SQL", "PostgreSQL", "HTML", "CSS", "Power BI"],
-        links: [{ text: "View Code", url: "https://github.com/BazeOnigiri/SAE_Leboncoin.git" }],
+        title: "SAE Leboncoin Vacation Rental - Web App",
+        date: "Oct 2025 - Jan 2026",
+        image: "assets/previews/previewLeboncoin.png",
+        techs: ["PHP", "Laravel", "SQL", "Merise", "BPMN"],
+        category: ["Web", "Analysis"],
+        actionBtn: { text: "View Modeling", icon: "fa-diagram-project" },
+        hasDetailedModal: true,
         fr: { 
-            title: "Application Web Laravel",
-            type: "Projet Universitaire", 
-            desc: "Application web type LeBonCoin développée en équipe de 5. Conception et modélisation de bases de données (MCD/MPD) et diagrammes BPMN. Création de tableaux de bord Power BI pour le suivi des indicateurs clés." 
+            title: "SAE Leboncoin Location Vacances - Application Web",
+            type: "Projet Universitaire (SAÉ)", 
+            desc: "Plateforme de location de vacances type LeBonCoin développée en équipe de 5 avec Laravel. Conception complète de la base de données et modélisation des processus métier.",
+            modalTitle: "SAE Leboncoin Location Vacances - Modélisation & Conception",
+            modalDesc: "Ce projet de gestion de locations de vacances a nécessité une phase complète d'analyse et de conception système, utilisant Merise et BPMN pour modéliser les besoins fonctionnels et les processus métier critiques.",
+            techSection: {
+                title: "Technologies et Méthodologies",
+                items: [
+                    { label: "Conception", value: "Merise (MCD, MLD, MPD)" },
+                    { label: "Processus", value: "BPMN 2.0" },
+                    { label: "Backend", value: "PHP / Laravel" },
+                    { label: "Base de données", value: "PostgreSQL" }
+                ]
+            },
+            diagrams: [
+                { 
+                    image: "assets/diagrams/mpd.png", 
+                    title: "MPD (Modèle Physique)", 
+                    desc: "Le MPD définit la structure physique de la base de données avec 30+ tables, clés primaires/étrangères et contraintes d'intégrité." 
+                },
+                { 
+                    image: "assets/diagrams/bpmn.png", 
+                    title: "Diagramme BPMN", 
+                    desc: "Modélisation du processus de gestion des incidents et remboursements entre locataires, propriétaires et services." 
+                }
+            ]
         },
         en: { 
-            title: "Web Application Laravel",
-            type: "University Project", 
-            desc: "Classified ads web application developed in a team of 5 using Laravel. Designed and modeled databases (ERD/Physical Data Models) and BPMN diagrams. Created Power BI dashboards to monitor key performance indicators." 
-        }
+            title: "SAE Leboncoin Vacation Rental - Web App",
+            type: "University Project (SAÉ)", 
+            desc: "Vacation rental platform (LeBonCoin-style) developed in a team of 5 using Laravel. Complete database design and business process modeling.",
+            modalTitle: "SAE Leboncoin Vacation Rental - Modeling & Design",
+            modalDesc: "This vacation rental management project required a complete analysis and system design phase, using Merise and BPMN to model functional requirements and critical business processes.",
+            techSection: {
+                title: "Technologies and Methodologies",
+                items: [
+                    { label: "Design", value: "Merise (CDM, LDM, PDM)" },
+                    { label: "Processes", value: "BPMN 2.0" },
+                    { label: "Backend", value: "PHP / Laravel" },
+                    { label: "Database", value: "PostgreSQL" }
+                ]
+            },
+            diagrams: [
+                { 
+                    image: "assets/diagrams/mpd.png", 
+                    title: "PDM (Physical Data Model)", 
+                    desc: "The PDM defines the physical database structure with 30+ tables, primary/foreign keys and integrity constraints." 
+                },
+                { 
+                    image: "assets/diagrams/bpmn.png", 
+                    title: "BPMN Diagram", 
+                    desc: "Modeling of the incident and refund management process between tenants, owners and services." 
+                }
+            ]
+        },
+        links: [{ text: "View Code", url: "https://github.com/BazeOnigiri/SAE_Leboncoin.git", icon: "fa-github" }]
     },
     {
         id: 2,
-        title: "Order Management App",
-        date: "2025",
-        image: "assets/previewSIBILIA.png", 
-        techs: ["C#", ".NET", "WPF", "XAML"], 
-        links: [{ text: "View Code", url: "https://github.com/yanis381/SAE201.git" }],
+        title: "SAE Leboncoin Vacation Rental - Business Intelligence",
+        date: "Oct 2025 - Jan 2026",
+        image: "assets/diagrams/powerbi-1.png",
+        techs: ["Power BI", "DAX", "PostgreSQL", "Star Schema"],
+        category: ["BI", "Analysis"],
+        actionBtn: { text: "View Dashboard", icon: "fa-chart-line" },
+        hasDetailedModal: true,
         fr: { 
-            title: "Application Gestion de Commandes",
-            type: "Projet Universitaire", 
-            desc: "Application de gestion de commandes développée en C# (WPF/XAML). Conception et implémentation d'une interface utilisateur pour la prise de commandes et la gestion des stocks." 
+            title: "SAE Leboncoin Location Vacances - Business Intelligence",
+            type: "Projet Universitaire (SAÉ)", 
+            desc: "Conception d'un Data Warehouse en schéma étoile et création de tableaux de bord Power BI pour le suivi du chiffre d'affaires des locations.",
+            modalTitle: "SAE Leboncoin Location Vacances - Analyse Power BI",
+            modalDesc: "Dans ce projet, après avoir créé et peuplé la base PostgreSQL, nous avons importé les données dans Power BI pour créer des tableaux de bord analytiques. L'objectif était de transformer les données brutes en informations décisionnelles.",
+            techSection: {
+                title: "Stack Data & Technologies",
+                items: [
+                    { label: "Source de données", value: "PostgreSQL Database" },
+                    { label: "Outil d'analyse", value: "Microsoft Power BI" },
+                    { label: "Modélisation", value: "Schéma en étoile (Star Schema)" },
+                    { label: "Mesures", value: "DAX (CA, KPIs, Agrégations)" }
+                ]
+            },
+            diagrams: [
+                { 
+                    image: "assets/diagrams/star-schema.png", 
+                    title: "Schéma en Étoile", 
+                    desc: "Architecture Data Warehouse avec table de faits (Reservations) et dimensions (Client, Hébergement, Temps) pour optimiser les requêtes analytiques." 
+                },
+                { 
+                    image: "assets/diagrams/powerbi-1.png", 
+                    title: "Dashboard CA par Hébergement", 
+                    desc: "Vue d'ensemble du chiffre d'affaires (5,11K€) avec répartition par type d'hébergement, évolution mensuelle et analyse par propriétaire." 
+                },
+                { 
+                    image: "assets/diagrams/powerbi-2.png", 
+                    title: "Dashboard Géographique", 
+                    desc: "Analyse spatiale du CA par région de résidence des clients avec carte interactive et détail par ville." 
+                }
+            ]
         },
         en: { 
-            title: "Order Management Application",
-            type: "University Project", 
-            desc: "Developed an order management application in C# (WPF/XAML). Designed and implemented a user interface for order taking and stock management." 
-        }
+            title: "SAE Leboncoin Vacation Rental - Business Intelligence",
+            type: "University Project (SAÉ)", 
+            desc: "Design of a Star Schema Data Warehouse and creation of Power BI dashboards to track rental revenue.",
+            modalTitle: "SAE Leboncoin Vacation Rental - Power BI Analysis",
+            modalDesc: "In this project, after creating and populating the PostgreSQL database, we imported the data into Power BI to create analytical dashboards. The goal was to transform raw data into decision-making information.",
+            techSection: {
+                title: "Data Stack & Technologies",
+                items: [
+                    { label: "Data Source", value: "PostgreSQL Database" },
+                    { label: "Analysis Tool", value: "Microsoft Power BI" },
+                    { label: "Modeling", value: "Star Schema (Data Warehouse)" },
+                    { label: "Measures", value: "DAX (Revenue, KPIs, Aggregations)" }
+                ]
+            },
+            diagrams: [
+                { 
+                    image: "assets/diagrams/star-schema.png", 
+                    title: "Star Schema", 
+                    desc: "Data Warehouse architecture with fact table (Reservations) and dimensions (Client, Accommodation, Time) to optimize analytical queries." 
+                },
+                { 
+                    image: "assets/diagrams/powerbi-1.png", 
+                    title: "Revenue by Accommodation Dashboard", 
+                    desc: "Revenue overview (5.11K€) with breakdown by accommodation type, monthly evolution and analysis by owner." 
+                },
+                { 
+                    image: "assets/diagrams/powerbi-2.png", 
+                    title: "Geographic Dashboard", 
+                    desc: "Spatial analysis of revenue by client residence region with interactive map and city-level detail." 
+                }
+            ]
+        },
+        links: []
     },
-    {
+        {
         id: 3,
         title: "Portfolio",
-        date: "2025",
-        image: "assets/previewPortfolio.png",
-        techs: ["JavaScript", "HTML", "CSS", "Web"],
-        links: [{ text: "View Code", url: "https://github.com/fatiht7/portfolio.git" }],
+        date: "Oct 2025 - Present",
+        image: "assets/previews/previewPortfolio.png",
+        techs: ["JavaScript", "HTML", "CSS"],
+        category: ["Web"],
+        actionBtn: null,
+        hasDetailedModal: false,
         fr: { 
             title: "Portfolio",
             type: "Projet Personnel", 
-            desc: "Site personnel moderne style Glassmorphism avec filtrage dynamique et animations fluides." 
+            desc: "Site personnel moderne style Glassmorphism avec filtrage dynamique, switch multilingue et animations fluides." 
         },
         en: { 
             title: "Portfolio",
             type: "Personal Project", 
-            desc: "Modern Glassmorphism style personal website features dynamic filtering and smooth animations." 
-        }
+            desc: "Modern Glassmorphism style personal website with dynamic filtering, multilingual switch and smooth animations." 
+        },
+        links: [{ text: "View Code", url: "https://github.com/fatiht7/portfolio.git", icon: "fa-github" }]
     },
     {
         id: 4,
+        title: "Sibilia - Order Management System",
+        date: "June 2025",
+        image: "assets/previews/previewSIBILIA.png", 
+        techs: ["C#", ".NET", "WPF", "XAML", "MVVM"],
+        category: ["Desktop"],
+        actionBtn: { text: "View App", icon: "fa-desktop" },
+        hasDetailedModal: true,
+        fr: { 
+            title: "Sibilia - Système de Gestion de Commandes",
+            type: "Projet Universitaire (SAÉ)", 
+            desc: "Application desktop de gestion commerciale développée en WPF/C#. Gestion des commandes, clients, plats et stocks avec architecture MVVM.",
+            modalTitle: "Projet Sibilia (SAÉ) - Système de Gestion",
+            modalDesc: "Ce projet a été réalisé dans le cadre d'un projet appliqué (SAÉ) pour simuler un système de gestion commerciale pour un traiteur. C'est une application desktop développée en WPF et C#.",
+            techSection: {
+                title: "Technologies et Architecture",
+                items: [
+                    { label: "Langage", value: "C# (.NET)" },
+                    { label: "Interface", value: "WPF / XAML" },
+                    { label: "Architecture", value: "MVVM Pattern" },
+                    { label: "Base de données", value: "MySQL" }
+                ]
+            },
+            features: [
+                "Système d'authentification sécurisé et gestion des rôles",
+                "CRUD complet pour produits, clients et commandes",
+                "Architecture modulaire basée sur le pattern MVVM",
+                "Filtrage et recherche avancée en temps réel"
+            ],
+            diagrams: [
+                { 
+                    image: "assets/sibilia/login.png", 
+                    title: "Connexion", 
+                    desc: "Interface d'authentification utilisateur sécurisée." 
+                },
+                { 
+                    image: "assets/sibilia/dashboard.png", 
+                    title: "Menu Principal", 
+                    desc: "Navigation vers les différents modules : Commandes, Plats, Clients." 
+                },
+                { 
+                    image: "assets/sibilia/order.png", 
+                    title: "Création Commande", 
+                    desc: "Interface complète de création de commande avec sélection client, plats et calcul automatique du total." 
+                }
+            ]
+        },
+        en: { 
+            title: "Sibilia - Order Management System",
+            type: "University Project (SAÉ)", 
+            desc: "Desktop commercial management application developed in WPF/C#. Order, client, dish and inventory management with MVVM architecture.",
+            modalTitle: "Sibilia Project (SAÉ) - Management System",
+            modalDesc: "This project was carried out as part of an Applied Project (SAÉ) to simulate a commercial management system for a catering business. It's a desktop application developed in WPF and C#.",
+            techSection: {
+                title: "Technologies and Architecture",
+                items: [
+                    { label: "Language", value: "C# (.NET)" },
+                    { label: "Interface", value: "WPF / XAML" },
+                    { label: "Architecture", value: "MVVM Pattern" },
+                    { label: "Database", value: "MySQL" }
+                ]
+            },
+            features: [
+                "Secure user authentication system and role management",
+                "Full CRUD for products, clients, and orders",
+                "Modular design based on the MVVM pattern",
+                "Real-time advanced filtering and search"
+            ],
+            diagrams: [
+                { 
+                    image: "assets/sibilia/login.png", 
+                    title: "Login", 
+                    desc: "Secure user authentication interface." 
+                },
+                { 
+                    image: "assets/sibilia/dashboard.png", 
+                    title: "Main Menu", 
+                    desc: "Navigation to different modules: Orders, Dishes, Clients." 
+                },
+                { 
+                    image: "assets/sibilia/order.png", 
+                    title: "Order Creation", 
+                    desc: "Complete order creation interface with client selection, dishes and automatic total calculation." 
+                }
+            ]
+        },
+        links: [{ text: "View Code", url: "https://github.com/yanis381/SAE201.git", icon: "fa-github" }]
+    },
+    {
+        id: 5,
         title: "2D Video Game",
         date: "2024",
-        image: "assets/previewLabyrinthe.png",
-        techs: ["C#", ".NET", "Game Dev"],
-        links: [{ text: "View Code", url: "https://github.com/xX-Proplayer-Xx/Labyrinthe.git" }],
+        image: "assets/previews/previewLabyrinthe.png",
+        techs: ["C#", ".NET"],
+        category: ["Desktop"],
+        actionBtn: null,
+        hasDetailedModal: false,
         fr: { 
             title: "Jeu Vidéo 2D",
             type: "Projet Universitaire", 
@@ -69,7 +271,8 @@ const projectsData = [
             title: "2D Video Game",
             type: "University Project", 
             desc: "Game engine development and physics management written in pure C#." 
-        }
+        },
+        links: [{ text: "View Code", url: "https://github.com/xX-Proplayer-Xx/Labyrinthe.git", icon: "fa-github" }]
     }
 ];
 
@@ -81,7 +284,7 @@ const translations = {
         nav_projects: "Projets", 
         nav_projects_btn: "Voir mes projets",
         hero_badge: "✨ Disponible Avril - Juin 2026",
-        "profil-p": "Étudiant en BUT Informatique (Parcours C). Je structure la donnée et conçois des architectures backend robustes.",
+        "profil-p": "Étudiant en BUT Informatique (Parcours Data). Je structure la donnée et conçois des architectures BI robustes.",
         "profil-btn-cv": "Télécharger mon CV",
         
         "titre_profil": "Profil",
@@ -115,9 +318,9 @@ const translations = {
         "titre_bac": "Baccalauréat Français", 
         "desc_bac": "Diplôme du baccalauréat spécialisé en sciences et informatique.",
         
-        "projets-titre": "Projets Récents", 
+        "projets-titre": "Projets & SAÉ", 
         "contact-titre": "Contactez-moi", 
-        "contact-p": "Disponible pour échanger sur des opportunités.", 
+        "contact-p": "Disponible pour échanger sur des opportunités de stage.", 
         "form-send": "Envoyer",
         "form-name": "Nom",
         "form-subject": "Objet",
@@ -137,7 +340,17 @@ const translations = {
         "interets-titre": "Centres d'intérêt", 
         "hobby-games": "Jeux Vidéo", 
         "hobby-fitness": "Fitness",
-        "hobby-fitness-desc": "Musculation"
+        "hobby-fitness-desc": "Musculation",
+
+        "filter-all": "Tous",
+        "filter-web": "Web",
+        "filter-desktop": "Desktop",
+        "filter-bi": "BI / Analytics",
+        "filter-analysis": "Modélisation",
+        
+        "diagrams-title": "Aperçu des Diagrammes",
+        "previews-title": "Aperçu Fonctionnel",
+        "features-title": "Fonctionnalités Clés"
     },
     en: {
         nav_home: "Home", 
@@ -146,7 +359,7 @@ const translations = {
         nav_projects: "Projects", 
         nav_projects_btn: "View my projects",
         hero_badge: "✨ Available April - June 2026",
-        "profil-p": "Second-year CS Student (Data Track). I aim to apply my data architecture rigor to software development.",
+        "profil-p": "Second-year CS Student (Data Track). I design data architectures and build robust BI solutions.",
         "profil-btn-cv": "Download CV",
         
         "titre_profil": "Profile",
@@ -178,7 +391,7 @@ const translations = {
         "titre_bac": "French Baccalaureate", 
         "desc_bac": "High School diploma specialized in science and computer.",
         
-        "projets-titre": "Recent Projects", 
+        "projets-titre": "Projects & SAÉ", 
         "contact-titre": "Contact Me", 
         "contact-p": "Available to discuss internship opportunities.", 
         "form-send": "Send",
@@ -200,7 +413,17 @@ const translations = {
         "interets-titre": "Interests", 
         "hobby-games": "Video Games", 
         "hobby-fitness": "Fitness",
-        "hobby-fitness-desc": "Weight training"
+        "hobby-fitness-desc": "Weight training",
+
+        "filter-all": "All Projects",
+        "filter-web": "Web",
+        "filter-desktop": "Desktop",
+        "filter-bi": "BI / Analytics",
+        "filter-analysis": "Modeling",
+        
+        "diagrams-title": "Key Diagram Previews",
+        "previews-title": "Functional Previews",
+        "features-title": "Key Features"
     }
 };
 
@@ -213,8 +436,9 @@ document.addEventListener('DOMContentLoaded', () => {
         new Typed('#typed-text', {
             strings: [
                 "Data Analyst.", 
-                "Backend Developer.", 
+                "BI Developer.", 
                 "SQL Expert.",
+                "Backend Developer.",
                 "Student."
             ],
             typeSpeed: 50,
@@ -250,24 +474,44 @@ function renderProjects(filter) {
     container.innerHTML = '';
     
     projectsData.forEach(p => {
-        if (filter === 'all' || p.techs.includes(filter)) {
+        const matchesFilter = filter === 'all' || 
+                             p.techs.includes(filter) || 
+                             (p.category && p.category.includes(filter));
+        
+        if (matchesFilter) {
             const content = p[currentLang];
             const displayTitle = content.title || p.title;
+            
+            let actionBtnHtml = '';
+            if (p.actionBtn) {
+                let btnText = p.actionBtn.text;
+                if (currentLang === 'fr') {
+                    if (p.actionBtn.text === 'View Modeling') btnText = 'Voir Modélisation';
+                    else if (p.actionBtn.text === 'View Dashboard') btnText = 'Voir Dashboard';
+                    else if (p.actionBtn.text === 'View App') btnText = 'Voir Application';
+                }
+                actionBtnHtml = `
+                    <button class="btn-action" onclick="event.stopPropagation(); openDetailedModal(${p.id})">
+                        <i class="fa-solid ${p.actionBtn.icon}"></i> ${btnText}
+                    </button>
+                `;
+            }
+            
             const html = `
                 <div class="glass-card project-card" onclick="openModal(${p.id})">
                     <div class="project-img" style="background-image: url('${p.image}')"></div>
                     <div class="project-content">
                         <div class="project-meta">
-                            <span class="meta-date">${p.date}</span>
-                            <span class="meta-sep">•</span>
                             <span class="meta-type">${content.type}</span>
                         </div>
+                        <span class="meta-date">${p.date}</span>
                         
                         <h3>${displayTitle}</h3>
                         <p>${content.desc}</p>
                         <div class="project-tags">
                             ${p.techs.map(t => `<span>${t}</span>`).join('')}
                         </div>
+                        ${actionBtnHtml}
                     </div>
                 </div>
             `;
@@ -278,6 +522,12 @@ function renderProjects(filter) {
 
 function openModal(id) {
     const p = projectsData.find(proj => proj.id === id);
+    
+    if (p.hasDetailedModal) {
+        openDetailedModal(id);
+        return;
+    }
+    
     const content = p[currentLang];
     const displayTitle = content.title || p.title;
     
@@ -286,20 +536,111 @@ function openModal(id) {
     document.querySelector('#modal-desc').textContent = content.desc;
     
     document.querySelector('#modal-techs').innerHTML = p.techs.map(t => `<span>${t}</span>`).join('');
-    document.querySelector('#modal-links').innerHTML = p.links.map(l => `<a href="${l.url}" target="_blank">${l.text}</a>`).join('');
+    document.querySelector('#modal-links').innerHTML = p.links.map(l => `
+        <a href="${l.url}" target="_blank" class="btn-link">
+            <i class="fa-brands ${l.icon || 'fa-github'}"></i> ${l.text}
+        </a>
+    `).join('');
     
     document.querySelector('#project-modal').style.display = 'flex';
+}
+
+function openDetailedModal(id) {
+    const p = projectsData.find(proj => proj.id === id);
+    const content = p[currentLang];
+    
+    const modal = document.querySelector('#detailed-modal');
+    
+    modal.querySelector('#detailed-modal-title').textContent = content.modalTitle;
+    modal.querySelector('#detailed-modal-desc').textContent = content.modalDesc;
+    
+    const techSection = modal.querySelector('#detailed-tech-section');
+    techSection.querySelector('h4').innerHTML = `<i class="fa-solid fa-globe"></i> ${content.techSection.title}`;
+    techSection.querySelector('.tech-grid').innerHTML = content.techSection.items.map(item => `
+        <div class="tech-item">
+            <span class="tech-label">${item.label}:</span>
+            <span class="tech-value">${item.value}</span>
+        </div>
+    `).join('');
+    
+    const featuresContainer = modal.querySelector('#detailed-features-section');
+    if (content.features && content.features.length > 0) {
+        const featuresTitle = translations[currentLang]['features-title'];
+        featuresContainer.innerHTML = `
+            <div class="features-section">
+                <h4><i class="fa-solid fa-list-check"></i> ${featuresTitle}</h4>
+                <ul class="features-list">
+                    ${content.features.map(f => `<li>${f}</li>`).join('')}
+                </ul>
+            </div>
+        `;
+        featuresContainer.style.display = 'block';
+    } else {
+        featuresContainer.innerHTML = '';
+        featuresContainer.style.display = 'none';
+    }
+    
+
+    let diagramsTitle;
+    if (p.id === 4) {
+        diagramsTitle = translations[currentLang]['previews-title'];
+    } else {
+        diagramsTitle = translations[currentLang]['diagrams-title'];
+    }
+    modal.querySelector('#diagrams-section-title').textContent = diagramsTitle;
+    
+    const diagramsContainer = modal.querySelector('#detailed-diagrams');
+    diagramsContainer.innerHTML = content.diagrams.map((d, index) => `
+        <div class="diagram-card" onclick="openImageModal('${d.image}')">
+            <div class="diagram-img" style="background-image: url('${d.image}')"></div>
+            <div class="diagram-info">
+                <h5>${index + 1}. ${d.title}</h5>
+                <p>${d.desc}</p>
+            </div>
+        </div>
+    `).join('');
+    
+    const linksContainer = modal.querySelector('#detailed-links');
+    if (p.links && p.links.length > 0) {
+        linksContainer.innerHTML = p.links.map(l => `
+            <a href="${l.url}" target="_blank" class="btn-link">
+                <i class="fa-brands ${l.icon || 'fa-github'}"></i> ${l.text}
+            </a>
+        `).join('');
+        linksContainer.style.display = 'flex';
+    } else {
+        linksContainer.style.display = 'none';
+    }
+    
+    modal.style.display = 'flex';
+}
+
+function openImageModal(imageSrc) {
+    const imageModal = document.querySelector('#image-modal');
+    imageModal.querySelector('#image-modal-img').src = imageSrc;
+    imageModal.style.display = 'flex';
 }
 
 function closeModal() {
     document.querySelector('#project-modal').style.display = 'none';
 }
 
+function closeDetailedModal() {
+    document.querySelector('#detailed-modal').style.display = 'none';
+}
+
+function closeImageModal() {
+    document.querySelector('#image-modal').style.display = 'none';
+}
+
 window.onclick = function(event) {
     const modal = document.querySelector('#project-modal');
-    if (event.target == modal) {
-        closeModal();
-    }
+    const detailedModal = document.querySelector('#detailed-modal');
+    const imageModal = document.querySelector('#image-modal');
+    
+    if (event.target == modal) closeModal();
+    if (event.target == detailedModal) closeDetailedModal();
+    if (event.target == imageModal) closeImageModal();
 }
 
 function updateLanguage(lang) {

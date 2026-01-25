@@ -55,7 +55,7 @@
                 <h2 class="gradient-text"><span id="typed-text"></span></h2>
                 
                 <p class="subtitle" data-lang="profil-p">
-                    Second-year CS Student (Data Track). I aim to apply my data architecture rigor to software development.
+                    Second-year CS Student (Data Track). I design data architectures and build robust BI solutions.
                 </p>
                 
                 <div class="hero-actions">
@@ -66,7 +66,7 @@
                 </div>
             </div>
             <div class="hero-card glass-card">
-                <img src="assets/imgPROFIL.png" alt="Fatih TÜRK">
+                <img src="assets/previews/imgPROFIL.png" alt="Fatih TÜRK">
             </div>
         </section>
 
@@ -99,7 +99,7 @@
 
                     <div class="skill-bar">
                         <div class="skill-info">
-                            <span><i class="devicon-python-plain"></i> Python</span>
+                            <span><i class="fa-solid fa-chart-pie"></i> Power BI / DAX</span>
                             <span class="percentage">85%</span>
                         </div>
                         <div class="progress-container"><div class="progress-fill" style="width:85%"></div></div>
@@ -107,7 +107,7 @@
 
                     <div class="skill-bar">
                         <div class="skill-info">
-                            <span><i class="devicon-csharp-plain"></i> C# (.NET / WPF)</span>
+                            <span><i class="devicon-python-plain"></i> Python</span>
                             <span class="percentage">80%</span>
                         </div>
                         <div class="progress-container"><div class="progress-fill" style="width:80%"></div></div>
@@ -115,7 +115,7 @@
 
                     <div class="skill-bar">
                         <div class="skill-info">
-                            <span><i class="fa-solid fa-chart-pie"></i> Power BI & Excel</span>
+                            <span><i class="devicon-csharp-plain"></i> C# (.NET / WPF)</span>
                             <span class="percentage">75%</span>
                         </div>
                         <div class="progress-container"><div class="progress-fill" style="width:75%"></div></div>
@@ -127,7 +127,7 @@
                     
                     <div class="skill-bar">
                         <div class="skill-info">
-                            <span><i class="devicon-html5-plain"></i> HTML, CSS, JS, PHP</span>
+                            <span><i class="devicon-php-plain"></i> PHP / Laravel</span>
                             <span class="percentage">85%</span>
                         </div>
                         <div class="progress-container"><div class="progress-fill" style="width:85%"></div></div>
@@ -135,18 +135,10 @@
 
                     <div class="skill-bar">
                         <div class="skill-info">
-                            <span><i class="devicon-php-plain"></i> PHP / Laravel</span>
+                            <span><i class="devicon-html5-plain"></i> HTML, CSS, JavaScript</span>
                             <span class="percentage">80%</span>
                         </div>
                         <div class="progress-container"><div class="progress-fill" style="width:80%"></div></div>
-                    </div>
-
-                    <div class="skill-bar">
-                        <div class="skill-info">
-                            <span><i class="devicon-linux-plain"></i> Linux</span>
-                            <span class="percentage">70%</span>
-                        </div>
-                        <div class="progress-container"><div class="progress-fill" style="width:70%"></div></div>
                     </div>
 
                     <div class="skill-bar">
@@ -155,6 +147,14 @@
                             <span class="percentage">75%</span>
                         </div>
                         <div class="progress-container"><div class="progress-fill" style="width:75%"></div></div>
+                    </div>
+
+                    <div class="skill-bar">
+                        <div class="skill-info">
+                            <span><i class="devicon-linux-plain"></i> Linux</span>
+                            <span class="percentage">70%</span>
+                        </div>
+                        <div class="progress-container"><div class="progress-fill" style="width:70%"></div></div>
                     </div>
                 </div>
             </div>
@@ -226,18 +226,17 @@
 
         <section id="projects" class="section">
             <div class="section-header row">
-                <h2 data-lang="projets-titre">Recent Projects</h2>
+                <h2 data-lang="projets-titre">Projects & SAÉ</h2>
                 <div class="tech-filters">
-                    <button class="active" data-filter="all">All</button>
-                    <button data-filter="C#">C# / .NET</button>
-                    <button data-filter="SQL">SQL / Data</button>
-                    <button data-filter="JavaScript">JavaScript</button>
-                    <button data-filter="PHP">PHP / Laravel</button>
-                    <button data-filter="HTML">HTML / CSS</button>
+                    <button class="active" data-filter="all" data-lang="filter-all">All Projects</button>
+                    <button data-filter="Web" data-lang="filter-web">Web</button>
+                    <button data-filter="Desktop" data-lang="filter-desktop">Desktop</button>
+                    <button data-filter="BI" data-lang="filter-bi">BI / Analytics</button>
+                    <button data-filter="Analysis" data-lang="filter-analysis">Modeling</button>
                 </div>
             </div>
             <div class="projects-grid" id="projects-container">
-                </div>
+            </div>
         </section>
 
         <section id="languages" class="section">
@@ -315,7 +314,7 @@
             <div class="glass-card contact-box">
                 <div class="contact-left">
                     <h2 data-lang="contact-titre">Contact Me</h2>
-                    <p data-lang="contact-p">Available to discuss opportunities.</p>
+                    <p data-lang="contact-p">Available to discuss internship opportunities.</p>
                     
                     <div class="info-item">
                         <i class="fa-solid fa-envelope"></i>
@@ -341,9 +340,9 @@
                 </div>
 
                 <form action="https://formspree.io/f/mnjpeoyr" method="POST" class="glass-form">
-                    <input type="text" name="name" placeholder="Name" data-lang-placeholder="form-name" required>
+                    <input type="text" name="name" placeholder="Name" required>
                     <input type="email" name="email" placeholder="Email" required>
-                    <input type="text" name="subject" placeholder="Subject" data-lang-placeholder="form-subject" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
                     <textarea name="message" placeholder="Message" rows="4" required></textarea>
                     <button type="submit" class="btn-primary full" data-lang="form-send">Send</button>
                 </form>
@@ -353,7 +352,7 @@
     </main>
     
     <footer>
-        <p>© 2025 Fatih TÜRK.</p>
+        <p>© 2025 Fatih TÜRK. All rights reserved.</p>
     </footer>
 
     <div id="project-modal" class="modal-overlay">
@@ -367,6 +366,34 @@
                 <div id="modal-links" class="links-row"></div>
             </div>
         </div>
+    </div>
+
+    <div id="detailed-modal" class="modal-overlay">
+        <div class="glass-card detailed-modal-card">
+            <button class="close-btn" onclick="closeDetailedModal()"><i class="fa-solid fa-xmark"></i></button>
+            
+            <div class="detailed-modal-content">
+                <h2 id="detailed-modal-title"></h2>
+                <p id="detailed-modal-desc" class="modal-intro"></p>
+                
+                <div id="detailed-tech-section" class="tech-section">
+                    <h4><i class="fa-solid fa-globe"></i> Technologies</h4>
+                    <div class="tech-grid"></div>
+                </div>
+                
+                <div id="detailed-features-section"></div>
+                
+                <h4 id="diagrams-section-title" class="diagrams-title">Key Diagram Previews</h4>
+                <div id="detailed-diagrams" class="diagrams-grid"></div>
+                
+                <div id="detailed-links" class="links-row"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="image-modal" class="modal-overlay image-modal">
+        <button class="close-btn close-btn-image" onclick="closeImageModal()"><i class="fa-solid fa-xmark"></i></button>
+        <img id="image-modal-img" src="">
     </div>
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
