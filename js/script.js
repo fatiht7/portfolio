@@ -117,8 +117,11 @@ const translations = {
         
         "projets-titre": "Projets Récents", 
         "contact-titre": "Contactez-moi", 
-        "contact-p": "Disponible pour échanger sur des opportunités de stage.", 
+        "contact-p": "Disponible pour échanger sur des opportunités.", 
         "form-send": "Envoyer",
+        "form-name": "Nom",
+        "form-subject": "Objet",
+        "form-message": "Message",
         
         "langues-titre": "Langues", 
         "lang-native": "Langue maternelle", 
@@ -179,6 +182,9 @@ const translations = {
         "contact-titre": "Contact Me", 
         "contact-p": "Available to discuss internship opportunities.", 
         "form-send": "Send",
+        "form-name": "Name",
+        "form-subject": "Subject",
+        "form-message": "Message",
         
         "langues-titre": "Languages", 
         "lang-native": "Native Speaker", 
@@ -202,7 +208,8 @@ let currentLang = 'en';
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    if(document.getElementById('typed-text')) {
+    const typedElement = document.querySelector('#typed-text');
+    if (typedElement) {
         new Typed('#typed-text', {
             strings: [
                 "Data Analyst.", 
@@ -227,14 +234,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    document.getElementById('lang-switch').addEventListener('click', () => {
-        const newLang = currentLang === 'fr' ? 'en' : 'fr';
-        updateLanguage(newLang);
-    });
+    const langSwitch = document.querySelector('#lang-switch');
+    if (langSwitch) {
+        langSwitch.addEventListener('click', () => {
+            const newLang = currentLang === 'fr' ? 'en' : 'fr';
+            updateLanguage(newLang);
+        });
+    }
 });
 
 function renderProjects(filter) {
-    const container = document.getElementById('projects-container');
+    const container = document.querySelector('#projects-container');
+    if (!container) return;
+    
     container.innerHTML = '';
     
     projectsData.forEach(p => {
@@ -269,22 +281,22 @@ function openModal(id) {
     const content = p[currentLang];
     const displayTitle = content.title || p.title;
     
-    document.getElementById('modal-img').src = p.image;
-    document.getElementById('modal-title').textContent = displayTitle;
-    document.getElementById('modal-desc').textContent = content.desc;
+    document.querySelector('#modal-img').src = p.image;
+    document.querySelector('#modal-title').textContent = displayTitle;
+    document.querySelector('#modal-desc').textContent = content.desc;
     
-    document.getElementById('modal-techs').innerHTML = p.techs.map(t => `<span>${t}</span>`).join('');
-    document.getElementById('modal-links').innerHTML = p.links.map(l => `<a href="${l.url}" target="_blank">${l.text}</a>`).join('');
+    document.querySelector('#modal-techs').innerHTML = p.techs.map(t => `<span>${t}</span>`).join('');
+    document.querySelector('#modal-links').innerHTML = p.links.map(l => `<a href="${l.url}" target="_blank">${l.text}</a>`).join('');
     
-    document.getElementById('project-modal').style.display = 'flex';
+    document.querySelector('#project-modal').style.display = 'flex';
 }
 
 function closeModal() {
-    document.getElementById('project-modal').style.display = 'none';
+    document.querySelector('#project-modal').style.display = 'none';
 }
 
 window.onclick = function(event) {
-    const modal = document.getElementById('project-modal');
+    const modal = document.querySelector('#project-modal');
     if (event.target == modal) {
         closeModal();
     }
@@ -292,38 +304,60 @@ window.onclick = function(event) {
 
 function updateLanguage(lang) {
     currentLang = lang;
-    document.getElementById('lang-switch').textContent = lang === 'fr' ? 'EN' : 'FR';
+    
+    const langSwitch = document.querySelector('#lang-switch');
+    if (langSwitch) {
+        langSwitch.textContent = lang === 'fr' ? 'EN' : 'FR';
+    }
     
     document.querySelectorAll('[data-lang]').forEach(el => {
         const key = el.dataset.lang;
-        if(translations[lang][key]) el.textContent = translations[lang][key];
+        if (translations[lang][key]) {
+            el.textContent = translations[lang][key];
+        }
     });
     
-    const activeFilter = document.querySelector('.tech-filters .active').dataset.filter;
-    renderProjects(activeFilter);
+    const inputName = document.querySelector('input[name="name"]');
+    const inputSubject = document.querySelector('input[name="subject"]');
+    const inputMessage = document.querySelector('textarea[name="message"]');
+    
+    if (inputName) inputName.placeholder = translations[lang]['form-name'];
+    if (inputSubject) inputSubject.placeholder = translations[lang]['form-subject'];
+    if (inputMessage) inputMessage.placeholder = translations[lang]['form-message'];
+    
+    const activeFilter = document.querySelector('.tech-filters .active');
+    if (activeFilter) {
+        renderProjects(activeFilter.dataset.filter);
+    }
 }
 
 function toggleMenu() {
-    const menu = document.getElementById('nav-menu');
+    const menu = document.querySelector('#nav-menu');
     const icon = document.querySelector('.hamburger i');
     
-    menu.classList.toggle('active');
-    
-    if (menu.classList.contains('active')) {
-        icon.classList.remove('fa-bars');
-        icon.classList.add('fa-xmark');
-    } else {
-        icon.classList.remove('fa-xmark');
-        icon.classList.add('fa-bars');
+    if (menu) {
+        menu.classList.toggle('active');
+        
+        if (icon) {
+            if (menu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        }
     }
 }
 
 function closeMenu() {
-    const menu = document.getElementById('nav-menu');
+    const menu = document.querySelector('#nav-menu');
     const icon = document.querySelector('.hamburger i');
     
-    menu.classList.remove('active');
-    if(icon){
+    if (menu) {
+        menu.classList.remove('active');
+    }
+    if (icon) {
         icon.classList.remove('fa-xmark');
         icon.classList.add('fa-bars');
     }
