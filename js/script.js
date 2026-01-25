@@ -93,6 +93,7 @@ const translations = {
         "soft-analytic": "Précis et Analytique",
         "soft-focus": "Orienté tâches et Concentré",
         "soft-team": "Travail d'équipe",
+        "soft-autonomous": "Autonome et capacité d'adaptation",
         
         "titre_edu": "Formation", 
         "titre_pro_exp": "Expériences Professionnelles",
@@ -132,7 +133,8 @@ const translations = {
         
         "interets-titre": "Centres d'intérêt", 
         "hobby-games": "Jeux Vidéo", 
-        "hobby-sport": "Football"
+        "hobby-fitness": "Fitness",
+        "hobby-fitness-desc": "Musculation"
     },
     en: {
         nav_home: "Home", 
@@ -151,8 +153,7 @@ const translations = {
         "comp-soft": "Soft Skills",
         "soft-time": "Good time management skills & Punctual",
         "soft-analytic": "Precise and Analytical",
-        "soft-focus": "Task-oriented and Focused",
-        "soft-team": "Teamwork",
+        "soft-autonomous": "Autonomous and adaptable",
 
         "titre_edu": "Education", 
         "titre_pro_exp": "Work Experience",
@@ -192,7 +193,8 @@ const translations = {
         
         "interets-titre": "Interests", 
         "hobby-games": "Video Games", 
-        "hobby-sport": "Football"
+        "hobby-fitness": "Fitness",
+        "hobby-fitness-desc": "Weight training"
     }
 };
 
