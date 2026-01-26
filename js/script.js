@@ -143,7 +143,7 @@ const projectsData = [
         },
         links: []
     },
-        {
+    {
         id: 3,
         title: "Portfolio",
         date: "Oct 2025 - Present",
@@ -283,6 +283,8 @@ const translations = {
         nav_contact: "Contact", 
         nav_projects: "Projets", 
         nav_projects_btn: "Voir mes projets",
+        nav_cv_download: "Télécharger CV", // AJOUT
+        
         hero_badge: "✨ Disponible Avril - Juin 2026",
         "profil-p": "Étudiant en BUT Informatique (Parcours Data). Je structure la donnée et conçois des architectures BI robustes.",
         "profil-btn-cv": "Télécharger mon CV",
@@ -300,6 +302,10 @@ const translations = {
         
         "titre_edu": "Formation", 
         "titre_pro_exp": "Expériences Professionnelles",
+        
+        "date_2024_2027": "2024 - 2027", // AJOUT
+        "date_2021_2024": "2021 - 2024", // AJOUT
+        "date_oct_jan": "Oct 2025 - Jan 2026", // AJOUT
         "date_june_25": "Juin 2025",
         "date_ete_24": "Été 2024",
         
@@ -313,16 +319,22 @@ const translations = {
         "desc_leclerc": "Supermarché - 250 employés. Mise en rayon et gestion des stocks. Merchandising et assistance client.",
         
         "titre_but": "BUT Informatique", 
+        "lieu_but": "Université de Savoie / IUT Annecy, France",
         "desc_but": "Bachelor Universitaire de Technologie en informatique. Deuxième année en cours.",
         
         "titre_bac": "Baccalauréat Français", 
-        "desc_bac": "Diplôme du baccalauréat spécialisé en sciences et informatique.",
+        "lieu_bac": "Lycée Louis Lachenal - Argonay, France",
+        "desc_bac": "Baccalauréat technologique STI2D - Option SIN (Systèmes d'Information et Numérique).",
+        
+        "lieu_usmb": "Usmb Annecy, France : Projet Universitaire en équipe",
+        "lieu_leclerc": "Leclerc - Seynod, France",
         
         "projets-titre": "Projets & SAÉ", 
         "contact-titre": "Contactez-moi", 
         "contact-p": "Disponible pour échanger sur des opportunités de stage.", 
         "form-send": "Envoyer",
         "form-name": "Nom",
+        "form-email": "Email", // AJOUT
         "form-subject": "Objet",
         "form-message": "Message",
         
@@ -332,15 +344,22 @@ const translations = {
         "lang-tr": "Turc", 
         "lang-en": "Anglais", 
         "lang-es": "Espagnol",
+        "lang_b1": "B1 - Intermédiaire", // AJOUT
+        "lang_a2": "A2 - Élémentaire", // AJOUT
         
         "ref-titre": "Références", 
         "role-ref1": "Enseignante d'Anglais, Coordinatrice Internationale", 
         "role-ref2": "Professeur SQL et POO, Chercheur à l'Université de Savoie",
+        "lieu_ref": "Université de Savoie / IUT Annecy, France",
         
         "interets-titre": "Centres d'intérêt", 
         "hobby-games": "Jeux Vidéo", 
+        "hobby_games_desc": "FPS, Jeux de construction", // AJOUT
+        "hobby_manga_desc": "One Piece, Chainsaw Man", // AJOUT
         "hobby-fitness": "Fitness",
         "hobby-fitness-desc": "Musculation",
+        
+        "footer_rights": "© 2026 Fatih TÜRK. Tous droits réservés.", // AJOUT
 
         "filter-all": "Tous",
         "filter-web": "Web",
@@ -350,7 +369,16 @@ const translations = {
         
         "diagrams-title": "Aperçu des Diagrammes",
         "previews-title": "Aperçu Fonctionnel",
-        "features-title": "Fonctionnalités Clés"
+        "features-title": "Fonctionnalités Clés",
+        
+        // Pour Typed.js
+        typed_strings: [
+            "Analyste de Données.", 
+            "Développeur BI.", 
+            "Expert SQL.", 
+            "Développeur Backend.", 
+            "Étudiant."
+        ]
     },
     en: {
         nav_home: "Home", 
@@ -358,6 +386,8 @@ const translations = {
         nav_contact: "Contact", 
         nav_projects: "Projects", 
         nav_projects_btn: "View my projects",
+        nav_cv_download: "Download CV",
+        
         hero_badge: "✨ Available April - June 2026",
         "profil-p": "Second-year CS Student (Data Track). I design data architectures and build robust BI solutions.",
         "profil-btn-cv": "Download CV",
@@ -369,10 +399,15 @@ const translations = {
         "comp-soft": "Soft Skills",
         "soft-time": "Good time management skills & Punctual",
         "soft-analytic": "Precise and Analytical",
+        "soft-focus": "Task-oriented and Focused",
+        "soft-team": "Teamwork",
         "soft-autonomous": "Autonomous and adaptable",
 
         "titre_edu": "Education", 
         "titre_pro_exp": "Work Experience",
+        "date_2024_2027": "2024 - 2027",
+        "date_2021_2024": "2021 - 2024",
+        "date_oct_jan": "Oct 2025 - Jan 2026",
         "date_june_25": "June 2025",
         "date_ete_24": "Summer 2024",
         
@@ -386,16 +421,22 @@ const translations = {
         "desc_leclerc": "Supermarket - 250 employees. Restocked shelves and managed inventory. Merchandised products and assisted customers.",
         
         "titre_but": "CS Bachelor (BUT Informatique)", 
+        "lieu_but": "University of Savoy / IUT Annecy, France",
         "desc_but": "Technical Bachelor's Degree in computer science. Second year in progress.",
         
         "titre_bac": "French Baccalaureate", 
-        "desc_bac": "High School diploma specialized in science and computer.",
+        "lieu_bac": "Louis Lachenal High School - Argonay, France",
+        "desc_bac": "Technical High School diploma (STI2D - Digital Information Systems).",
+        
+        "lieu_usmb": "Usmb Annecy, France : Team University Project",
+        "lieu_leclerc": "Leclerc - Seynod, France",
         
         "projets-titre": "Projects & SAÉ", 
         "contact-titre": "Contact Me", 
         "contact-p": "Available to discuss internship opportunities.", 
         "form-send": "Send",
         "form-name": "Name",
+        "form-email": "Email",
         "form-subject": "Subject",
         "form-message": "Message",
         
@@ -405,15 +446,22 @@ const translations = {
         "lang-tr": "Turkish", 
         "lang-en": "English", 
         "lang-es": "Spanish",
+        "lang_b1": "B1 - Intermediate",
+        "lang_a2": "A2 - Elementary",
         
         "ref-titre": "References", 
         "role-ref1": "English Lecturer, International Coordinator", 
         "role-ref2": "SQL and OOP teacher, Researcher at university of Savoy",
+        "lieu_ref": "University of Savoy / IUT Annecy, France",
         
         "interets-titre": "Interests", 
         "hobby-games": "Video Games", 
+        "hobby_games_desc": "FPS, Construction games",
+        "hobby_manga_desc": "One Piece, Chainsaw Man",
         "hobby-fitness": "Fitness",
         "hobby-fitness-desc": "Weight training",
+        
+        "footer_rights": "© 2026 Fatih TÜRK. All rights reserved.",
 
         "filter-all": "All Projects",
         "filter-web": "Web",
@@ -423,30 +471,25 @@ const translations = {
         
         "diagrams-title": "Key Diagram Previews",
         "previews-title": "Functional Previews",
-        "features-title": "Key Features"
+        "features-title": "Key Features",
+        
+        // Pour Typed.js
+        typed_strings: [
+            "Data Analyst.", 
+            "BI Developer.", 
+            "SQL Expert.",
+            "Backend Developer.",
+            "Student."
+        ]
     }
 };
 
 let currentLang = 'en';
+let typedInstance;
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const typedElement = document.querySelector('#typed-text');
-    if (typedElement) {
-        new Typed('#typed-text', {
-            strings: [
-                "Data Analyst.", 
-                "BI Developer.", 
-                "SQL Expert.",
-                "Backend Developer.",
-                "Student."
-            ],
-            typeSpeed: 50,
-            backSpeed: 30,
-            backDelay: 2000,
-            loop: true
-        });
-    }
+    initTyped('en'); // Démarrage en anglais par défaut
 
     renderProjects('all');
     
@@ -467,6 +510,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// Fonction pour initialiser ou réinitialiser Typed.js
+function initTyped(lang) {
+    const typedElement = document.querySelector('#typed-text');
+    if (typedElement) {
+        if (typedInstance) {
+            typedInstance.destroy();
+        }
+
+        typedInstance = new Typed('#typed-text', {
+            strings: translations[lang].typed_strings,
+            typeSpeed: 50,
+            backSpeed: 30,
+            backDelay: 2000,
+            loop: true
+        });
+    }
+}
+
 function renderProjects(filter) {
     const container = document.querySelector('#projects-container');
     if (!container) return;
@@ -475,8 +536,8 @@ function renderProjects(filter) {
     
     projectsData.forEach(p => {
         const matchesFilter = filter === 'all' || 
-                             p.techs.includes(filter) || 
-                             (p.category && p.category.includes(filter));
+                              p.techs.includes(filter) || 
+                              (p.category && p.category.includes(filter));
         
         if (matchesFilter) {
             const content = p[currentLang];
@@ -659,13 +720,17 @@ function updateLanguage(lang) {
     });
     
     const inputName = document.querySelector('input[name="name"]');
+    const inputEmail = document.querySelector('input[name="email"]');
     const inputSubject = document.querySelector('input[name="subject"]');
     const inputMessage = document.querySelector('textarea[name="message"]');
     
     if (inputName) inputName.placeholder = translations[lang]['form-name'];
+    if (inputEmail) inputEmail.placeholder = translations[lang]['form-email'];
     if (inputSubject) inputSubject.placeholder = translations[lang]['form-subject'];
     if (inputMessage) inputMessage.placeholder = translations[lang]['form-message'];
     
+    initTyped(lang);
+
     const activeFilter = document.querySelector('.tech-filters .active');
     if (activeFilter) {
         renderProjects(activeFilter.dataset.filter);
