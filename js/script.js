@@ -255,6 +255,27 @@ const projectsData = [
     },
     {
         id: 5,
+        title: "Open Food Facts - DB & Dashboards",
+        date: "Mar 2026 - Apr 2026",
+        image: "assets/diagrams/powerbi-1.png",
+        techs: ["PostgreSQL", "Power BI", "Knime", "Star Schema"],
+        category: ["BI", "Analysis"],
+        actionBtn: null,
+        hasDetailedModal: false,
+        fr: {
+            title: "Open Food Facts - BDD & Tableaux de Bord",
+            type: "Projet Universitaire (SAÉ)",
+            desc: "Création d'une base de données relationnelle (OLTP) à partir des données brutes Open Food Facts. Modèle en étoile pour l'analyse BI, workflows Knime pour l'exploration des données et rapports analytiques en anglais."
+        },
+        en: {
+            title: "Open Food Facts - DB & Dashboards",
+            type: "University Project (SAÉ)",
+            desc: "Built a relational database (OLTP) from raw Open Food Facts data. Designed a star schema for BI analysis, Knime workflows for data exploration and analytical reports in English."
+        },
+        links: []
+    },
+    {
+        id: 7,
         title: "2D Video Game",
         date: "2024",
         image: "assets/previews/previewLabyrinthe.png",
@@ -262,15 +283,15 @@ const projectsData = [
         category: ["Desktop"],
         actionBtn: null,
         hasDetailedModal: false,
-        fr: { 
+        fr: {
             title: "Jeu Vidéo 2D",
-            type: "Projet Universitaire", 
-            desc: "Développement d'un moteur de jeu et gestion physique en C# pur." 
+            type: "Projet Universitaire",
+            desc: "Développement d'un moteur de jeu et gestion physique en C# pur."
         },
-        en: { 
+        en: {
             title: "2D Video Game",
-            type: "University Project", 
-            desc: "Game engine development and physics management written in pure C#." 
+            type: "University Project",
+            desc: "Game engine development and physics management written in pure C#."
         },
         links: [{ text: "View Code", url: "https://github.com/xX-Proplayer-Xx/Labyrinthe.git", icon: "fa-github" }]
     }
@@ -285,12 +306,12 @@ const translations = {
         nav_projects_btn: "Voir mes projets",
         nav_cv_download: "Télécharger CV", // AJOUT
         
-        hero_badge: "✨ Disponible Avril - Juin 2026",
+        hero_badge: "🔍 Alternance BI disponible - Sept. 2026",
         "profil-p": "Étudiant en BUT Informatique (Parcours Data). Je structure la donnée et conçois des architectures BI robustes.",
         "profil-btn-cv": "Télécharger mon CV",
-        
+
         "titre_profil": "Profil",
-        "bio_profil": "Étudiant en deuxième année de BUT Informatique à l'Université d'Annecy, spécialisé dans l'administration, la gestion et l'exploitation des données (Parcours C). Je cherche à appliquer mes compétences en développement logiciel et manipulation de données lors d'un stage d'avril à juin 2026, tout en contribuant à des projets innovants.",
+        "bio_profil": "Étudiant en 2ème année de BUT Informatique (Parcours AGED) à l'IUT d'Annecy, spécialisé dans l'administration, la gestion et l'exploitation des données. Je recherche une alternance en Business Intelligence à partir de septembre 2026, avec pour objectif d'accompagner les entreprises dans la modélisation de leurs données et la création de tableaux de bord interactifs.",
 
         "competences-titre": "Compétences Techniques", 
         "comp-soft": "Savoir-être",
@@ -308,14 +329,23 @@ const translations = {
         "date_oct_jan": "Oct 2025 - Jan 2026", // AJOUT
         "date_june_25": "Juin 2025",
         "date_ete_24": "Été 2024",
-        
+        "date_avr_juin_26": "Avr. 2026 - Juin 2026 (en cours)",
+        "date_mars_avr_26": "Mars 2026 - Avr. 2026",
+
+        "job_lbdp": "Stagiaire Data Analyst & Business Intelligence",
+        "lieu_lbdp": "La Boutique du Pro (LBDP) - Méry, France",
+        "desc_lbdp": "Extraction, nettoyage et modélisation de données croisées provenant d'un ERP (Odoo) et d'une plateforme e-commerce (WooCommerce). Création de tableaux de bord interactifs Power BI pour le suivi des ventes, des stocks et des indicateurs de performance (KPIs).",
+
+        "job_open_food": "Projet BDD & Dashboards Open Food Facts",
+        "desc_open_food": "Création et optimisation d'une base de données relationnelle (OLTP) à partir de données brutes de l'Open Food Facts. Simulation de ventes massives et conception d'un modèle en étoile. Workflows Knime pour l'exploration des données et rapports analytiques en anglais.",
+
         "job_web_app": "Application Web & Gestion BDD",
         "desc_web_app": "Développement d'une application web avec Laravel en équipe de 5. Conception et modélisation de bases de données (MCD/MPD) et diagrammes BPMN. Création de tableaux de bord Power BI pour le suivi des indicateurs clés.",
-        
+
         "job_order_app": "Application Gestion de Commandes",
         "desc_order_app": "Développement d'une application de gestion de commandes en C# (WPF/XAML). Conception et implémentation d'une interface utilisateur pour la prise de commandes et la gestion des stocks.",
-        
-        "job_leclerc": "Employé Commercial", 
+
+        "job_leclerc": "Employé Commercial",
         "desc_leclerc": "Supermarché - 250 employés. Mise en rayon et gestion des stocks. Merchandising et assistance client.",
         
         "titre_but": "BUT Informatique", 
@@ -330,8 +360,8 @@ const translations = {
         "lieu_leclerc": "Leclerc - Seynod, France",
         
         "projets-titre": "Projets & SAÉ", 
-        "contact-titre": "Contactez-moi", 
-        "contact-p": "Disponible pour échanger sur des opportunités de stage.", 
+        "contact-titre": "Contactez-moi",
+        "contact-p": "Disponible pour échanger sur des opportunités d'alternance en Business Intelligence.",
         "form-send": "Envoyer",
         "form-name": "Nom",
         "form-email": "Email", // AJOUT
@@ -388,12 +418,12 @@ const translations = {
         nav_projects_btn: "View my projects",
         nav_cv_download: "Download CV",
         
-        hero_badge: "✨ Available April - June 2026",
+        hero_badge: "🔍 BI Apprenticeship available - Sept. 2026",
         "profil-p": "Second-year CS Student (Data Track). I design data architectures and build robust BI solutions.",
         "profil-btn-cv": "Download CV",
-        
+
         "titre_profil": "Profile",
-        "bio_profil": "Second-year Computer Science student pursuing a Bachelor's Degree of Technology at the University of Annecy, specializing in data administration, management, and exploitation (Track C). I am seeking to apply my skills in software development and data manipulation during an internship from April to June 2026, while contributing to innovative projects.",
+        "bio_profil": "Second-year Computer Science student (Data Track) at IUT d'Annecy, specializing in data administration, management, and exploitation. I am seeking a Business Intelligence work-study contract (apprenticeship) from September 2026, aiming to help companies model their data and build interactive dashboards.",
 
         "competences-titre": "Technical Skills", 
         "comp-soft": "Soft Skills",
@@ -410,14 +440,23 @@ const translations = {
         "date_oct_jan": "Oct 2025 - Jan 2026",
         "date_june_25": "June 2025",
         "date_ete_24": "Summer 2024",
-        
+        "date_avr_juin_26": "Apr. 2026 - Jun. 2026 (ongoing)",
+        "date_mars_avr_26": "Mar. 2026 - Apr. 2026",
+
+        "job_lbdp": "Data Analyst & Business Intelligence Intern",
+        "lieu_lbdp": "La Boutique du Pro (LBDP) - Méry, France",
+        "desc_lbdp": "Extraction, cleaning and modeling of cross-data from an ERP (Odoo) and an e-commerce platform (WooCommerce). Built interactive Power BI dashboards to track sales, inventory, and key performance indicators (KPIs).",
+
+        "job_open_food": "Open Food Facts - DB & Dashboards Project",
+        "desc_open_food": "Built and optimized a relational database (OLTP) from raw Open Food Facts data. Simulated large-scale sales data and designed a star schema for analysis. Created Knime workflows for data exploration and analytical reports in English.",
+
         "job_web_app": "Web Application & Database Management",
         "desc_web_app": "Developed a web application using Laravel in a team of 5. Designed and modeled databases (ERD/Physical Data Models) and BPMN diagrams. Created Power BI dashboards to monitor key performance indicators.",
-        
+
         "job_order_app": "Order Management Application",
         "desc_order_app": "Developed an order management application in C# (WPF/XAML). Designed and implemented a user interface for order taking and stock management.",
-        
-        "job_leclerc": "Retail Associate", 
+
+        "job_leclerc": "Retail Associate",
         "desc_leclerc": "Supermarket - 250 employees. Restocked shelves and managed inventory. Merchandised products and assisted customers.",
         
         "titre_but": "CS Bachelor (BUT Informatique)", 
@@ -432,8 +471,8 @@ const translations = {
         "lieu_leclerc": "Leclerc - Seynod, France",
         
         "projets-titre": "Projects & SAÉ", 
-        "contact-titre": "Contact Me", 
-        "contact-p": "Available to discuss internship opportunities.", 
+        "contact-titre": "Contact Me",
+        "contact-p": "Available to discuss Business Intelligence apprenticeship opportunities.",
         "form-send": "Send",
         "form-name": "Name",
         "form-email": "Email",
