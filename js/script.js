@@ -25,12 +25,12 @@ const projectsData = [
             },
             diagrams: [
                 { 
-                    image: "assets/diagrams/mpd.png", 
+                    image: "assets/leboncoin/mpd.png", 
                     title: "MPD (Modèle Physique)", 
                     desc: "Le MPD définit la structure physique de la base de données avec 30+ tables, clés primaires/étrangères et contraintes d'intégrité." 
                 },
                 { 
-                    image: "assets/diagrams/bpmn.png", 
+                    image: "assets/leboncoin/bpmn.png", 
                     title: "Diagramme BPMN", 
                     desc: "Modélisation du processus de gestion des incidents et remboursements entre locataires, propriétaires et services." 
                 }
@@ -53,12 +53,12 @@ const projectsData = [
             },
             diagrams: [
                 { 
-                    image: "assets/diagrams/mpd.png", 
+                    image: "assets/leboncoin/mpd.png", 
                     title: "PDM (Physical Data Model)", 
                     desc: "The PDM defines the physical database structure with 30+ tables, primary/foreign keys and integrity constraints." 
                 },
                 { 
-                    image: "assets/diagrams/bpmn.png", 
+                    image: "assets/leboncoin/bpmn.png", 
                     title: "BPMN Diagram", 
                     desc: "Modeling of the incident and refund management process between tenants, owners and services." 
                 }
@@ -70,7 +70,7 @@ const projectsData = [
         id: 2,
         title: "SAE Leboncoin Vacation Rental - Business Intelligence",
         date: "Oct 2025 - Jan 2026",
-        image: "assets/diagrams/powerbi-1.png",
+        image: "assets/leboncoin/powerbi-1.png",
         techs: ["Power BI", "DAX", "PostgreSQL", "Star Schema"],
         category: ["BI", "Analysis"],
         actionBtn: { text: "View Dashboard", icon: "fa-chart-line" },
@@ -92,17 +92,17 @@ const projectsData = [
             },
             diagrams: [
                 { 
-                    image: "assets/diagrams/star-schema.png", 
+                    image: "assets/leboncoin/star-schema.png", 
                     title: "Schéma en Étoile", 
                     desc: "Architecture Data Warehouse avec table de faits (Reservations) et dimensions (Client, Hébergement, Temps) pour optimiser les requêtes analytiques." 
                 },
                 { 
-                    image: "assets/diagrams/powerbi-1.png", 
+                    image: "assets/leboncoin/powerbi-1.png", 
                     title: "Dashboard CA par Hébergement", 
                     desc: "Vue d'ensemble du chiffre d'affaires (5,11K€) avec répartition par type d'hébergement, évolution mensuelle et analyse par propriétaire." 
                 },
                 { 
-                    image: "assets/diagrams/powerbi-2.png", 
+                    image: "assets/leboncoin/powerbi-2.png", 
                     title: "Dashboard Géographique", 
                     desc: "Analyse spatiale du CA par région de résidence des clients avec carte interactive et détail par ville." 
                 }
@@ -125,17 +125,17 @@ const projectsData = [
             },
             diagrams: [
                 { 
-                    image: "assets/diagrams/star-schema.png", 
+                    image: "assets/leboncoin/star-schema.png", 
                     title: "Star Schema", 
                     desc: "Data Warehouse architecture with fact table (Reservations) and dimensions (Client, Accommodation, Time) to optimize analytical queries." 
                 },
                 { 
-                    image: "assets/diagrams/powerbi-1.png", 
+                    image: "assets/leboncoin/powerbi-1.png", 
                     title: "Revenue by Accommodation Dashboard", 
                     desc: "Revenue overview (5.11K€) with breakdown by accommodation type, monthly evolution and analysis by owner." 
                 },
                 { 
-                    image: "assets/diagrams/powerbi-2.png", 
+                    image: "assets/leboncoin/powerbi-2.png", 
                     title: "Geographic Dashboard", 
                     desc: "Spatial analysis of revenue by client residence region with interactive map and city-level detail." 
                 }
@@ -257,20 +257,96 @@ const projectsData = [
         id: 5,
         title: "Open Food Facts - DB & Dashboards",
         date: "Mar 2026 - Apr 2026",
-        image: "assets/diagrams/powerbi-1.png",
-        techs: ["PostgreSQL", "Power BI", "Knime", "Star Schema"],
+        image: "assets/open-food-facts/ventespage1.jpg",
+        techs: ["PostgreSQL", "Power BI", "Knime", "Star Schema", "Merise"],
         category: ["BI", "Analysis"],
-        actionBtn: null,
-        hasDetailedModal: false,
+        actionBtn: { text: "View Dashboards", icon: "fa-chart-line" },
+        hasDetailedModal: true,
         fr: {
             title: "Open Food Facts - BDD & Tableaux de Bord",
             type: "Projet Universitaire (SAÉ)",
-            desc: "Création d'une base de données relationnelle (OLTP) à partir des données brutes Open Food Facts. Modèle en étoile pour l'analyse BI, workflows Knime pour l'exploration des données et rapports analytiques en anglais."
+            desc: "Conception d'une base OLTP à partir de données Open Food Facts, modélisation en étoile pour l'analyse BI, workflows ETL Knime et tableaux de bord Power BI (ventes & composition produits).",
+            modalTitle: "Open Food Facts - Modélisation & Analyse BI",
+            modalDesc: "Ce projet couvre l'ensemble de la chaîne data : conception d'une base relationnelle OLTP à partir de données brutes, transformation vers un modèle OLAP en étoile, automatisation via des workflows Knime, et visualisation dans Power BI avec deux rapports analytiques distincts (ventes simulées et composition nutritionnelle).",
+            techSection: {
+                title: "Stack Data & Technologies",
+                items: [
+                    { label: "Base de données", value: "PostgreSQL (OLTP)" },
+                    { label: "Modélisation", value: "Merise — MLD OLTP & OLAP" },
+                    { label: "ETL", value: "Knime (workflows d'insertion)" },
+                    { label: "Visualisation", value: "Microsoft Power BI" }
+                ]
+            },
+            diagrams: [
+                {
+                    image: "assets/open-food-facts/ventespage1.jpg",
+                    title: "Dashboard Ventes — Saisonnalité",
+                    desc: "Vue macroéconomique des ventes simulées : 1,24 Md€ de CA, évolution N-1, saisonnalité mensuelle par enseigne (Aldi, Lidl, Carrefour…)."
+                },
+                {
+                    image: "assets/open-food-facts/compositionpage1.jpg",
+                    title: "Dashboard Composition — Vue Marché",
+                    desc: "605 674 produits analysés par catégorie, Nutri-Score (A à E) et classification NOVA. Treemap interactif filtrable par pays et catégorie."
+                },
+                {
+                    image: "assets/open-food-facts/mldBaseOLTP.jpg",
+                    title: "MLD Base OLTP",
+                    desc: "Modèle relationnel opérationnel (OLTP) conçu avec Merise. Gère les produits, ingrédients, distributeurs et historique de ventes."
+                },
+                {
+                    image: "assets/open-food-facts/mldBaseOLAP.jpg",
+                    title: "Modèle en Étoile (OLAP)",
+                    desc: "Data Warehouse avec tables de faits (ventes, composition) et dimensions (temps, distributeur, produit, ingrédient) pour l'analyse Power BI."
+                },
+                {
+                    image: "assets/open-food-facts/ETLKnime_InsertionDonnée.jpg",
+                    title: "Workflow ETL Knime",
+                    desc: "Pipeline d'extraction et d'insertion des données Open Food Facts vers PostgreSQL. Nettoyage, transformation et chargement automatisé."
+                }
+            ]
         },
         en: {
             title: "Open Food Facts - DB & Dashboards",
             type: "University Project (SAÉ)",
-            desc: "Built a relational database (OLTP) from raw Open Food Facts data. Designed a star schema for BI analysis, Knime workflows for data exploration and analytical reports in English."
+            desc: "Designed an OLTP database from Open Food Facts data, built a star schema for BI analysis, ETL workflows with Knime and Power BI dashboards (sales & product composition).",
+            modalTitle: "Open Food Facts - Modeling & BI Analysis",
+            modalDesc: "This project covers the full data pipeline: designing a relational OLTP database from raw data, transforming it into a star-schema OLAP model, automating ETL with Knime workflows, and building two Power BI reports (simulated sales analytics and nutritional composition analysis).",
+            techSection: {
+                title: "Data Stack & Technologies",
+                items: [
+                    { label: "Database", value: "PostgreSQL (OLTP)" },
+                    { label: "Modeling", value: "Merise — OLTP & OLAP MLD" },
+                    { label: "ETL", value: "Knime (insertion workflows)" },
+                    { label: "Visualization", value: "Microsoft Power BI" }
+                ]
+            },
+            diagrams: [
+                {
+                    image: "assets/open-food-facts/ventespage1.jpg",
+                    title: "Sales Dashboard — Seasonality",
+                    desc: "Macroeconomic overview of simulated sales: 1.24B€ revenue, year-over-year growth (+49.9%), monthly seasonality by retailer (Aldi, Lidl, Carrefour…)."
+                },
+                {
+                    image: "assets/open-food-facts/compositionpage1.jpg",
+                    title: "Composition Dashboard — Market Overview",
+                    desc: "605,674 products analyzed by category, Nutri-Score (A to E) and NOVA classification. Interactive treemap filterable by country and category."
+                },
+                {
+                    image: "assets/open-food-facts/mldBaseOLTP.jpg",
+                    title: "OLTP Logical Data Model",
+                    desc: "Operational relational model (OLTP) designed with Merise. Covers products, ingredients, distributors and sales history."
+                },
+                {
+                    image: "assets/open-food-facts/mldBaseOLAP.jpg",
+                    title: "Star Schema (OLAP)",
+                    desc: "Data Warehouse with fact tables (sales, composition) and dimensions (time, distributor, product, ingredient) for Power BI analysis."
+                },
+                {
+                    image: "assets/open-food-facts/ETLKnime_InsertionDonnée.jpg",
+                    title: "Knime ETL Workflow",
+                    desc: "Data extraction and insertion pipeline from Open Food Facts into PostgreSQL. Automated cleaning, transformation and loading."
+                }
+            ]
         },
         links: []
     },
@@ -531,6 +607,9 @@ document.addEventListener('DOMContentLoaded', () => {
     initTyped('en'); // Démarrage en anglais par défaut
 
     renderProjects('all');
+
+    initScrollReveal();
+    initProgressBars();
     
     document.querySelectorAll('.tech-filters button').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -588,6 +667,7 @@ function renderProjects(filter) {
                 if (currentLang === 'fr') {
                     if (p.actionBtn.text === 'View Modeling') btnText = 'Voir Modélisation';
                     else if (p.actionBtn.text === 'View Dashboard') btnText = 'Voir Dashboard';
+                    else if (p.actionBtn.text === 'View Dashboards') btnText = 'Voir Dashboards';
                     else if (p.actionBtn.text === 'View App') btnText = 'Voir Application';
                 }
                 actionBtnHtml = `
@@ -774,6 +854,54 @@ function updateLanguage(lang) {
     if (activeFilter) {
         renderProjects(activeFilter.dataset.filter);
     }
+}
+
+function initScrollReveal() {
+    const targets = document.querySelectorAll(
+        '.glass-card, .section-header h2, .tech-filters, .timeline-card'
+    );
+
+    targets.forEach(el => {
+        el.classList.add('reveal');
+    });
+
+    // Stagger sibling cards within the same grid/parent
+    document.querySelectorAll(
+        '.education-grid, .projects-grid, .grid-3, .grid-4, .split-view, .skills-layout-advanced'
+    ).forEach(grid => {
+        grid.querySelectorAll('.glass-card, .timeline-card').forEach((card, i) => {
+            card.style.transitionDelay = `${i * 0.08}s`;
+        });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+}
+
+function initProgressBars() {
+    const skillsSection = document.querySelector('#skills');
+    if (!skillsSection) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.querySelectorAll('.progress-fill').forEach((bar, i) => {
+                    setTimeout(() => bar.classList.add('animated'), i * 100);
+                });
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+
+    observer.observe(skillsSection);
 }
 
 function toggleMenu() {
