@@ -604,9 +604,7 @@ let typedInstance;
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    initTyped('en'); // Démarrage en anglais par défaut
-
-    renderProjects('all');
+    updateLanguage('en'); // Applique toutes les traductions + Typed.js + projets au chargement
 
     initScrollReveal();
     initProgressBars();
