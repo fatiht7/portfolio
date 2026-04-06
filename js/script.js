@@ -1,5 +1,102 @@
 const projectsData = [
     {
+        id: 5,
+        title: "Open Food Facts - DB & Dashboards",
+        date: "Mar 2026 - Apr 2026",
+        image: "assets/open-food-facts/ventespage1.jpg",
+        techs: ["PostgreSQL", "Power BI", "Knime", "Star Schema", "Merise"],
+        category: ["BI", "Analysis"],
+        actionBtn: { text: "View Dashboards", icon: "fa-chart-line" },
+        hasDetailedModal: true,
+        fr: {
+            title: "Open Food Facts - BDD & Tableaux de Bord",
+            type: "Projet Universitaire (SAÉ)",
+            desc: "Conception d'une base OLTP à partir de données Open Food Facts, modélisation en étoile pour l'analyse BI, workflows ETL Knime et tableaux de bord Power BI (ventes & composition produits).",
+            modalTitle: "Open Food Facts - Modélisation & Analyse BI",
+            modalDesc: "Ce projet couvre l'ensemble de la chaîne data : conception d'une base relationnelle OLTP à partir de données brutes, transformation vers un modèle OLAP en étoile, automatisation via des workflows Knime, et visualisation dans Power BI avec deux rapports analytiques distincts (ventes simulées et composition nutritionnelle).",
+            techSection: {
+                title: "Stack Data & Technologies",
+                items: [
+                    { label: "Base de données", value: "PostgreSQL (OLTP)" },
+                    { label: "Modélisation", value: "Merise — MLD OLTP & OLAP" },
+                    { label: "ETL", value: "Knime (workflows d'insertion)" },
+                    { label: "Visualisation", value: "Microsoft Power BI" }
+                ]
+            },
+            diagrams: [
+                {
+                    image: "assets/open-food-facts/ventespage1.jpg",
+                    title: "Dashboard Ventes — Saisonnalité",
+                    desc: "Vue macroéconomique des ventes simulées : 1,24 Md€ de CA, évolution N-1, saisonnalité mensuelle par enseigne (Aldi, Lidl, Carrefour…)."
+                },
+                {
+                    image: "assets/open-food-facts/compositionpage1.jpg",
+                    title: "Dashboard Composition — Vue Marché",
+                    desc: "605 674 produits analysés par catégorie, Nutri-Score (A à E) et classification NOVA. Treemap interactif filtrable par pays et catégorie."
+                },
+                {
+                    image: "assets/open-food-facts/mldBaseOLTP.jpg",
+                    title: "MLD Base OLTP",
+                    desc: "Modèle relationnel opérationnel (OLTP) conçu avec Merise. Gère les produits, ingrédients, distributeurs et historique de ventes."
+                },
+                {
+                    image: "assets/open-food-facts/mldBaseOLAP.jpg",
+                    title: "Modèle en Étoile (OLAP)",
+                    desc: "Data Warehouse avec tables de faits (ventes, composition) et dimensions (temps, distributeur, produit, ingrédient) pour l'analyse Power BI."
+                },
+                {
+                    image: "assets/open-food-facts/ETLKnime_InsertionDonnée.jpg",
+                    title: "Workflow ETL Knime",
+                    desc: "Pipeline d'extraction et d'insertion des données Open Food Facts vers PostgreSQL. Nettoyage, transformation et chargement automatisé."
+                }
+            ]
+        },
+        en: {
+            title: "Open Food Facts - DB & Dashboards",
+            type: "University Project (SAÉ)",
+            desc: "Designed an OLTP database from Open Food Facts data, built a star schema for BI analysis, ETL workflows with Knime and Power BI dashboards (sales & product composition).",
+            modalTitle: "Open Food Facts - Modeling & BI Analysis",
+            modalDesc: "This project covers the full data pipeline: designing a relational OLTP database from raw data, transforming it into a star-schema OLAP model, automating ETL with Knime workflows, and building two Power BI reports (simulated sales analytics and nutritional composition analysis).",
+            techSection: {
+                title: "Data Stack & Technologies",
+                items: [
+                    { label: "Database", value: "PostgreSQL (OLTP)" },
+                    { label: "Modeling", value: "Merise — OLTP & OLAP MLD" },
+                    { label: "ETL", value: "Knime (insertion workflows)" },
+                    { label: "Visualization", value: "Microsoft Power BI" }
+                ]
+            },
+            diagrams: [
+                {
+                    image: "assets/open-food-facts/ventespage1.jpg",
+                    title: "Sales Dashboard — Seasonality",
+                    desc: "Macroeconomic overview of simulated sales: 1.24B€ revenue, year-over-year growth (+49.9%), monthly seasonality by retailer (Aldi, Lidl, Carrefour…)."
+                },
+                {
+                    image: "assets/open-food-facts/compositionpage1.jpg",
+                    title: "Composition Dashboard — Market Overview",
+                    desc: "605,674 products analyzed by category, Nutri-Score (A to E) and NOVA classification. Interactive treemap filterable by country and category."
+                },
+                {
+                    image: "assets/open-food-facts/mldBaseOLTP.jpg",
+                    title: "OLTP Logical Data Model",
+                    desc: "Operational relational model (OLTP) designed with Merise. Covers products, ingredients, distributors and sales history."
+                },
+                {
+                    image: "assets/open-food-facts/mldBaseOLAP.jpg",
+                    title: "Star Schema (OLAP)",
+                    desc: "Data Warehouse with fact tables (sales, composition) and dimensions (time, distributor, product, ingredient) for Power BI analysis."
+                },
+                {
+                    image: "assets/open-food-facts/ETLKnime_InsertionDonnée.jpg",
+                    title: "Knime ETL Workflow",
+                    desc: "Data extraction and insertion pipeline from Open Food Facts into PostgreSQL. Automated cleaning, transformation and loading."
+                }
+            ]
+        },
+        links: []
+    },
+    {
         id: 1,
         title: "SAE Leboncoin Vacation Rental - Web App",
         date: "Oct 2025 - Jan 2026",
@@ -252,103 +349,6 @@ const projectsData = [
             ]
         },
         links: [{ text: "View Code", url: "https://github.com/yanis381/SAE201.git", icon: "fa-github" }]
-    },
-    {
-        id: 5,
-        title: "Open Food Facts - DB & Dashboards",
-        date: "Mar 2026 - Apr 2026",
-        image: "assets/open-food-facts/ventespage1.jpg",
-        techs: ["PostgreSQL", "Power BI", "Knime", "Star Schema", "Merise"],
-        category: ["BI", "Analysis"],
-        actionBtn: { text: "View Dashboards", icon: "fa-chart-line" },
-        hasDetailedModal: true,
-        fr: {
-            title: "Open Food Facts - BDD & Tableaux de Bord",
-            type: "Projet Universitaire (SAÉ)",
-            desc: "Conception d'une base OLTP à partir de données Open Food Facts, modélisation en étoile pour l'analyse BI, workflows ETL Knime et tableaux de bord Power BI (ventes & composition produits).",
-            modalTitle: "Open Food Facts - Modélisation & Analyse BI",
-            modalDesc: "Ce projet couvre l'ensemble de la chaîne data : conception d'une base relationnelle OLTP à partir de données brutes, transformation vers un modèle OLAP en étoile, automatisation via des workflows Knime, et visualisation dans Power BI avec deux rapports analytiques distincts (ventes simulées et composition nutritionnelle).",
-            techSection: {
-                title: "Stack Data & Technologies",
-                items: [
-                    { label: "Base de données", value: "PostgreSQL (OLTP)" },
-                    { label: "Modélisation", value: "Merise — MLD OLTP & OLAP" },
-                    { label: "ETL", value: "Knime (workflows d'insertion)" },
-                    { label: "Visualisation", value: "Microsoft Power BI" }
-                ]
-            },
-            diagrams: [
-                {
-                    image: "assets/open-food-facts/ventespage1.jpg",
-                    title: "Dashboard Ventes — Saisonnalité",
-                    desc: "Vue macroéconomique des ventes simulées : 1,24 Md€ de CA, évolution N-1, saisonnalité mensuelle par enseigne (Aldi, Lidl, Carrefour…)."
-                },
-                {
-                    image: "assets/open-food-facts/compositionpage1.jpg",
-                    title: "Dashboard Composition — Vue Marché",
-                    desc: "605 674 produits analysés par catégorie, Nutri-Score (A à E) et classification NOVA. Treemap interactif filtrable par pays et catégorie."
-                },
-                {
-                    image: "assets/open-food-facts/mldBaseOLTP.jpg",
-                    title: "MLD Base OLTP",
-                    desc: "Modèle relationnel opérationnel (OLTP) conçu avec Merise. Gère les produits, ingrédients, distributeurs et historique de ventes."
-                },
-                {
-                    image: "assets/open-food-facts/mldBaseOLAP.jpg",
-                    title: "Modèle en Étoile (OLAP)",
-                    desc: "Data Warehouse avec tables de faits (ventes, composition) et dimensions (temps, distributeur, produit, ingrédient) pour l'analyse Power BI."
-                },
-                {
-                    image: "assets/open-food-facts/ETLKnime_InsertionDonnée.jpg",
-                    title: "Workflow ETL Knime",
-                    desc: "Pipeline d'extraction et d'insertion des données Open Food Facts vers PostgreSQL. Nettoyage, transformation et chargement automatisé."
-                }
-            ]
-        },
-        en: {
-            title: "Open Food Facts - DB & Dashboards",
-            type: "University Project (SAÉ)",
-            desc: "Designed an OLTP database from Open Food Facts data, built a star schema for BI analysis, ETL workflows with Knime and Power BI dashboards (sales & product composition).",
-            modalTitle: "Open Food Facts - Modeling & BI Analysis",
-            modalDesc: "This project covers the full data pipeline: designing a relational OLTP database from raw data, transforming it into a star-schema OLAP model, automating ETL with Knime workflows, and building two Power BI reports (simulated sales analytics and nutritional composition analysis).",
-            techSection: {
-                title: "Data Stack & Technologies",
-                items: [
-                    { label: "Database", value: "PostgreSQL (OLTP)" },
-                    { label: "Modeling", value: "Merise — OLTP & OLAP MLD" },
-                    { label: "ETL", value: "Knime (insertion workflows)" },
-                    { label: "Visualization", value: "Microsoft Power BI" }
-                ]
-            },
-            diagrams: [
-                {
-                    image: "assets/open-food-facts/ventespage1.jpg",
-                    title: "Sales Dashboard — Seasonality",
-                    desc: "Macroeconomic overview of simulated sales: 1.24B€ revenue, year-over-year growth (+49.9%), monthly seasonality by retailer (Aldi, Lidl, Carrefour…)."
-                },
-                {
-                    image: "assets/open-food-facts/compositionpage1.jpg",
-                    title: "Composition Dashboard — Market Overview",
-                    desc: "605,674 products analyzed by category, Nutri-Score (A to E) and NOVA classification. Interactive treemap filterable by country and category."
-                },
-                {
-                    image: "assets/open-food-facts/mldBaseOLTP.jpg",
-                    title: "OLTP Logical Data Model",
-                    desc: "Operational relational model (OLTP) designed with Merise. Covers products, ingredients, distributors and sales history."
-                },
-                {
-                    image: "assets/open-food-facts/mldBaseOLAP.jpg",
-                    title: "Star Schema (OLAP)",
-                    desc: "Data Warehouse with fact tables (sales, composition) and dimensions (time, distributor, product, ingredient) for Power BI analysis."
-                },
-                {
-                    image: "assets/open-food-facts/ETLKnime_InsertionDonnée.jpg",
-                    title: "Knime ETL Workflow",
-                    desc: "Data extraction and insertion pipeline from Open Food Facts into PostgreSQL. Automated cleaning, transformation and loading."
-                }
-            ]
-        },
-        links: []
     },
     {
         id: 7,
