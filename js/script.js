@@ -3,6 +3,7 @@ const projectsData = [
         id: 5,
         title: "Open Food Facts - DB & Dashboards",
         date: "Mar 2026 - Apr 2026",
+        status: "completed",
         image: "assets/open-food-facts/ventespage1.jpg",
         techs: ["PostgreSQL", "Power BI", "Knime", "Star Schema", "Merise"],
         category: ["BI", "Analysis"],
@@ -100,6 +101,7 @@ const projectsData = [
         id: 1,
         title: "SAE Leboncoin Vacation Rental - Web App",
         date: "Oct 2025 - Jan 2026",
+        status: "completed",
         image: "assets/previews/previewLeboncoin.png",
         techs: ["PHP", "Laravel", "SQL", "Merise", "BPMN"],
         category: ["Web", "Analysis"],
@@ -167,6 +169,7 @@ const projectsData = [
         id: 2,
         title: "SAE Leboncoin Vacation Rental - Business Intelligence",
         date: "Oct 2025 - Jan 2026",
+        status: "completed",
         image: "assets/leboncoin/powerbi-1.png",
         techs: ["Power BI", "DAX", "PostgreSQL", "Star Schema"],
         category: ["BI", "Analysis"],
@@ -244,6 +247,7 @@ const projectsData = [
         id: 3,
         title: "Portfolio",
         date: "Oct 2025 - Present",
+        status: "ongoing",
         image: "assets/previews/previewPortfolio.png",
         techs: ["JavaScript", "HTML", "CSS"],
         category: ["Web"],
@@ -265,6 +269,7 @@ const projectsData = [
         id: 4,
         title: "Sibilia - Order Management System",
         date: "June 2025",
+        status: "completed",
         image: "assets/previews/previewSIBILIA.png", 
         techs: ["C#", ".NET", "WPF", "XAML", "MVVM"],
         category: ["Desktop"],
@@ -354,6 +359,7 @@ const projectsData = [
         id: 7,
         title: "2D Video Game",
         date: "2024",
+        status: "completed",
         image: "assets/previews/previewLabyrinthe.png",
         techs: ["C#", ".NET"],
         category: ["Desktop"],
@@ -465,7 +471,10 @@ const translations = {
         "hobby-fitness": "Fitness",
         "hobby-fitness-desc": "Musculation",
         
-        "footer_rights": "© 2026 Fatih TÜRK. Tous droits réservés.", // AJOUT
+        "footer_rights": "© 2026 Fatih TÜRK. Tous droits réservés.",
+        "footer_tagline": "Conçu & développé avec passion",
+        "status-ongoing": "En cours",
+        "status-completed": "Terminé",
 
         "filter-all": "Tous",
         "filter-web": "Web",
@@ -577,6 +586,9 @@ const translations = {
         "hobby-fitness-desc": "Weight training",
         
         "footer_rights": "© 2026 Fatih TÜRK. All rights reserved.",
+        "footer_tagline": "Designed & built with passion",
+        "status-ongoing": "Ongoing",
+        "status-completed": "Completed",
 
         "filter-all": "All Projects",
         "filter-web": "Web",
@@ -604,10 +616,13 @@ let typedInstance;
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    updateLanguage('en'); // Applique toutes les traductions + Typed.js + projets au chargement
+    updateLanguage('en');
 
     initScrollReveal();
     initProgressBars();
+    initScrollProgress();
+    initCursorGlow();
+    initScrollSpy();
     
     document.querySelectorAll('.tech-filters button').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -681,6 +696,7 @@ function renderProjects(filter) {
                     <div class="project-content">
                         <div class="project-meta">
                             <span class="meta-type">${content.type}</span>
+                            <span class="project-badge ${p.status === 'ongoing' ? 'badge-ongoing' : 'badge-completed'}">${translations[currentLang]['status-' + p.status]}</span>
                         </div>
                         <span class="meta-date">${p.date}</span>
                         
@@ -900,6 +916,60 @@ function initProgressBars() {
     }, { threshold: 0.3 });
 
     observer.observe(skillsSection);
+}
+
+function initScrollProgress() {
+    const scrollProgress = document.getElementById('scroll-progress');
+    const backToTop = document.getElementById('back-to-top');
+
+    window.addEventListener('scroll', () => {
+        const scrollTop = document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const progress = (scrollTop / scrollHeight) * 100;
+        scrollProgress.style.width = progress + '%';
+
+        if (scrollTop > 400) {
+            backToTop.classList.add('visible');
+        } else {
+            backToTop.classList.remove('visible');
+        }
+    });
+
+    backToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
+
+function initCursorGlow() {
+    const glow = document.getElementById('cursor-glow');
+    if (!glow) return;
+
+    document.addEventListener('mousemove', (e) => {
+        glow.style.left = e.clientX + 'px';
+        glow.style.top = e.clientY + 'px';
+        if (!glow.classList.contains('active')) glow.classList.add('active');
+    });
+    document.addEventListener('mouseleave', () => glow.classList.remove('active'));
+}
+
+function initScrollSpy() {
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + entry.target.id) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }, { threshold: 0.2, rootMargin: '-80px 0px -50% 0px' });
+
+    sections.forEach(section => observer.observe(section));
 }
 
 function toggleMenu() {
