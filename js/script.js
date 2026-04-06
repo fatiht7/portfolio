@@ -710,6 +710,8 @@ function renderProjects(filter) {
                 </div>
             `;
             container.insertAdjacentHTML('beforeend', html);
+            const card = container.lastElementChild;
+            card.style.animationDelay = `${container.children.length * 0.08}s`;
         }
     });
 }
@@ -736,7 +738,7 @@ function openModal(id) {
         </a>
     `).join('');
     
-    document.querySelector('#project-modal').style.display = 'flex';
+    document.querySelector('#project-modal').classList.add('active');
 }
 
 function openDetailedModal(id) {
@@ -806,36 +808,44 @@ function openDetailedModal(id) {
         linksContainer.style.display = 'none';
     }
     
-    modal.style.display = 'flex';
+    modal.classList.add('active');
 }
 
 function openImageModal(imageSrc) {
     const imageModal = document.querySelector('#image-modal');
     imageModal.querySelector('#image-modal-img').src = imageSrc;
-    imageModal.style.display = 'flex';
+    imageModal.classList.add('active');
 }
 
 function closeModal() {
-    document.querySelector('#project-modal').style.display = 'none';
+    document.querySelector('#project-modal').classList.remove('active');
 }
 
 function closeDetailedModal() {
-    document.querySelector('#detailed-modal').style.display = 'none';
+    document.querySelector('#detailed-modal').classList.remove('active');
 }
 
 function closeImageModal() {
-    document.querySelector('#image-modal').style.display = 'none';
+    document.querySelector('#image-modal').classList.remove('active');
 }
 
 window.onclick = function(event) {
     const modal = document.querySelector('#project-modal');
     const detailedModal = document.querySelector('#detailed-modal');
     const imageModal = document.querySelector('#image-modal');
-    
+
     if (event.target == modal) closeModal();
     if (event.target == detailedModal) closeDetailedModal();
     if (event.target == imageModal) closeImageModal();
 }
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        if (document.querySelector('#image-modal.active')) closeImageModal();
+        else if (document.querySelector('#detailed-modal.active')) closeDetailedModal();
+        else if (document.querySelector('#project-modal.active')) closeModal();
+    }
+});
 
 function updateLanguage(lang) {
     currentLang = lang;
@@ -921,6 +931,7 @@ function initProgressBars() {
 function initScrollProgress() {
     const scrollProgress = document.getElementById('scroll-progress');
     const backToTop = document.getElementById('back-to-top');
+    const nav = document.querySelector('.glass-nav');
 
     window.addEventListener('scroll', () => {
         const scrollTop = document.documentElement.scrollTop;
@@ -932,6 +943,12 @@ function initScrollProgress() {
             backToTop.classList.add('visible');
         } else {
             backToTop.classList.remove('visible');
+        }
+
+        if (scrollTop > 50) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
         }
     });
 

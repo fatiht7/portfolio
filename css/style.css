@@ -75,6 +75,11 @@ body {
     background: rgba(10,10,15,0.8);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--glass-border);
+    transition: padding 0.3s ease, background 0.3s ease;
+}
+.glass-nav.scrolled {
+    padding: 0.6rem 5%;
+    background: rgba(10,10,15,0.95);
 }
 .logo { font-size: 1.5rem; font-weight: 700; color: var(--text); text-decoration: none; }
 .logo .dot { color: var(--accent); }
@@ -152,6 +157,7 @@ body {
 .education-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
 .timeline-card { padding: 2rem; position: relative; }
 .timeline-card.highlight { border-left: 3px solid var(--accent); }
+.timeline-card:hover { border-color: rgba(108,92,231,0.4); box-shadow: 0 8px 32px rgba(108,92,231,0.1); }
 .timeline-card .date { display: inline-block; padding: 0.25rem 0.75rem; background: var(--accent); color: white; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-bottom: 1rem; }
 .timeline-card h4 { font-size: 1.2rem; margin-bottom: 0.5rem; }
 .timeline-card h5 { color: var(--text-mute); font-weight: 400; margin-bottom: 1rem; }
@@ -172,7 +178,8 @@ body {
 .tech-filters button.active { background: var(--gradient); color: white; border-color: transparent; }
 
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 2rem; }
-.project-card { cursor: pointer; overflow: hidden; display: flex; flex-direction: column; }
+.project-card { cursor: pointer; overflow: hidden; display: flex; flex-direction: column; animation: cardFadeIn 0.4s ease both; }
+@keyframes cardFadeIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
 .project-card:hover {
     transform: translateY(-5px);
     border-color: rgba(108,92,231,0.4);
@@ -264,17 +271,25 @@ footer { text-align: center; padding: 3rem 2rem 2rem; color: var(--text-mute); b
 .footer-socials { display: flex; gap: 1rem; margin-bottom: 0.5rem; }
 
 .modal-overlay {
-    display: none;
     position: fixed;
     inset: 0;
     background: rgba(0,0,0,0.8);
     backdrop-filter: blur(5px);
     z-index: 2000;
+    display: flex;
     align-items: center;
     justify-content: center;
     padding: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-.modal-card { max-width: 600px; width: 100%; max-height: 90vh; overflow-y: auto; position: relative; }
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+.modal-card { max-width: 600px; width: 100%; max-height: 90vh; overflow-y: auto; position: relative; transform: translateY(20px) scale(0.97); transition: transform 0.3s ease; }
+.modal-overlay.active .modal-card, .modal-overlay.active .detailed-modal-card { transform: translateY(0) scale(1); }
 .modal-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 16px 16px 0 0; }
 .modal-content { padding: 2rem; }
 .modal-content h2 { margin-bottom: 1rem; }
@@ -321,6 +336,8 @@ footer { text-align: center; padding: 3rem 2rem 2rem; color: var(--text-mute); b
     position: relative;
     background: var(--bg);
     border: 1px solid var(--glass-border);
+    transform: translateY(20px) scale(0.97);
+    transition: transform 0.3s ease;
 }
 
 .detailed-modal-content {
