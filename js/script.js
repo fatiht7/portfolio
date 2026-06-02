@@ -386,14 +386,18 @@ const translations = {
         nav_contact: "Contact", 
         nav_projects: "Projets", 
         nav_projects_btn: "Voir mes projets",
-        nav_cv_download: "Télécharger CV", // AJOUT
+        nav_cv_download: "Télécharger CV",
+        nav_cv_fr: "CV français",
+        nav_cv_intl: "CV international",
         
-        hero_badge: "🔍 Alternance BI disponible - Sept. 2026",
-        "profil-p": "Étudiant en BUT Informatique (Parcours Data). Je structure la donnée et conçois des architectures BI robustes.",
+        hero_badge: "🔍 Alternance Data / BI / Bases de données - Sept. 2026",
+        "profil-p": "Étudiant en BUT Informatique AGED. Je transforme la donnée en reporting fiable et en outils d'aide à la décision.",
         "profil-btn-cv": "Télécharger mon CV",
+        "profil-btn-cv-fr": "Télécharger CV français",
+        "profil-btn-cv-intl": "Télécharger CV international",
 
         "titre_profil": "Profil",
-        "bio_profil": "Étudiant en 2ème année de BUT Informatique (Parcours AGED) à l'IUT d'Annecy, spécialisé dans l'administration, la gestion et l'exploitation des données. Je recherche une alternance en Business Intelligence à partir de septembre 2026, avec pour objectif d'accompagner les entreprises dans la modélisation de leurs données et la création de tableaux de bord interactifs.",
+        "bio_profil": "Étudiant en 2ème année de BUT Informatique, parcours AGED (administration, gestion et exploitation des données) à l'IUT d'Annecy. Actuellement en stage Data Analyst / Business Intelligence, je recherche une alternance dès septembre 2026 en data, BI ou bases de données, avec l'objectif de contribuer à l'exploitation de données, au reporting et à l'aide à la décision.",
 
         "competences-titre": "Compétences Techniques", 
         "comp-soft": "Savoir-être",
@@ -406,9 +410,9 @@ const translations = {
         "titre_edu": "Formation", 
         "titre_pro_exp": "Expériences Professionnelles",
         
-        "date_2024_2027": "2024 - 2027", // AJOUT
-        "date_2021_2024": "2021 - 2024", // AJOUT
-        "date_oct_jan": "Oct 2025 - Jan 2026", // AJOUT
+        "date_2024_2027": "2024 - 2027",
+        "date_2021_2024": "2021 - 2024",
+        "date_oct_jan": "Oct 2025 - Jan 2026",
         "date_june_25": "Juin 2025",
         "date_ete_24": "Été 2024",
         "date_avr_juin_26": "Avr. 2026 - Juin 2026 (en cours)",
@@ -416,7 +420,7 @@ const translations = {
 
         "job_lbdp": "Stagiaire Data Analyst & Business Intelligence",
         "lieu_lbdp": "La Boutique du Pro (LBDP) - Méry, France",
-        "desc_lbdp": "Extraction, nettoyage et modélisation de données croisées provenant d'un ERP (Odoo) et d'une plateforme e-commerce (WooCommerce). Création de tableaux de bord interactifs Power BI pour le suivi des ventes, des stocks et des indicateurs de performance (KPIs).",
+        "desc_lbdp": "Extraction et nettoyage de données issues d'une plateforme e-commerce (WooCommerce) et d'un logiciel de gestion comptable (MEG). Création de tableaux de bord interactifs Power BI pour le suivi des ventes, des stocks et des indicateurs de performance (KPIs).",
 
         "job_open_food": "Projet BDD & Dashboards Open Food Facts",
         "desc_open_food": "Création et optimisation d'une base de données relationnelle (OLTP) à partir de données brutes de l'Open Food Facts. Simulation de ventes massives et conception d'un modèle en étoile. Workflows Knime pour l'exploration des données et rapports analytiques en anglais.",
@@ -446,7 +450,7 @@ const translations = {
         "contact-p": "Disponible pour échanger sur des opportunités d'alternance en Business Intelligence.",
         "form-send": "Envoyer",
         "form-name": "Nom",
-        "form-email": "Email", // AJOUT
+        "form-email": "Email",
         "form-subject": "Objet",
         "form-message": "Message",
         
@@ -456,8 +460,8 @@ const translations = {
         "lang-tr": "Turc", 
         "lang-en": "Anglais", 
         "lang-es": "Espagnol",
-        "lang_b1": "B1 - Intermédiaire", // AJOUT
-        "lang_a2": "A2 - Élémentaire", // AJOUT
+        "lang_b1": "B1 - Intermédiaire",
+        "lang_a2": "A2 - Élémentaire",
         
         "ref-titre": "Références", 
         "role-ref1": "Enseignante d'Anglais, Coordinatrice Internationale", 
@@ -466,8 +470,8 @@ const translations = {
         
         "interets-titre": "Centres d'intérêt", 
         "hobby-games": "Jeux Vidéo", 
-        "hobby_games_desc": "FPS, Jeux de construction", // AJOUT
-        "hobby_manga_desc": "One Piece, Chainsaw Man", // AJOUT
+        "hobby_games_desc": "FPS, Jeux de construction",
+        "hobby_manga_desc": "One Piece, Chainsaw Man",
         "hobby-fitness": "Fitness",
         "hobby-fitness-desc": "Musculation",
         
@@ -486,10 +490,10 @@ const translations = {
         "previews-title": "Aperçu Fonctionnel",
         "features-title": "Fonctionnalités Clés",
         
-        // Pour Typed.js
         typed_strings: [
             "Analyste de Données.", 
             "Développeur BI.", 
+            "Bases de Données.",
             "Expert SQL.", 
             "Développeur Backend.", 
             "Étudiant."
@@ -502,13 +506,17 @@ const translations = {
         nav_projects: "Projects", 
         nav_projects_btn: "View my projects",
         nav_cv_download: "Download CV",
+        nav_cv_fr: "French CV",
+        nav_cv_intl: "International CV",
         
-        hero_badge: "🔍 BI Apprenticeship available - Sept. 2026",
-        "profil-p": "Second-year CS Student (Data Track). I design data architectures and build robust BI solutions.",
+        hero_badge: "🔍 Data / BI / Databases apprenticeship - Sept. 2026",
+        "profil-p": "Second-year BUT Informatique AGED student. I turn data into reliable reporting and decision support tools.",
         "profil-btn-cv": "Download CV",
+        "profil-btn-cv-fr": "Download French CV",
+        "profil-btn-cv-intl": "Download International CV",
 
         "titre_profil": "Profile",
-        "bio_profil": "Second-year Computer Science student (Data Track) at IUT d'Annecy, specializing in data administration, management, and exploitation. I am seeking a Business Intelligence work-study contract (apprenticeship) from September 2026, aiming to help companies model their data and build interactive dashboards.",
+        "bio_profil": "Second-year BUT Informatique student in the AGED track (data administration, management and exploitation) at IUT d'Annecy. Currently a Data Analyst / Business Intelligence intern, I am seeking a work-study contract from September 2026 in data, BI or databases, with the goal of contributing to data exploitation, reporting and decision support.",
 
         "competences-titre": "Technical Skills", 
         "comp-soft": "Soft Skills",
@@ -530,7 +538,7 @@ const translations = {
 
         "job_lbdp": "Data Analyst & Business Intelligence Intern",
         "lieu_lbdp": "La Boutique du Pro (LBDP) - Méry, France",
-        "desc_lbdp": "Extraction, cleaning and modeling of cross-data from an ERP (Odoo) and an e-commerce platform (WooCommerce). Built interactive Power BI dashboards to track sales, inventory, and key performance indicators (KPIs).",
+        "desc_lbdp": "Extraction and cleaning of data from an e-commerce platform (WooCommerce) and accounting management software (MEG). Built interactive Power BI dashboards to track sales, inventory and key performance indicators (KPIs).",
 
         "job_open_food": "Open Food Facts - DB & Dashboards Project",
         "desc_open_food": "Built and optimized a relational database (OLTP) from raw Open Food Facts data. Simulated large-scale sales data and designed a star schema for analysis. Created Knime workflows for data exploration and analytical reports in English.",
@@ -600,10 +608,10 @@ const translations = {
         "previews-title": "Functional Previews",
         "features-title": "Key Features",
         
-        // Pour Typed.js
         typed_strings: [
             "Data Analyst.", 
             "BI Developer.", 
+            "Database-focused.",
             "SQL Expert.",
             "Backend Developer.",
             "Student."
@@ -641,7 +649,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Fonction pour initialiser ou réinitialiser Typed.js
 function initTyped(lang) {
     const typedElement = document.querySelector('#typed-text');
     if (typedElement) {
@@ -889,7 +896,6 @@ function initScrollReveal() {
         el.classList.add('reveal');
     });
 
-    // Stagger sibling cards within the same grid/parent
     document.querySelectorAll(
         '.education-grid, .projects-grid, .grid-3, .grid-4, .split-view, .skills-layout-advanced'
     ).forEach(grid => {

@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fatih TÜRK - Data Analyst & BI Developer Portfolio. Second-year CS student specializing in Business Intelligence, Power BI, SQL, and ETL pipelines.">
+    <meta name="description" content="Fatih TÜRK - Data / BI / Databases portfolio. Second-year BUT Informatique AGED student specializing in SQL, Power BI, ETL, reporting and decision support.">
     <meta property="og:title" content="Fatih TÜRK - Data & BI Portfolio">
-    <meta property="og:description" content="Data Analyst & BI Developer. Power BI dashboards, SQL modeling, ETL workflows.">
+    <meta property="og:description" content="Data / BI / Databases. Power BI dashboards, SQL modeling, ETL workflows and reporting.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="assets/previews/imgPROFIL.png">
     <title>Fatih TÜRK - Portfolio</title>
@@ -25,8 +25,7 @@
     <div id="cursor-glow"></div>
 
     <div class="background">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
+        <div class="data-grid"></div>
     </div>
 
     <nav class="glass-nav">
@@ -40,12 +39,16 @@
             <li><a href="#projects" onclick="closeMenu()" data-lang="nav_projects">Projects</a></li>
             <li><a href="#contact" onclick="closeMenu()" data-lang="nav_contact">Contact</a></li>
             <li class="mobile-only">
-                <a href="assets/CV_international.pdf" download data-lang="nav_cv_download">Download CV</a>
+                <a href="assets/CV_Fatih_TURK_Alternance_FR.pdf" target="_blank" data-lang="nav_cv_fr">CV French</a>
+            </li>
+            <li class="mobile-only">
+                <a href="assets/CV_international.pdf" target="_blank" data-lang="nav_cv_intl">CV International</a>
             </li>
         </ul>   
 
         <div class="nav-actions">
-            <a href="assets/CV_international.pdf" target="_blank" download class="btn-small btn-outline desktop-only"><i class="fa-solid fa-download"></i> CV</a>
+            <a href="assets/CV_Fatih_TURK_Alternance_FR.pdf" target="_blank" class="btn-small btn-outline desktop-only"><i class="fa-solid fa-file-lines"></i> CV FR</a>
+            <a href="assets/CV_international.pdf" target="_blank" class="btn-small btn-outline desktop-only"><i class="fa-solid fa-globe"></i> CV Intl</a>
             <button id="lang-switch">FR</button>
             
             <div class="hamburger" onclick="toggleMenu()">
@@ -58,24 +61,25 @@
 
         <section id="hero" class="hero">
             <div class="hero-content">
-                <span class="badge-glass" data-lang="hero_badge">🔍 BI Apprenticeship available - Sept. 2026</span>
+                <span class="badge-glass" data-lang="hero_badge">🔍 Data / BI / Databases apprenticeship - Sept. 2026</span>
                 <h1>Fatih TÜRK</h1>
                 
                 <h2 class="gradient-text"><span id="typed-text"></span></h2>
                 
                 <p class="subtitle" data-lang="profil-p">
-                    Second-year CS Student (Data Track). I design data architectures and build robust BI solutions.
+                    Second-year BUT Informatique AGED student. I turn data into reliable reporting and decision support tools.
                 </p>
                 
                 <div class="hero-actions">
                     <a href="#projects" class="btn-primary" data-lang="nav_projects_btn">View my projects</a>
-                    <a href="assets/CV_international.pdf" download class="btn-glass" data-lang="profil-btn-cv">
-                        Download CV <i class="fa-solid fa-file-arrow-down"></i>
-                    </a>
                 </div>
             </div>
             <div class="hero-card glass-card">
                 <img src="assets/previews/imgPROFIL.png" alt="Fatih TÜRK">
+                <div class="hero-card-meta">
+                    <span>Data / BI</span>
+                    <strong>Annecy</strong>
+                </div>
             </div>
         </section>
 
@@ -83,7 +87,7 @@
             <div class="glass-card profile-simple">
                 <h2 data-lang="titre_profil">Profile</h2>
                 <p class="profile-bio" data-lang="bio_profil">
-                    Second-year Computer Science student (Data Track) at IUT d'Annecy, specializing in data administration, management, and exploitation. I am seeking a Business Intelligence work-study contract (apprenticeship) from September 2026, aiming to help companies model their data and build interactive dashboards.
+                    Second-year BUT Informatique student in the AGED track (data administration, management and exploitation) at IUT d'Annecy. Currently a Data Analyst / Business Intelligence intern, I am seeking a work-study contract from September 2026 in data, BI or databases, with the goal of contributing to data exploitation, reporting and decision support.
                 </p>
             </div>
         </section>
@@ -99,7 +103,7 @@
 
                     <div class="skill-bar">
                         <div class="skill-info">
-                            <span><i class="devicon-postgresql-plain"></i> SQL (PostgreSQL, MySQL)</span>
+                            <span><i class="devicon-postgresql-plain"></i> SQL (PostgreSQL, MySQL, Access)</span>
                             <span class="percentage">90%</span>
                         </div>
                         <div class="progress-container"><div class="progress-fill" style="--bar-width:90%"></div></div>
@@ -107,7 +111,7 @@
 
                     <div class="skill-bar">
                         <div class="skill-info">
-                            <span><i class="fa-solid fa-chart-pie"></i> Power BI / DAX</span>
+                            <span><i class="fa-solid fa-chart-pie"></i> Power BI / Apache Superset / DAX</span>
                             <span class="percentage">85%</span>
                         </div>
                         <div class="progress-container"><div class="progress-fill" style="--bar-width:85%"></div></div>
@@ -123,7 +127,7 @@
 
                     <div class="skill-bar">
                         <div class="skill-info">
-                            <span><i class="fa-solid fa-file-excel"></i> Excel (TCD, Nettoyage)</span>
+                            <span><i class="fa-solid fa-file-excel"></i> Excel (TCD, Nettoyage, VBA)</span>
                             <span class="percentage">80%</span>
                         </div>
                         <div class="progress-container"><div class="progress-fill" style="--bar-width:80%"></div></div>
@@ -236,7 +240,7 @@
                         <span class="date" data-lang="date_avr_juin_26">Apr. 2026 - Jun. 2026 (ongoing)</span>
                         <h4 data-lang="job_lbdp">Data Analyst & Business Intelligence Intern</h4>
                         <h5 data-lang="lieu_lbdp">La Boutique du Pro (LBDP) - Méry, France</h5>
-                        <p data-lang="desc_lbdp">Extraction, cleaning and modeling of cross-data from an ERP (Odoo) and an e-commerce platform (WooCommerce). Built interactive Power BI dashboards to track sales, inventory, and key performance indicators (KPIs).</p>
+                        <p data-lang="desc_lbdp">Extraction and cleaning of data from an e-commerce platform (WooCommerce) and accounting management software (MEG). Built interactive Power BI dashboards to track sales, inventory and key performance indicators (KPIs).</p>
                     </div>
 
                     <div class="glass-card timeline-card">
@@ -379,7 +383,7 @@
                         <a href="https://github.com/fatiht7" target="_blank" class="btn-social">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/fatih-türk-b6b760368/" target="_blank" class="btn-social">
+                        <a href="https://www.linkedin.com/in/fatih-tk" target="_blank" class="btn-social">
                             <i class="fab fa-linkedin"></i>
                         </a>
                     </div>
@@ -407,7 +411,7 @@
                 <a href="https://github.com/fatiht7" target="_blank" class="btn-social" aria-label="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/fatih-türk-b6b760368/" target="_blank" class="btn-social" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/fatih-tk" target="_blank" class="btn-social" aria-label="LinkedIn">
                     <i class="fab fa-linkedin"></i>
                 </a>
             </div>
