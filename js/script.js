@@ -397,7 +397,7 @@ const translations = {
         "profil-btn-cv-intl": "Télécharger CV international",
 
         "titre_profil": "Profil",
-        "bio_profil": "Étudiant en 2ème année de BUT Informatique, parcours AGED (administration, gestion et exploitation des données) à l'IUT d'Annecy. Actuellement en stage Data Analyst / Business Intelligence, je recherche une alternance dès septembre 2026 en data, BI ou bases de données, avec l'objectif de contribuer à l'exploitation de données, au reporting et à l'aide à la décision.",
+        "bio_profil": "Étudiant en 2ème année de BUT Informatique, parcours AGED (administration, gestion et exploitation des données) à l'IUT d'Annecy. Ayant réalisé un stage en Data Analyst / Business Intelligence, je recherche une alternance dès septembre 2026 en data, BI ou bases de données, avec l'objectif de contribuer à l'exploitation de données, au reporting et à l'aide à la décision.",
 
         "competences-titre": "Compétences Techniques", 
         "comp-soft": "Savoir-être",
@@ -415,7 +415,7 @@ const translations = {
         "date_oct_jan": "Oct 2025 - Jan 2026",
         "date_june_25": "Juin 2025",
         "date_ete_24": "Été 2024",
-        "date_avr_juin_26": "Avr. 2026 - Juin 2026 (en cours)",
+        "date_avr_juin_26": "Avr. 2026 - Juin 2026",
         "date_mars_avr_26": "Mars 2026 - Avr. 2026",
 
         "job_lbdp": "Stagiaire Data Analyst & Business Intelligence",
@@ -516,7 +516,7 @@ const translations = {
         "profil-btn-cv-intl": "Download International CV",
 
         "titre_profil": "Profile",
-        "bio_profil": "Second-year BUT Informatique student in the AGED track (data administration, management and exploitation) at IUT d'Annecy. Currently a Data Analyst / Business Intelligence intern, I am seeking a work-study contract from September 2026 in data, BI or databases, with the goal of contributing to data exploitation, reporting and decision support.",
+        "bio_profil": "Second-year BUT Informatique student in the AGED track (data administration, management and exploitation) at IUT d'Annecy. Having completed a Data Analyst / Business Intelligence internship, I am seeking a work-study contract from September 2026 in data, BI or databases, with the goal of contributing to data exploitation, reporting and decision support.",
 
         "competences-titre": "Technical Skills", 
         "comp-soft": "Soft Skills",
@@ -533,7 +533,7 @@ const translations = {
         "date_oct_jan": "Oct 2025 - Jan 2026",
         "date_june_25": "June 2025",
         "date_ete_24": "Summer 2024",
-        "date_avr_juin_26": "Apr. 2026 - Jun. 2026 (ongoing)",
+        "date_avr_juin_26": "Apr. 2026 - Jun. 2026",
         "date_mars_avr_26": "Mar. 2026 - Apr. 2026",
 
         "job_lbdp": "Data Analyst & Business Intelligence Intern",
