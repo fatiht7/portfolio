@@ -391,13 +391,13 @@ const translations = {
         nav_cv_intl: "CV international",
         
         hero_badge: "🔍 Alternance Data / BI / Bases de données - Sept. 2026",
-        "profil-p": "Étudiant en BUT Informatique AGED. Je transforme la donnée en reporting fiable et en outils d'aide à la décision.",
+        "profil-p": "Étudiant en BUT Informatique, parcours administration, gestion et exploitation des données. Je transforme la donnée en reporting fiable et en outils d'aide à la décision.",
         "profil-btn-cv": "Télécharger mon CV",
         "profil-btn-cv-fr": "Télécharger CV français",
         "profil-btn-cv-intl": "Télécharger CV international",
 
         "titre_profil": "Profil",
-        "bio_profil": "Étudiant en 2ème année de BUT Informatique, parcours AGED (administration, gestion et exploitation des données) à l'IUT d'Annecy. Ayant réalisé un stage en Data Analyst / Business Intelligence, je recherche une alternance dès septembre 2026 en data, BI ou bases de données, avec l'objectif de contribuer à l'exploitation de données, au reporting et à l'aide à la décision.",
+        "bio_profil": "Étudiant en 2ème année de BUT Informatique, parcours administration, gestion et exploitation des données à l'IUT d'Annecy. Ayant réalisé un stage en Data Analyst / Business Intelligence, je recherche une alternance dès septembre 2026 en data, BI ou bases de données, avec l'objectif de contribuer à l'exploitation de données, au reporting et à l'aide à la décision.",
 
         "competences-titre": "Compétences Techniques", 
         "skills-data-title": "Analyse & Data",
@@ -512,13 +512,13 @@ const translations = {
         nav_cv_intl: "International CV",
         
         hero_badge: "🔍 Data / BI / Databases apprenticeship - Sept. 2026",
-        "profil-p": "Second-year BUT Informatique AGED student. I turn data into reliable reporting and decision support tools.",
+        "profil-p": "Second-year BUT Informatique student specializing in data administration, management and exploitation. I turn data into reliable reporting and decision support tools.",
         "profil-btn-cv": "Download CV",
         "profil-btn-cv-fr": "Download French CV",
         "profil-btn-cv-intl": "Download International CV",
 
         "titre_profil": "Profile",
-        "bio_profil": "Second-year BUT Informatique student in the AGED track (data administration, management and exploitation) at IUT d'Annecy. Having completed a Data Analyst / Business Intelligence internship, I am seeking a work-study contract from September 2026 in data, BI or databases, with the goal of contributing to data exploitation, reporting and decision support.",
+        "bio_profil": "Second-year BUT Informatique student specializing in data administration, management and exploitation at IUT d'Annecy. Having completed a Data Analyst / Business Intelligence internship, I am seeking a work-study contract from September 2026 in data, BI or databases, with the goal of contributing to data exploitation, reporting and decision support.",
 
         "competences-titre": "Technical Skills", 
         "skills-data-title": "Analysis & Data",

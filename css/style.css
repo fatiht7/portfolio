@@ -228,17 +228,9 @@ body {
 .progress-container { height: 8px; background: rgba(128,151,174,0.14); border-radius: 999px; overflow: hidden; }
 .progress-fill { height: 100%; background: var(--gradient); border-radius: 999px; width: 0 !important; transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1); }
 .progress-fill.animated { width: var(--bar-width) !important; }
-body.lang-fr .skills-layout-advanced { grid-template-columns: repeat(3, 1fr); }
+body.lang-fr .skills-layout-advanced { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 body.lang-fr .skill-column { padding: 1.6rem; }
-body.lang-fr .skill-column:nth-child(1) { grid-column: span 1; }
-body.lang-fr .skill-column:nth-child(2) {
-    grid-column: span 2;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 1.2rem;
-}
 body.lang-fr .skill-column h3 { padding-bottom: 1rem; margin-bottom: 1rem; border-bottom: 1px solid var(--glass-border); }
-body.lang-fr .skill-column:nth-child(2) h3 { grid-column: 1 / -1; }
 body.lang-fr .skill-bar { margin-bottom: 0.85rem; }
 body.lang-fr .skill-info { margin-bottom: 0; justify-content: flex-start; }
 body.lang-fr .percentage,
@@ -664,9 +656,6 @@ footer { text-align: center; padding: 3rem 2rem 2rem; color: var(--text-mute); b
     .hero-actions { justify-content: center; }
     
     .skills-layout-advanced { grid-template-columns: 1fr; }
-    body.lang-fr .skill-column:nth-child(1),
-    body.lang-fr .skill-column:nth-child(2) { grid-column: auto; }
-    body.lang-fr .skill-column:nth-child(2) { grid-template-columns: 1fr; }
     .grid-4 { grid-template-columns: repeat(2, 1fr); }
     .grid-3 { grid-template-columns: 1fr; }
     .split-view { grid-template-columns: 1fr; }
