@@ -866,6 +866,8 @@ document.addEventListener('keydown', (e) => {
 
 function updateLanguage(lang) {
     currentLang = lang;
+    document.body.classList.toggle('lang-fr', lang === 'fr');
+    document.body.classList.toggle('lang-en', lang === 'en');
     
     const langSwitch = document.querySelector('#lang-switch');
     if (langSwitch) {
