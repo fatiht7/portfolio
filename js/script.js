@@ -400,8 +400,10 @@ const translations = {
         "bio_profil": "Étudiant en 2ème année de BUT Informatique, parcours administration, gestion et exploitation des données à l'IUT d'Annecy. Ayant réalisé un stage en Data Analyst / Business Intelligence, je recherche une alternance dès septembre 2026 en data, BI ou bases de données, avec l'objectif de contribuer à l'exploitation de données, au reporting et à l'aide à la décision.",
 
         "competences-titre": "Compétences Techniques", 
-        "skills-data-title": "Analyse & Data",
-        "skills-dev-title": "Développement & Outils",
+        "skills-frontend-title": "Frontend",
+        "skills-backend-title": "Backend & Logiciel",
+        "skills-data-title": "Data & BI",
+        "skills-tools-title": "Outils & Modélisation",
         "comp-soft": "Savoir-être",
         "soft-time": "Bonne gestion du temps & Ponctuel",
         "soft-analytic": "Précis et Analytique",
@@ -521,8 +523,10 @@ const translations = {
         "bio_profil": "Second-year BUT Informatique student specializing in data administration, management and exploitation at IUT d'Annecy. Having completed a Data Analyst / Business Intelligence internship, I am seeking a work-study contract from September 2026 in data, BI or databases, with the goal of contributing to data exploitation, reporting and decision support.",
 
         "competences-titre": "Technical Skills", 
-        "skills-data-title": "Analysis & Data",
-        "skills-dev-title": "Development & Tools",
+        "skills-frontend-title": "Frontend",
+        "skills-backend-title": "Backend & Software",
+        "skills-data-title": "Data & BI",
+        "skills-tools-title": "Tools & Modeling",
         "comp-soft": "Soft Skills",
         "soft-time": "Good time management skills & Punctual",
         "soft-analytic": "Precise and Analytical",
@@ -877,7 +881,16 @@ function updateLanguage(lang) {
     document.querySelectorAll('[data-lang]').forEach(el => {
         const key = el.dataset.lang;
         if (translations[lang][key]) {
-            el.textContent = translations[lang][key];
+            if (el.children.length) {
+                const textNode = Array.from(el.childNodes).find(node => node.nodeType === Node.TEXT_NODE);
+                if (textNode) {
+                    textNode.textContent = ` ${translations[lang][key]}`;
+                } else {
+                    el.appendChild(document.createTextNode(` ${translations[lang][key]}`));
+                }
+            } else {
+                el.textContent = translations[lang][key];
+            }
         }
     });
     
