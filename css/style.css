@@ -158,7 +158,9 @@ body {
     letter-spacing: 0;
     z-index: 0;
     white-space: nowrap;
-    text-shadow: 0 0 22px rgba(34,199,184,0.16);
+    text-shadow:
+        0.06em 0.06em 0 rgba(34,199,184,0.34),
+        0 0 22px rgba(34,199,184,0.16);
 }
 .hero-name::after {
     content: none;
