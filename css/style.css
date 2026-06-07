@@ -157,6 +157,7 @@ body {
     display: inline-block;
     letter-spacing: 0;
     z-index: 0;
+    white-space: nowrap;
 }
 .hero-name::after {
     content: attr(data-text);
@@ -166,6 +167,9 @@ body {
     color: transparent;
     -webkit-text-stroke: 1px rgba(34,199,184,0.34);
     z-index: -1;
+    width: max-content;
+    white-space: nowrap;
+    pointer-events: none;
 }
 .hero-name::before {
     content: "";
