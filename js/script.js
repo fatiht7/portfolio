@@ -11,7 +11,7 @@ const projectsData = [
         hasDetailedModal: true,
         fr: {
             title: "Open Food Facts - BDD & Tableaux de Bord",
-            type: "Projet Universitaire (SAÉ)",
+            type: "Projet universitaire (SAÉ)",
             desc: "Conception d'une base OLTP à partir de données Open Food Facts, modélisation en étoile pour l'analyse BI, workflows ETL Knime et tableaux de bord Power BI (ventes & composition produits).",
             modalTitle: "Open Food Facts - Modélisation & Analyse BI",
             modalDesc: "Ce projet couvre l'ensemble de la chaîne data : conception d'une base relationnelle OLTP à partir de données brutes, transformation vers un modèle OLAP en étoile, automatisation via des workflows Knime, et visualisation dans Power BI avec deux rapports analytiques distincts (ventes simulées et composition nutritionnelle).",
@@ -54,7 +54,7 @@ const projectsData = [
         },
         en: {
             title: "Open Food Facts - DB & Dashboards",
-            type: "University Project (SAÉ)",
+            type: "University project (SAÉ)",
             desc: "Designed an OLTP database from Open Food Facts data, built a star schema for BI analysis, ETL workflows with Knime and Power BI dashboards (sales & product composition).",
             modalTitle: "Open Food Facts - Modeling & BI Analysis",
             modalDesc: "This project covers the full data pipeline: designing a relational OLTP database from raw data, transforming it into a star-schema OLAP model, automating ETL with Knime workflows, and building two Power BI reports (simulated sales analytics and nutritional composition analysis).",
@@ -99,7 +99,7 @@ const projectsData = [
     },
     {
         id: 1,
-        title: "SAE Leboncoin Vacation Rental - Web App",
+        title: "SAÉ Leboncoin Vacation Rental - Web App",
         date: "Oct 2025 - Jan 2026",
         status: "completed",
         image: "assets/previews/previewLeboncoin.png",
@@ -108,10 +108,10 @@ const projectsData = [
         actionBtn: { text: "View Modeling", icon: "fa-diagram-project" },
         hasDetailedModal: true,
         fr: { 
-            title: "SAE Leboncoin Location Vacances - Application Web",
-            type: "Projet Universitaire (SAÉ)", 
+            title: "SAÉ Leboncoin Location Vacances - Application Web",
+            type: "Projet universitaire (SAÉ)", 
             desc: "Plateforme de location de vacances type LeBonCoin développée en équipe de 5 avec Laravel. Conception complète de la base de données et modélisation des processus métier.",
-            modalTitle: "SAE Leboncoin Location Vacances - Modélisation & Conception",
+            modalTitle: "SAÉ Leboncoin Location Vacances - Modélisation & Conception",
             modalDesc: "Ce projet de gestion de locations de vacances a nécessité une phase complète d'analyse et de conception système, utilisant Merise et BPMN pour modéliser les besoins fonctionnels et les processus métier critiques.",
             techSection: {
                 title: "Technologies et Méthodologies",
@@ -136,10 +136,10 @@ const projectsData = [
             ]
         },
         en: { 
-            title: "SAE Leboncoin Vacation Rental - Web App",
-            type: "University Project (SAÉ)", 
+            title: "SAÉ Leboncoin Vacation Rental - Web App",
+            type: "University project (SAÉ)", 
             desc: "Vacation rental platform (LeBonCoin-style) developed in a team of 5 using Laravel. Complete database design and business process modeling.",
-            modalTitle: "SAE Leboncoin Vacation Rental - Modeling & Design",
+            modalTitle: "SAÉ Leboncoin Vacation Rental - Modeling & Design",
             modalDesc: "This vacation rental management project required a complete analysis and system design phase, using Merise and BPMN to model functional requirements and critical business processes.",
             techSection: {
                 title: "Technologies and Methodologies",
@@ -167,7 +167,7 @@ const projectsData = [
     },
     {
         id: 2,
-        title: "SAE Leboncoin Vacation Rental - Business Intelligence",
+        title: "SAÉ Leboncoin Vacation Rental - Business Intelligence",
         date: "Oct 2025 - Jan 2026",
         status: "completed",
         image: "assets/leboncoin/powerbi-1.png",
@@ -176,10 +176,10 @@ const projectsData = [
         actionBtn: { text: "View Dashboard", icon: "fa-chart-line" },
         hasDetailedModal: true,
         fr: { 
-            title: "SAE Leboncoin Location Vacances - Business Intelligence",
-            type: "Projet Universitaire (SAÉ)", 
+            title: "SAÉ Leboncoin Location Vacances - Business Intelligence",
+            type: "Projet universitaire (SAÉ)", 
             desc: "Conception d'un Data Warehouse en schéma étoile et création de tableaux de bord Power BI pour le suivi du chiffre d'affaires des locations.",
-            modalTitle: "SAE Leboncoin Location Vacances - Analyse Power BI",
+            modalTitle: "SAÉ Leboncoin Location Vacances - Analyse Power BI",
             modalDesc: "Dans ce projet, après avoir créé et peuplé la base PostgreSQL, nous avons importé les données dans Power BI pour créer des tableaux de bord analytiques. L'objectif était de transformer les données brutes en informations décisionnelles.",
             techSection: {
                 title: "Stack Data & Technologies",
@@ -209,10 +209,10 @@ const projectsData = [
             ]
         },
         en: { 
-            title: "SAE Leboncoin Vacation Rental - Business Intelligence",
-            type: "University Project (SAÉ)", 
+            title: "SAÉ Leboncoin Vacation Rental - Business Intelligence",
+            type: "University project (SAÉ)", 
             desc: "Design of a Star Schema Data Warehouse and creation of Power BI dashboards to track rental revenue.",
-            modalTitle: "SAE Leboncoin Vacation Rental - Power BI Analysis",
+            modalTitle: "SAÉ Leboncoin Vacation Rental - Power BI Analysis",
             modalDesc: "In this project, after creating and populating the PostgreSQL database, we imported the data into Power BI to create analytical dashboards. The goal was to transform raw data into decision-making information.",
             techSection: {
                 title: "Data Stack & Technologies",
@@ -255,13 +255,13 @@ const projectsData = [
         hasDetailedModal: false,
         fr: { 
             title: "Portfolio",
-            type: "Projet Personnel", 
-            desc: "Site personnel moderne style Glassmorphism avec filtrage dynamique, switch multilingue et animations fluides." 
+            type: "Projet personnel", 
+            desc: "Portfolio personnel orienté Data / BI avec design responsive, filtrage dynamique des projets, switch multilingue et animations fluides." 
         },
         en: { 
             title: "Portfolio",
-            type: "Personal Project", 
-            desc: "Modern Glassmorphism style personal website with dynamic filtering, multilingual switch and smooth animations." 
+            type: "Personal project", 
+            desc: "Data / BI-oriented personal portfolio with responsive design, dynamic project filtering, multilingual switch and smooth animations." 
         },
         links: [{ text: "View Code", url: "https://github.com/fatiht7/portfolio.git", icon: "fa-github" }]
     },
@@ -277,7 +277,7 @@ const projectsData = [
         hasDetailedModal: true,
         fr: { 
             title: "Sibilia - Système de Gestion de Commandes",
-            type: "Projet Universitaire (SAÉ)", 
+            type: "Projet universitaire (SAÉ)", 
             desc: "Application desktop de gestion commerciale développée en WPF/C#. Gestion des commandes, clients, plats et stocks avec architecture MVVM.",
             modalTitle: "Projet Sibilia (SAÉ) - Système de Gestion",
             modalDesc: "Ce projet a été réalisé dans le cadre d'un projet appliqué (SAÉ) pour simuler un système de gestion commerciale pour un traiteur. C'est une application desktop développée en WPF et C#.",
@@ -316,7 +316,7 @@ const projectsData = [
         },
         en: { 
             title: "Sibilia - Order Management System",
-            type: "University Project (SAÉ)", 
+            type: "University project (SAÉ)", 
             desc: "Desktop commercial management application developed in WPF/C#. Order, client, dish and inventory management with MVVM architecture.",
             modalTitle: "Sibilia Project (SAÉ) - Management System",
             modalDesc: "This project was carried out as part of an Applied Project (SAÉ) to simulate a commercial management system for a catering business. It's a desktop application developed in WPF and C#.",
@@ -366,13 +366,13 @@ const projectsData = [
         actionBtn: null,
         hasDetailedModal: false,
         fr: {
-            title: "Jeu Vidéo 2D",
-            type: "Projet Universitaire",
+            title: "Labyrinthe - Jeu vidéo 2D",
+            type: "Projet universitaire (SAÉ)",
             desc: "Développement d'un moteur de jeu et gestion physique en C# pur."
         },
         en: {
-            title: "2D Video Game",
-            type: "University Project",
+            title: "Labyrinth - 2D Video Game",
+            type: "University project (SAÉ)",
             desc: "Game engine development and physics management written in pure C#."
         },
         links: [{ text: "View Code", url: "https://github.com/xX-Proplayer-Xx/Labyrinthe.git", icon: "fa-github" }]
@@ -400,6 +400,8 @@ const translations = {
         "bio_profil": "Étudiant en 2ème année de BUT Informatique, parcours AGED (administration, gestion et exploitation des données) à l'IUT d'Annecy. Ayant réalisé un stage en Data Analyst / Business Intelligence, je recherche une alternance dès septembre 2026 en data, BI ou bases de données, avec l'objectif de contribuer à l'exploitation de données, au reporting et à l'aide à la décision.",
 
         "competences-titre": "Compétences Techniques", 
+        "skills-data-title": "Analyse & Data",
+        "skills-dev-title": "Développement & Outils",
         "comp-soft": "Savoir-être",
         "soft-time": "Bonne gestion du temps & Ponctuel",
         "soft-analytic": "Précis et Analytique",
@@ -442,10 +444,10 @@ const translations = {
         "lieu_bac": "Lycée Louis Lachenal - Argonay, France",
         "desc_bac": "Baccalauréat technologique STI2D - Option SIN (Systèmes d'Information et Numérique).",
         
-        "lieu_usmb": "Usmb Annecy, France : Projet Universitaire en équipe",
+        "lieu_usmb": "USMB / IUT Annecy, France - Projet universitaire en équipe (SAÉ)",
         "lieu_leclerc": "Leclerc - Seynod, France",
         
-        "projets-titre": "Projets & SAÉ", 
+        "projets-titre": "Projets", 
         "contact-titre": "Contactez-moi",
         "contact-p": "Disponible pour échanger sur des opportunités d'alternance en Business Intelligence.",
         "form-send": "Envoyer",
@@ -519,6 +521,8 @@ const translations = {
         "bio_profil": "Second-year BUT Informatique student in the AGED track (data administration, management and exploitation) at IUT d'Annecy. Having completed a Data Analyst / Business Intelligence internship, I am seeking a work-study contract from September 2026 in data, BI or databases, with the goal of contributing to data exploitation, reporting and decision support.",
 
         "competences-titre": "Technical Skills", 
+        "skills-data-title": "Analysis & Data",
+        "skills-dev-title": "Development & Tools",
         "comp-soft": "Soft Skills",
         "soft-time": "Good time management skills & Punctual",
         "soft-analytic": "Precise and Analytical",
@@ -560,10 +564,10 @@ const translations = {
         "lieu_bac": "Louis Lachenal High School - Argonay, France",
         "desc_bac": "Technical High School diploma (STI2D - Digital Information Systems).",
         
-        "lieu_usmb": "Usmb Annecy, France : Team University Project",
+        "lieu_usmb": "USMB / IUT Annecy, France - University team project (SAÉ)",
         "lieu_leclerc": "Leclerc - Seynod, France",
         
-        "projets-titre": "Projects & SAÉ", 
+        "projets-titre": "Projects", 
         "contact-titre": "Contact Me",
         "contact-p": "Available to discuss Business Intelligence apprenticeship opportunities.",
         "form-send": "Send",
@@ -739,11 +743,14 @@ function openModal(id) {
     document.querySelector('#modal-desc').textContent = content.desc;
     
     document.querySelector('#modal-techs').innerHTML = p.techs.map(t => `<span>${t}</span>`).join('');
-    document.querySelector('#modal-links').innerHTML = p.links.map(l => `
+    document.querySelector('#modal-links').innerHTML = p.links.map(l => {
+        const linkText = currentLang === 'fr' && l.text === 'View Code' ? 'Voir le code' : l.text;
+        return `
         <a href="${l.url}" target="_blank" class="btn-link">
-            <i class="fa-brands ${l.icon || 'fa-github'}"></i> ${l.text}
+            <i class="fa-brands ${l.icon || 'fa-github'}"></i> ${linkText}
         </a>
-    `).join('');
+    `;
+    }).join('');
     
     document.querySelector('#project-modal').classList.add('active');
 }
@@ -805,11 +812,14 @@ function openDetailedModal(id) {
     
     const linksContainer = modal.querySelector('#detailed-links');
     if (p.links && p.links.length > 0) {
-        linksContainer.innerHTML = p.links.map(l => `
+        linksContainer.innerHTML = p.links.map(l => {
+            const linkText = currentLang === 'fr' && l.text === 'View Code' ? 'Voir le code' : l.text;
+            return `
             <a href="${l.url}" target="_blank" class="btn-link">
-                <i class="fa-brands ${l.icon || 'fa-github'}"></i> ${l.text}
+                <i class="fa-brands ${l.icon || 'fa-github'}"></i> ${linkText}
             </a>
-        `).join('');
+        `;
+        }).join('');
         linksContainer.style.display = 'flex';
     } else {
         linksContainer.style.display = 'none';
