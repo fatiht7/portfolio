@@ -870,8 +870,8 @@ function updateLanguage(lang) {
     document.body.classList.toggle('lang-fr', lang === 'fr');
     document.body.classList.toggle('lang-en', lang === 'en');
     const cvPath = lang === 'fr'
-        ? 'assets/CV_Fatih_TURK_Alternance_2026_FR.pdf'
-        : 'assets/CV_international.pdf';
+        ? 'assets/CV_Fatih_TURK_FR.pdf'
+        : 'assets/CV_Fatih_TURK_International.pdf';
     
     document.querySelectorAll('[data-set-lang]').forEach(button => {
         const isActive = button.dataset.setLang === lang;

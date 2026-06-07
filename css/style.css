@@ -248,32 +248,35 @@ body {
 
 .skills-layout-advanced { display: grid; grid-template-columns: repeat(2, minmax(320px, 1fr)); gap: 1.5rem; margin-bottom: 2rem; }
 .skill-column { padding: 2rem; }
-.skill-column h3 { margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
+.skill-column h3 { margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.85rem; font-size: 1.22rem; }
 .skill-column h3 span { min-width: 0; }
+.skill-column h3 i { font-size: 1.22rem; }
 .accent-icon { color: var(--accent); }
 .skill-bar { margin-bottom: 1.25rem; }
-.skill-info { display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.9rem; }
-.skill-info span { display: flex; align-items: center; gap: 0.5rem; }
+.skill-info { display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 1rem; }
+.skill-info span { display: flex; align-items: center; gap: 0.7rem; }
+.skill-info i { font-size: 1.08rem; }
 .percentage { color: var(--accent-warm); font-weight: 600; }
 .progress-container { height: 8px; background: rgba(128,151,174,0.14); border-radius: 999px; overflow: hidden; }
 .progress-fill { height: 100%; background: var(--gradient); border-radius: 999px; width: 0 !important; transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1); }
 .progress-fill.animated { width: var(--bar-width) !important; }
 body.lang-fr .skills-layout-advanced { grid-template-columns: repeat(2, minmax(340px, 1fr)); }
-body.lang-fr .skill-column { padding: 1.6rem; }
+body.lang-fr .skill-column { padding: 1.75rem; }
 body.lang-fr .skill-column h3 { padding-bottom: 1rem; margin-bottom: 1rem; border-bottom: 1px solid var(--glass-border); }
-body.lang-fr .skill-bar { margin-bottom: 0.75rem; }
+body.lang-fr .skill-bar { margin-bottom: 0.82rem; }
 body.lang-fr .skill-info { margin-bottom: 0; justify-content: flex-start; }
 body.lang-fr .percentage,
 body.lang-fr .progress-container { display: none; }
 body.lang-fr .skill-info span:first-child {
     width: 100%;
-    padding: 0.35rem 0;
+    padding: 0.42rem 0;
     color: var(--text-mute);
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     white-space: nowrap;
 }
 body.lang-fr .skill-info i {
-    width: 24px;
+    width: 28px;
+    font-size: 1.12rem;
     justify-content: center;
     color: var(--accent-light);
     text-shadow: 0 0 14px rgba(34,199,184,0.28);
