@@ -627,12 +627,12 @@ const translations = {
     }
 };
 
-let currentLang = 'en';
+let currentLang = 'fr';
 let typedInstance;
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    updateLanguage('en');
+    updateLanguage('fr');
 
     initScrollReveal();
     initProgressBars();
