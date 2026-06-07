@@ -639,6 +639,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollProgress();
     initCursorGlow();
     initScrollSpy();
+    initSmoothNavigation();
     
     document.querySelectorAll('.tech-filters button').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -1023,6 +1024,32 @@ function initScrollSpy() {
     }, { threshold: 0.2, rootMargin: '-80px 0px -50% 0px' });
 
     sections.forEach(section => observer.observe(section));
+}
+
+function initSmoothNavigation() {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', (event) => {
+            const targetId = link.getAttribute('href');
+            if (!targetId || targetId === '#') return;
+
+            const target = document.querySelector(targetId);
+            if (!target) return;
+
+            event.preventDefault();
+            closeMenu();
+
+            const nav = document.querySelector('.glass-nav');
+            const navHeight = nav ? nav.offsetHeight : 0;
+            const top = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 18;
+
+            window.scrollTo({
+                top: Math.max(0, top),
+                behavior: reduceMotion ? 'auto' : 'smooth'
+            });
+        });
+    });
 }
 
 function toggleMenu() {
