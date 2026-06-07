@@ -39,17 +39,16 @@
             <li><a href="#projects" onclick="closeMenu()" data-lang="nav_projects">Projects</a></li>
             <li><a href="#contact" onclick="closeMenu()" data-lang="nav_contact">Contact</a></li>
             <li class="mobile-only">
-                <a href="assets/CV_Fatih_TURK_Alternance_2026_FR.pdf" target="_blank" data-lang="nav_cv_fr">CV French</a>
-            </li>
-            <li class="mobile-only">
-                <a href="assets/CV_international.pdf" target="_blank" data-lang="nav_cv_intl">CV International</a>
+                <a href="assets/CV_international.pdf" target="_blank" data-cv-link data-lang="nav_cv_download">Download CV</a>
             </li>
         </ul>   
 
         <div class="nav-actions">
-            <a href="assets/CV_Fatih_TURK_Alternance_2026_FR.pdf" target="_blank" class="btn-small btn-cv-primary desktop-only"><i class="fa-solid fa-file-lines"></i> CV FR</a>
-            <a href="assets/CV_international.pdf" target="_blank" class="btn-small btn-outline desktop-only"><i class="fa-solid fa-globe"></i> CV Intl</a>
-            <button id="lang-switch">FR</button>
+            <a href="assets/CV_international.pdf" target="_blank" class="btn-small btn-cv-primary desktop-only" data-cv-link data-lang="nav_cv_download"><i class="fa-solid fa-file-lines"></i> Download CV</a>
+            <div class="language-switch" aria-label="Language selector">
+                <button type="button" class="lang-option" data-set-lang="fr">FR</button>
+                <button type="button" class="lang-option" data-set-lang="en">EN</button>
+            </div>
             
             <div class="hamburger" onclick="toggleMenu()">
                 <i class="fa-solid fa-bars"></i>
@@ -438,8 +437,7 @@
                     </div>
 
                     <div class="contact-actions">
-                        <a href="assets/CV_Fatih_TURK_Alternance_2026_FR.pdf" target="_blank" class="btn-small btn-cv-primary"><i class="fa-solid fa-file-lines"></i> CV FR</a>
-                        <a href="assets/CV_international.pdf" target="_blank" class="btn-small btn-outline"><i class="fa-solid fa-globe"></i> CV Intl</a>
+                        <a href="assets/CV_international.pdf" target="_blank" class="btn-small btn-cv-primary" data-cv-link data-lang="nav_cv_download"><i class="fa-solid fa-file-lines"></i> Download CV</a>
                     </div>
 
                     <div class="social-links">

@@ -648,13 +648,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    const langSwitch = document.querySelector('#lang-switch');
-    if (langSwitch) {
-        langSwitch.addEventListener('click', () => {
-            const newLang = currentLang === 'fr' ? 'en' : 'fr';
-            updateLanguage(newLang);
-        });
-    }
+    document.querySelectorAll('[data-set-lang]').forEach(button => {
+        button.addEventListener('click', () => updateLanguage(button.dataset.setLang));
+    });
 });
 
 function initTyped(lang) {
@@ -870,13 +866,22 @@ document.addEventListener('keydown', (e) => {
 
 function updateLanguage(lang) {
     currentLang = lang;
+    document.documentElement.lang = lang;
     document.body.classList.toggle('lang-fr', lang === 'fr');
     document.body.classList.toggle('lang-en', lang === 'en');
+    const cvPath = lang === 'fr'
+        ? 'assets/CV_Fatih_TURK_Alternance_2026_FR.pdf'
+        : 'assets/CV_international.pdf';
     
-    const langSwitch = document.querySelector('#lang-switch');
-    if (langSwitch) {
-        langSwitch.textContent = lang === 'fr' ? 'EN' : 'FR';
-    }
+    document.querySelectorAll('[data-set-lang]').forEach(button => {
+        const isActive = button.dataset.setLang === lang;
+        button.classList.toggle('active', isActive);
+        button.setAttribute('aria-pressed', String(isActive));
+    });
+
+    document.querySelectorAll('[data-cv-link]').forEach(link => {
+        link.href = cvPath;
+    });
     
     document.querySelectorAll('[data-lang]').forEach(el => {
         const key = el.dataset.lang;

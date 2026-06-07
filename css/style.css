@@ -116,8 +116,37 @@ body {
     transform: translateY(-1px);
     box-shadow: 0 14px 30px rgba(79,140,255,0.22);
 }
-#lang-switch { padding: 0.5rem 1rem; background: var(--surface-2); color: var(--text); border: 1px solid var(--glass-border); border-radius: 8px; cursor: pointer; font-weight: 600; transition: all 0.3s; }
-#lang-switch:hover { border-color: var(--accent); color: var(--accent-light); }
+.language-switch {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(17,25,35,0.82);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    padding: 0.18rem;
+    gap: 0.15rem;
+}
+.lang-option {
+    min-width: 38px;
+    height: 34px;
+    padding: 0 0.7rem;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--text-mute);
+    cursor: pointer;
+    font-weight: 700;
+    transition: all 0.25s ease;
+}
+.lang-option:hover {
+    color: var(--text);
+    border-color: rgba(34,199,184,0.28);
+}
+.lang-option.active {
+    color: var(--text);
+    border-color: rgba(220,191,255,0.86);
+    background: rgba(185,91,255,0.16);
+    box-shadow: 0 0 16px rgba(185,91,255,0.34), inset 0 0 12px rgba(255,255,255,0.06);
+}
 .hamburger { display: none; font-size: 1.5rem; cursor: pointer; color: var(--text); }
 .mobile-only { display: none; }
 
