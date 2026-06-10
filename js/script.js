@@ -2,7 +2,10 @@ const projectsData = [
     {
         id: 5,
         title: "Open Food Facts - DB & Dashboards",
-        date: "Mar 2026 - Apr 2026",
+        date: {
+            fr: "Mars 2026 - Avril 2026",
+            en: "March 2026 - April 2026"
+        },
         status: "completed",
         image: "assets/open-food-facts/ventespage1.jpg",
         techs: ["PostgreSQL", "Power BI", "Knime", "Star Schema", "Merise"],
@@ -100,7 +103,10 @@ const projectsData = [
     {
         id: 1,
         title: "SAÉ Leboncoin Vacation Rental - Web App",
-        date: "Oct 2025 - Jan 2026",
+        date: {
+            fr: "Octobre 2025 - Janvier 2026",
+            en: "October 2025 - January 2026"
+        },
         status: "completed",
         image: "assets/previews/previewLeboncoin.png",
         techs: ["PHP", "Laravel", "SQL", "Merise", "BPMN"],
@@ -168,7 +174,10 @@ const projectsData = [
     {
         id: 2,
         title: "SAÉ Leboncoin Vacation Rental - Business Intelligence",
-        date: "Oct 2025 - Jan 2026",
+        date: {
+            fr: "Octobre 2025 - Janvier 2026",
+            en: "October 2025 - January 2026"
+        },
         status: "completed",
         image: "assets/leboncoin/powerbi-1.png",
         techs: ["Power BI", "DAX", "PostgreSQL", "Star Schema"],
@@ -246,7 +255,10 @@ const projectsData = [
     {
         id: 3,
         title: "Portfolio",
-        date: "Oct 2025 - Present",
+        date: {
+            fr: "Octobre 2025 - Aujourd'hui",
+            en: "October 2025 - Present"
+        },
         status: "ongoing",
         image: "assets/previews/previewPortfolio.png",
         techs: ["JavaScript", "HTML", "CSS"],
@@ -268,7 +280,10 @@ const projectsData = [
     {
         id: 4,
         title: "Sibilia - Order Management System",
-        date: "June 2025",
+        date: {
+            fr: "Juin 2025",
+            en: "June 2025"
+        },
         status: "completed",
         image: "assets/previews/previewSIBILIA.png", 
         techs: ["C#", ".NET", "WPF", "XAML", "MVVM"],
@@ -358,7 +373,10 @@ const projectsData = [
     {
         id: 7,
         title: "2D Video Game",
-        date: "2024",
+        date: {
+            fr: "2024",
+            en: "2024"
+        },
         status: "completed",
         image: "assets/previews/previewLabyrinthe.png",
         techs: ["C#", ".NET"],
@@ -391,15 +409,17 @@ const translations = {
         nav_cv_intl: "CV international",
         
         hero_badge: "🔍 Alternance Data / BI / Bases de données - Sept. 2026",
-        "profil-p": "Étudiant en BUT Informatique, parcours administration, gestion et exploitation des données. Je transforme la donnée en reporting fiable et en outils d'aide à la décision.",
+        "profil-p": "Étudiant en BUT Informatique, spécialisé en administration, gestion et exploitation des données. Je conçois des tableaux de bord et des outils d'aide à la décision à partir de données fiables.",
         "profil-btn-cv": "Télécharger mon CV",
         "profil-btn-cv-fr": "Télécharger CV français",
         "profil-btn-cv-intl": "Télécharger CV international",
 
         "titre_profil": "Profil",
-        "bio_profil": "Étudiant en 2ème année de BUT Informatique, parcours administration, gestion et exploitation des données à l'IUT d'Annecy. Ayant réalisé un stage en Data Analyst / Business Intelligence, je recherche une alternance dès septembre 2026 en data, BI ou bases de données, avec l'objectif de contribuer à l'exploitation de données, au reporting et à l'aide à la décision.",
+        "profile-lead": "Je transforme des données brutes en analyses claires et en outils utiles à la prise de décision.",
+        "profile-discover": "Découvrir mon parcours",
+        "bio_profil": "Étudiant en deuxième année de BUT Informatique, parcours administration, gestion et exploitation des données à l'IUT d'Annecy, j'ai acquis une première expérience en Data Analysis et Business Intelligence. Je recherche une alternance à partir de septembre 2026 en Data, BI ou bases de données afin de contribuer à la préparation des données, à leur analyse et à la création de tableaux de bord.",
 
-        "competences-titre": "Compétences Techniques", 
+        "competences-titre": "Compétences techniques",
         "skills-frontend-title": "Frontend",
         "skills-backend-title": "Backend & Logiciel",
         "skills-data-title": "Data & BI",
@@ -411,16 +431,20 @@ const translations = {
         "soft-team": "Travail d'équipe",
         "soft-autonomous": "Autonome et capacité d'adaptation",
         
-        "titre_edu": "Formation", 
-        "titre_pro_exp": "Expériences Professionnelles",
+        "titre_edu": "Formation",
+        "titre_pro_exp": "Expériences professionnelles",
+        "education-intro": "Un parcours technique construit entre développement, bases de données et analyse de données.",
+        "experience-intro": "Des expériences professionnelles et universitaires centrées sur des solutions concrètes, fiables et utiles.",
+        "projects-overline": "Projets sélectionnés",
+        "contact-overline": "Construisons quelque chose d'utile à partir des données.",
         
         "date_2024_2027": "2024 - 2027",
         "date_2021_2024": "2021 - 2024",
-        "date_oct_jan": "Oct 2025 - Jan 2026",
+        "date_oct_jan": "Octobre 2025 - Janvier 2026",
         "date_june_25": "Juin 2025",
         "date_ete_24": "Été 2024",
-        "date_avr_juin_26": "Avr. 2026 - Juin 2026",
-        "date_mars_avr_26": "Mars 2026 - Avr. 2026",
+        "date_avr_juin_26": "Avril 2026 - Juin 2026",
+        "date_mars_avr_26": "Mars 2026 - Avril 2026",
 
         "job_lbdp": "Stagiaire Data Analyst & Business Intelligence",
         "lieu_lbdp": "La Boutique du Pro (LBDP) - Méry, France",
@@ -436,7 +460,7 @@ const translations = {
         "desc_order_app": "Développement d'une application de gestion de commandes en C# (WPF/XAML). Conception et implémentation d'une interface utilisateur pour la prise de commandes et la gestion des stocks.",
 
         "job_leclerc": "Employé Commercial",
-        "desc_leclerc": "Supermarché - 250 employés. Mise en rayon et gestion des stocks. Merchandising et assistance client.",
+        "desc_leclerc": "Mise en rayon, suivi des stocks, présentation des produits et accompagnement des clients au sein d'une équipe en grande distribution.",
         
         "titre_but": "BUT Informatique", 
         "lieu_but": "Université de Savoie / IUT Annecy, France",
@@ -451,7 +475,7 @@ const translations = {
         
         "projets-titre": "Projets", 
         "contact-titre": "Contactez-moi",
-        "contact-p": "Disponible pour échanger sur des opportunités d'alternance en Business Intelligence.",
+        "contact-p": "Disponible pour échanger sur une alternance en Data, Business Intelligence ou bases de données.",
         "form-send": "Envoyer",
         "form-name": "Nom",
         "form-email": "Email",
@@ -495,12 +519,12 @@ const translations = {
         "features-title": "Fonctionnalités Clés",
         
         typed_strings: [
-            "Analyste de Données.", 
+            "Analyste de Données.",
             "Développeur BI.", 
             "Bases de Données.",
-            "Expert SQL.", 
-            "Développeur Backend.", 
-            "Étudiant."
+            "Développement Backend.",
+            "Étudiant.",
+            "SQL & Bases de Données."
         ]
     },
     en: {
@@ -513,14 +537,16 @@ const translations = {
         nav_cv_fr: "French CV",
         nav_cv_intl: "International CV",
         
-        hero_badge: "🔍 Data / BI / Databases apprenticeship - Sept. 2026",
-        "profil-p": "Second-year BUT Informatique student specializing in data administration, management and exploitation. I turn data into reliable reporting and decision support tools.",
+        hero_badge: "🔍 Seeking a Data / BI / Database apprenticeship - September 2026",
+        "profil-p": "Second-year BUT Informatique student specializing in data management and analytics. I build reliable dashboards and decision-support tools from structured data.",
         "profil-btn-cv": "Download CV",
         "profil-btn-cv-fr": "Download French CV",
         "profil-btn-cv-intl": "Download International CV",
 
         "titre_profil": "Profile",
-        "bio_profil": "Second-year BUT Informatique student specializing in data administration, management and exploitation at IUT d'Annecy. Having completed a Data Analyst / Business Intelligence internship, I am seeking a work-study contract from September 2026 in data, BI or databases, with the goal of contributing to data exploitation, reporting and decision support.",
+        "profile-lead": "I turn raw data into clear analysis and practical decision-support tools.",
+        "profile-discover": "Discover my journey",
+        "bio_profil": "I am a second-year BUT Informatique student specializing in data management and analytics at IUT Annecy. After gaining initial experience in Data Analysis and Business Intelligence, I am seeking an apprenticeship starting in September 2026 in Data, BI or databases, where I can contribute to data preparation, analysis and dashboard development.",
 
         "competences-titre": "Technical Skills", 
         "skills-frontend-title": "Frontend",
@@ -534,15 +560,19 @@ const translations = {
         "soft-team": "Teamwork",
         "soft-autonomous": "Autonomous and adaptable",
 
-        "titre_edu": "Education", 
+        "titre_edu": "Education",
         "titre_pro_exp": "Work Experience",
+        "education-intro": "A technical path built between software engineering, databases and data analysis.",
+        "experience-intro": "Professional and academic experience focused on building practical, reliable solutions.",
+        "projects-overline": "Selected work",
+        "contact-overline": "Let us build something useful from data.",
         "date_2024_2027": "2024 - 2027",
         "date_2021_2024": "2021 - 2024",
-        "date_oct_jan": "Oct 2025 - Jan 2026",
+        "date_oct_jan": "October 2025 - January 2026",
         "date_june_25": "June 2025",
         "date_ete_24": "Summer 2024",
-        "date_avr_juin_26": "Apr. 2026 - Jun. 2026",
-        "date_mars_avr_26": "Mar. 2026 - Apr. 2026",
+        "date_avr_juin_26": "April 2026 - June 2026",
+        "date_mars_avr_26": "March 2026 - April 2026",
 
         "job_lbdp": "Data Analyst & Business Intelligence Intern",
         "lieu_lbdp": "La Boutique du Pro (LBDP) - Méry, France",
@@ -558,7 +588,7 @@ const translations = {
         "desc_order_app": "Developed an order management application in C# (WPF/XAML). Designed and implemented a user interface for order taking and stock management.",
 
         "job_leclerc": "Retail Associate",
-        "desc_leclerc": "Supermarket - 250 employees. Restocked shelves and managed inventory. Merchandised products and assisted customers.",
+        "desc_leclerc": "Shelf stocking, inventory monitoring, product presentation and customer support as part of a retail team.",
         
         "titre_but": "CS Bachelor (BUT Informatique)", 
         "lieu_but": "University of Savoy / IUT Annecy, France",
@@ -573,7 +603,7 @@ const translations = {
         
         "projets-titre": "Projects", 
         "contact-titre": "Contact Me",
-        "contact-p": "Available to discuss Business Intelligence apprenticeship opportunities.",
+        "contact-p": "Available to discuss apprenticeship opportunities in Data, Business Intelligence or databases.",
         "form-send": "Send",
         "form-name": "Name",
         "form-email": "Email",
@@ -617,29 +647,33 @@ const translations = {
         "features-title": "Key Features",
         
         typed_strings: [
-            "Data Analyst.", 
+            "Data Analyst.",
             "BI Developer.", 
-            "Database-focused.",
-            "SQL Expert.",
-            "Backend Developer.",
-            "Student."
+            "Databases.",
+            "Backend Development.",
+            "Student.",
+            "SQL & Databases."
         ]
     }
 };
 
 let currentLang = 'fr';
 let typedInstance;
+let lenisInstance = null;
 
 document.addEventListener('DOMContentLoaded', () => {
 
     updateLanguage('fr');
 
+    initSmoothScroll();
     initScrollReveal();
     initProgressBars();
     initScrollProgress();
     initCursorGlow();
     initScrollSpy();
     initSmoothNavigation();
+    initHeroParallax();
+    initHeroVisualAlignment();
     
     document.querySelectorAll('.tech-filters button').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -664,8 +698,9 @@ function initTyped(lang) {
         typedInstance = new Typed('#typed-text', {
             strings: translations[lang].typed_strings,
             typeSpeed: 50,
-            backSpeed: 30,
-            backDelay: 2000,
+            backSpeed: 26,
+            backDelay: 2400,
+            smartBackspace: false,
             loop: true
         });
     }
@@ -676,13 +711,15 @@ function renderProjects(filter) {
     if (!container) return;
     
     container.innerHTML = '';
-    
+    let visibleProjectIndex = 0;
+
     projectsData.forEach(p => {
         const matchesFilter = filter === 'all' || 
                               p.techs.includes(filter) || 
                               (p.category && p.category.includes(filter));
         
         if (matchesFilter) {
+            visibleProjectIndex += 1;
             const content = p[currentLang];
             const displayTitle = content.title || p.title;
             
@@ -697,20 +734,29 @@ function renderProjects(filter) {
                 }
                 actionBtnHtml = `
                     <button class="btn-action" onclick="event.stopPropagation(); openDetailedModal(${p.id})">
-                        <i class="fa-solid ${p.actionBtn.icon}"></i> ${btnText}
+                        ${btnText} <i class="fa-solid fa-arrow-right"></i>
                     </button>
                 `;
+            } else {
+                actionBtnHtml = `
+                    <span class="project-open-label">
+                        ${currentLang === 'fr' ? 'Découvrir le projet' : 'Explore project'}
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                `;
             }
-            
+
             const html = `
                 <div class="glass-card project-card" onclick="openModal(${p.id})">
+                    <span class="project-index">${String(visibleProjectIndex).padStart(2, '0')} / ${String(projectsData.length).padStart(2, '0')}</span>
                     <div class="project-img" style="background-image: url('${p.image}')"></div>
                     <div class="project-content">
+                        <span class="project-case-label">${currentLang === 'fr' ? 'ÉTUDE DE CAS' : 'CASE STUDY'}</span>
                         <div class="project-meta">
                             <span class="meta-type">${content.type}</span>
                             <span class="project-badge ${p.status === 'ongoing' ? 'badge-ongoing' : 'badge-completed'}">${translations[currentLang]['status-' + p.status]}</span>
                         </div>
-                        <span class="meta-date">${p.date}</span>
+                        <span class="meta-date">${typeof p.date === 'object' ? p.date[currentLang] : p.date}</span>
                         
                         <h3>${displayTitle}</h3>
                         <p>${content.desc}</p>
@@ -754,6 +800,7 @@ function openModal(id) {
     }).join('');
     
     document.querySelector('#project-modal').classList.add('active');
+    updateModalScrollState();
 }
 
 function openDetailedModal(id) {
@@ -827,24 +874,40 @@ function openDetailedModal(id) {
     }
     
     modal.classList.add('active');
+    updateModalScrollState();
 }
 
 function openImageModal(imageSrc) {
     const imageModal = document.querySelector('#image-modal');
     imageModal.querySelector('#image-modal-img').src = imageSrc;
     imageModal.classList.add('active');
+    updateModalScrollState();
 }
 
 function closeModal() {
     document.querySelector('#project-modal').classList.remove('active');
+    updateModalScrollState();
 }
 
 function closeDetailedModal() {
     document.querySelector('#detailed-modal').classList.remove('active');
+    updateModalScrollState();
 }
 
 function closeImageModal() {
     document.querySelector('#image-modal').classList.remove('active');
+    updateModalScrollState();
+}
+
+function updateModalScrollState() {
+    if (!lenisInstance) return;
+
+    const hasOpenModal = document.querySelector('.modal-overlay.active');
+    if (hasOpenModal) {
+        lenisInstance.stop();
+    } else {
+        lenisInstance.start();
+    }
 }
 
 window.onclick = function(event) {
@@ -920,7 +983,7 @@ function updateLanguage(lang) {
 
 function initScrollReveal() {
     const targets = document.querySelectorAll(
-        '.glass-card, .section-header h2, .tech-filters, .timeline-card'
+        '.glass-card, .section-header h2, .tech-filters, .timeline-card, .editorial-section-heading, .profile-manifesto, .contact-heading'
     );
 
     targets.forEach(el => {
@@ -990,7 +1053,11 @@ function initScrollProgress() {
     });
 
     backToTop.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        if (lenisInstance) {
+            lenisInstance.scrollTo(0, { duration: 1.2 });
+        } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
     });
 }
 
@@ -1044,12 +1111,98 @@ function initSmoothNavigation() {
             const navHeight = nav ? nav.offsetHeight : 0;
             const top = target.getBoundingClientRect().top + window.pageYOffset - navHeight - 18;
 
-            window.scrollTo({
-                top: Math.max(0, top),
-                behavior: reduceMotion ? 'auto' : 'smooth'
-            });
+            if (lenisInstance && !reduceMotion) {
+                lenisInstance.scrollTo(Math.max(0, top), { duration: 1.2 });
+            } else {
+                window.scrollTo({
+                    top: Math.max(0, top),
+                    behavior: reduceMotion ? 'auto' : 'smooth'
+                });
+            }
         });
     });
+}
+
+function initSmoothScroll() {
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduceMotion || typeof Lenis === 'undefined') return;
+
+    lenisInstance = new Lenis({
+        duration: 1.2,
+        easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        orientation: 'vertical',
+        gestureOrientation: 'vertical',
+        smoothWheel: true,
+        syncTouch: false,
+        wheelMultiplier: 0.9
+    });
+
+    const raf = time => {
+        lenisInstance.raf(time);
+        window.requestAnimationFrame(raf);
+    };
+
+    window.requestAnimationFrame(raf);
+}
+
+function initHeroParallax() {
+    const hero = document.querySelector('.hero');
+    const content = hero?.querySelector('.hero-content');
+    const visual = hero?.querySelector('.hero-visual-editorial');
+    const scrollCue = hero?.querySelector('.hero-scroll-cue');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!hero || !content || !visual || reduceMotion) return;
+
+    let ticking = false;
+
+    const updateHero = () => {
+        const rect = hero.getBoundingClientRect();
+        const travelled = Math.max(0, -rect.top);
+        const progress = Math.min(1, travelled / Math.max(hero.offsetHeight, 1));
+
+        content.style.transform = `translate3d(0, ${travelled * 0.08}px, 0)`;
+        content.style.opacity = String(1 - progress * 0.42);
+        visual.style.transform = `translate3d(0, ${travelled * 0.035}px, 0) scale(${1 - progress * 0.025})`;
+
+        if (scrollCue) {
+            scrollCue.style.opacity = String(1 - progress * 1.8);
+        }
+
+        ticking = false;
+    };
+
+    const requestUpdate = () => {
+        if (!ticking) {
+            window.requestAnimationFrame(updateHero);
+            ticking = true;
+        }
+    };
+
+    window.addEventListener('scroll', requestUpdate, { passive: true });
+    window.addEventListener('resize', requestUpdate);
+    updateHero();
+}
+
+function initHeroVisualAlignment() {
+    const visual = document.querySelector('.hero-visual-editorial');
+    const portrait = visual?.querySelector('.portrait-frame');
+
+    if (!visual || !portrait || typeof ResizeObserver === 'undefined') return;
+
+    const syncRailHeight = () => {
+        visual.style.setProperty('--portrait-rail-height', `${portrait.offsetHeight}px`);
+    };
+
+    const observer = new ResizeObserver(syncRailHeight);
+    observer.observe(portrait);
+
+    const portraitImage = portrait.querySelector('img');
+    if (portraitImage && !portraitImage.complete) {
+        portraitImage.addEventListener('load', syncRailHeight, { once: true });
+    }
+
+    syncRailHeight();
 }
 
 function toggleMenu() {

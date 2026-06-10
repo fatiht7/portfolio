@@ -13,7 +13,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;700&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
@@ -29,7 +29,10 @@
     </div>
 
     <nav class="glass-nav">
-        <a href="#" class="logo">Fatih<span class="dot">.</span>Data</a>
+        <a href="#hero" class="logo">
+            <span class="logo-mark">FT</span>
+            <span class="logo-copy">Fatih TÜRK<small>Data portfolio</small></span>
+        </a>
         
         <ul class="nav-menu" id="nav-menu">
             <li><a href="#hero" onclick="closeMenu()" data-lang="nav_home">Home</a></li>
@@ -60,39 +63,96 @@
 
         <section id="hero" class="hero">
             <div class="hero-content">
-                <span class="badge-glass" data-lang="hero_badge">🔍 Data / BI / Databases apprenticeship - Sept. 2026</span>
+                <span class="hero-kicker">Portfolio / 2026</span>
+                <span class="badge-glass" data-lang="hero_badge">🔍 Seeking a Data / BI / Database apprenticeship - September 2026</span>
                 <h1 class="hero-name" data-text="Fatih TÜRK">Fatih TÜRK</h1>
-                
+
                 <h2 class="gradient-text"><span id="typed-text"></span></h2>
                 
                 <p class="subtitle" data-lang="profil-p">
-                    Second-year BUT Informatique student specializing in data administration, management and exploitation. I turn data into reliable reporting and decision support tools.
+                    Second-year BUT Informatique student specializing in data management and analytics. I build reliable dashboards and decision-support tools from structured data.
                 </p>
                 
                 <div class="hero-actions">
                     <a href="#projects" class="btn-primary" data-lang="nav_projects_btn">View my projects</a>
+                    <a href="#profile" class="hero-text-link">
+                        <span data-lang="titre_profil">Profile</span>
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </a>
                 </div>
             </div>
-            <div class="hero-card glass-card">
-                <img src="assets/previews/imgPROFIL.png" alt="Fatih TÜRK">
-                <div class="hero-card-meta">
-                    <span>Data / BI</span>
-                    <strong>Annecy</strong>
+            <div class="hero-visual-editorial" aria-label="Fatih TÜRK and data project previews">
+                <div class="visual-rail visual-rail-left" aria-hidden="true">
+                    <div class="visual-track">
+                        <img src="assets/open-food-facts/ventespage1.jpg" alt="">
+                        <img src="assets/leboncoin/powerbi-1.png" alt="">
+                        <img src="assets/open-food-facts/mldBaseOLAP.jpg" alt="">
+                        <img src="assets/open-food-facts/ventespage1.jpg" alt="">
+                        <img src="assets/leboncoin/powerbi-1.png" alt="">
+                        <img src="assets/open-food-facts/mldBaseOLAP.jpg" alt="">
+                    </div>
                 </div>
+                <div class="portrait-frame">
+                    <img src="assets/previews/imgPROFIL.png" alt="Fatih TÜRK">
+                    <div class="portrait-caption">
+                        <span>Data / BI</span>
+                        <strong>Annecy, France</strong>
+                    </div>
+                </div>
+                <div class="visual-rail visual-rail-right" aria-hidden="true">
+                    <div class="visual-track">
+                        <img src="assets/open-food-facts/compositionpage1.jpg" alt="">
+                        <img src="assets/leboncoin/star-schema.png" alt="">
+                        <img src="assets/sibilia/dashboard.png" alt="">
+                        <img src="assets/open-food-facts/compositionpage1.jpg" alt="">
+                        <img src="assets/leboncoin/star-schema.png" alt="">
+                        <img src="assets/sibilia/dashboard.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="hero-scroll-cue" aria-hidden="true">
+                <span>Scroll</span>
+                <i></i>
             </div>
         </section>
 
+        <div class="expertise-marquee" aria-hidden="true">
+            <div class="expertise-track">
+                <span>Data Analysis</span><i></i>
+                <span>Business Intelligence</span><i></i>
+                <span>Database Design</span><i></i>
+                <span>ETL Workflows</span><i></i>
+                <span>Power BI</span><i></i>
+                <span>Data Analysis</span><i></i>
+                <span>Business Intelligence</span><i></i>
+                <span>Database Design</span><i></i>
+                <span>ETL Workflows</span><i></i>
+                <span>Power BI</span><i></i>
+            </div>
+        </div>
+
         <section id="profile" class="section">
-            <div class="glass-card profile-simple">
-                <h2 data-lang="titre_profil">Profile</h2>
-                <p class="profile-bio" data-lang="bio_profil">
-                    Second-year BUT Informatique student specializing in data administration, management and exploitation at IUT d'Annecy. Having completed a Data Analyst / Business Intelligence internship, I am seeking a work-study contract from September 2026 in data, BI or databases, with the goal of contributing to data exploitation, reporting and decision support.
-                </p>
+            <div class="editorial-section-layout">
+                <div class="editorial-section-heading">
+                    <span class="section-index">[001]</span>
+                    <h2 data-lang="titre_profil">Profile</h2>
+                </div>
+                <div class="profile-manifesto">
+                    <p class="profile-lead" data-lang="profile-lead">I turn raw data into clear analysis and practical decision-support tools.</p>
+                    <p class="profile-bio" data-lang="bio_profil">
+                        I am a second-year BUT Informatique student specializing in data management and analytics at IUT Annecy. After gaining initial experience in Data Analysis and Business Intelligence, I am seeking an apprenticeship starting in September 2026 in Data, BI or databases, where I can contribute to data preparation, analysis and dashboard development.
+                    </p>
+                    <a href="#experience" class="editorial-link">
+                        <span data-lang="profile-discover">Discover my journey</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
         </section>
 
         <section id="skills" class="section">
-            <div class="section-header">
+            <div class="editorial-section-heading stack-heading">
+                <span class="section-index">[002]</span>
                 <h2 data-lang="competences-titre">Technical Skills</h2>
             </div>
             
@@ -263,8 +323,10 @@
         </section>
 
         <section id="education" class="section">
-            <div class="section-header">
+            <div class="editorial-section-heading centered-heading">
+                <span class="section-index">[003]</span>
                 <h2 data-lang="titre_edu">Education</h2>
+                <p data-lang="education-intro">A technical path built between software engineering, databases and data analysis.</p>
             </div>
 
             <div class="education-grid">
@@ -286,8 +348,10 @@
 
         <section id="experience" class="section">
             <div class="container">
-                <div class="section-header">
+                <div class="editorial-section-heading centered-heading">
+                    <span class="section-index">[004]</span>
                     <h2 data-lang="titre_pro_exp">Work Experience</h2>
+                    <p data-lang="experience-intro">Professional and academic experience focused on building practical, reliable solutions.</p>
                 </div>
                 
                 <div class="education-grid">
@@ -331,7 +395,13 @@
 
         <section id="projects" class="section">
             <div class="section-header row">
-                <h2 data-lang="projets-titre">Projects</h2>
+                <div class="section-title-group">
+                    <span class="section-index">[005]</span>
+                    <div>
+                        <span class="section-overline" data-lang="projects-overline">Selected work</span>
+                        <h2 data-lang="projets-titre">Projects</h2>
+                    </div>
+                </div>
                 <div class="tech-filters">
                     <button class="active" data-filter="all" data-lang="filter-all">All Projects</button>
                     <button data-filter="Web" data-lang="filter-web">Web</button>
@@ -345,7 +415,8 @@
         </section>
 
         <section id="languages" class="section">
-            <div class="section-header">
+            <div class="editorial-section-heading">
+                <span class="section-index">[006]</span>
                 <h2 data-lang="langues-titre">Languages</h2>
             </div>
             <div class="grid-4">
@@ -373,7 +444,8 @@
         </section>
 
         <section id="interets" class="section" style="padding-top:0;">
-            <div class="section-header">
+            <div class="editorial-section-heading">
+                <span class="section-index">[007]</span>
                 <h2 data-lang="interets-titre">Interests</h2>
             </div>
             <div class="grid-3">
@@ -396,7 +468,8 @@
         </section>
 
         <section id="references" class="section">
-            <div class="section-header">
+            <div class="editorial-section-heading">
+                <span class="section-index">[008]</span>
                 <h2 data-lang="ref-titre">References</h2>
             </div>
             <div class="split-view">
@@ -416,10 +489,14 @@
         </section>
 
         <section id="contact" class="section">
-            <div class="glass-card contact-box">
+            <div class="contact-heading">
+                <span class="section-index">[009]</span>
+                <p data-lang="contact-overline">Let us build something useful from data.</p>
+            </div>
+            <div class="contact-box">
                 <div class="contact-left">
                     <h2 data-lang="contact-titre">Contact Me</h2>
-                    <p data-lang="contact-p">Available to discuss Business Intelligence apprenticeship opportunities.</p>
+                    <p data-lang="contact-p">Available to discuss apprenticeship opportunities in Data, Business Intelligence or databases.</p>
                     
                     <div class="contact-details">
                         <div class="info-item">
@@ -476,7 +553,6 @@
                     <i class="fab fa-linkedin"></i>
                 </a>
             </div>
-            <p data-lang="footer_tagline">Designed & built with passion</p>
             <p data-lang="footer_rights">© 2026 Fatih TÜRK. All rights reserved.</p>
         </div>
     </footer>
@@ -523,6 +599,7 @@
     </div>
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
