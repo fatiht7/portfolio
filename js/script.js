@@ -524,7 +524,7 @@ const translations = {
             "Bases de Données.",
             "Développement Backend.",
             "Étudiant.",
-            "SQL & Bases de Données."
+            "SQL et Bases de Données."
         ]
     },
     en: {
@@ -652,7 +652,7 @@ const translations = {
             "Databases.",
             "Backend Development.",
             "Student.",
-            "SQL & Databases."
+            "SQL and Databases."
         ]
     }
 };
@@ -690,20 +690,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function initTyped(lang) {
     const typedElement = document.querySelector('#typed-text');
-    if (typedElement) {
-        if (typedInstance) {
-            typedInstance.destroy();
-        }
+    if (!typedElement) return;
 
-        typedInstance = new Typed('#typed-text', {
-            strings: translations[lang].typed_strings,
-            typeSpeed: 50,
-            backSpeed: 26,
-            backDelay: 2400,
-            smartBackspace: false,
-            loop: true
-        });
+    if (typedInstance) {
+        typedInstance.destroy();
+        typedInstance = null;
     }
+
+    if (typeof Typed === 'undefined') {
+        typedElement.textContent = translations[lang].typed_strings[0];
+        return;
+    }
+
+    typedInstance = new Typed('#typed-text', {
+        strings: translations[lang].typed_strings,
+        typeSpeed: 50,
+        backSpeed: 26,
+        backDelay: 2400,
+        smartBackspace: false,
+        loop: true
+    });
 }
 
 function renderProjects(filter) {

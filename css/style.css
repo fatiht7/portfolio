@@ -1266,11 +1266,16 @@ footer ::selection {
     margin-top: 2.2rem;
     font-family: 'Instrument Serif', serif;
     font-style: italic;
-    font-size: clamp(2rem, 4vw, 4.25rem);
+    font-size: clamp(1.9rem, 3.3vw, 3.7rem);
     font-weight: 400;
+    white-space: nowrap;
     background: none;
     -webkit-text-fill-color: var(--accent-warm);
     color: var(--accent-warm);
+}
+#typed-text,
+.typed-cursor {
+    white-space: nowrap;
 }
 .subtitle {
     max-width: 650px;
@@ -1892,7 +1897,10 @@ footer {
         letter-spacing: -0.04em;
     }
     .hero-name { max-width: 7.6ch; }
-    .gradient-text { margin-top: 1.5rem; }
+    .gradient-text {
+        margin-top: 1.5rem;
+        font-size: clamp(1.45rem, 6.5vw, 2.15rem);
+    }
     .hero-visual-editorial {
         order: 2;
         width: 100%;
@@ -1995,6 +2003,481 @@ footer {
         flex-direction: column;
         gap: 0.35rem;
         text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: clip;
+    }
+
+    .container {
+        width: 100%;
+        padding-inline: clamp(1rem, 5vw, 2rem);
+    }
+
+    .glass-nav {
+        gap: 0.75rem;
+    }
+
+    .nav-actions {
+        min-width: 0;
+        gap: 0.45rem;
+    }
+
+    .language-switch {
+        flex: 0 0 auto;
+    }
+
+    .lang-option {
+        min-width: 34px;
+        height: 32px;
+        padding-inline: 0.55rem;
+    }
+
+    .hamburger {
+        flex: 0 0 auto;
+        width: 36px;
+        height: 36px;
+        display: grid;
+        place-items: center;
+        text-align: center;
+    }
+
+    .hamburger i {
+        display: none;
+    }
+
+    .hamburger::before {
+        content: "";
+        width: 19px;
+        height: 2px;
+        background: currentColor;
+        border-radius: 2px;
+        box-shadow: 0 -6px 0 currentColor, 0 6px 0 currentColor;
+    }
+
+    .nav-menu {
+        max-height: calc(100svh - 64px);
+        overflow-y: auto;
+    }
+
+    .nav-menu li {
+        min-width: 0;
+        padding: 0.85rem 0.5rem;
+    }
+
+    .nav-menu a {
+        display: block;
+        overflow-wrap: anywhere;
+    }
+
+    .hero-content,
+    .profile-manifesto,
+    .project-content,
+    .contact-left,
+    .glass-form {
+        min-width: 0;
+    }
+
+    .badge-glass {
+        display: block;
+        width: fit-content;
+        max-width: 100%;
+        line-height: 1.45;
+        overflow-wrap: anywhere;
+    }
+
+    .gradient-text {
+        width: 100%;
+        max-width: 100%;
+        min-height: 2.4rem;
+        line-height: 1.15;
+    }
+
+    #typed-text,
+    .typed-cursor {
+        white-space: nowrap;
+    }
+
+    .subtitle,
+    .profile-bio,
+    .editorial-section-heading > p,
+    .contact-heading p,
+    .contact-left > p,
+    .timeline-card p,
+    .project-content p {
+        overflow-wrap: anywhere;
+    }
+
+    .editorial-section-heading h2,
+    .section-title-group h2,
+    .contact-left h2 {
+        max-width: 100%;
+        overflow-wrap: normal;
+        word-break: normal;
+    }
+
+    #experience .editorial-section-heading h2 {
+        font-size: clamp(2rem, 9vw, 3.5rem);
+        line-height: 0.98;
+    }
+
+    .skill-column,
+    body.lang-fr .skill-column {
+        min-width: 0;
+        padding: clamp(1.35rem, 5vw, 2rem);
+    }
+
+    .skill-info,
+    .skill-info span {
+        min-width: 0;
+    }
+
+    body.lang-fr .skill-info span:first-child {
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+
+    .soft-skills-row {
+        padding: clamp(1.35rem, 5vw, 2rem);
+    }
+
+    .tags-cloud {
+        gap: 0.65rem;
+    }
+
+    .tag-glass {
+        max-width: 100%;
+        padding: 0.65rem 0.85rem;
+        line-height: 1.35;
+        overflow-wrap: anywhere;
+    }
+
+    .timeline-card .date {
+        max-width: 100%;
+        font-size: clamp(1.2rem, 5.4vw, 1.8rem);
+        white-space: normal;
+    }
+
+    #experience {
+        width: 100dvw;
+        margin-left: calc(50% - 50dvw);
+        padding-inline: clamp(1rem, 5vw, 2rem);
+    }
+
+    .section-header.row {
+        gap: 1.75rem;
+    }
+
+    .section-title-group {
+        min-width: 0;
+    }
+
+    .tech-filters {
+        width: 100%;
+        max-width: 100%;
+        justify-content: flex-start;
+    }
+
+    .tech-filters button {
+        min-height: 38px;
+        padding: 0.5rem 0.8rem;
+        line-height: 1.2;
+    }
+
+    .project-meta {
+        max-width: 100%;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .project-badge {
+        margin-left: 0;
+    }
+
+    .project-content h3,
+    .lang-card h3,
+    .interest-card h3,
+    .timeline-card h4,
+    .timeline-card h5 {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .project-tags span {
+        overflow-wrap: anywhere;
+    }
+
+    #contact {
+        width: 100dvw;
+        margin-left: calc(50% - 50dvw);
+        padding-inline: clamp(1rem, 5vw, 2rem);
+    }
+
+    .contact-heading {
+        gap: 1rem;
+    }
+
+    .contact-box {
+        width: 100%;
+        min-width: 0;
+        gap: 2.25rem;
+    }
+
+    .contact-details,
+    .info-item,
+    .info-item span {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .info-item span {
+        overflow-wrap: anywhere;
+    }
+
+    #contact .contact-actions,
+    #contact .social-links {
+        display: flex;
+        width: fit-content;
+        max-width: 100%;
+    }
+
+    .glass-form input,
+    .glass-form textarea,
+    .glass-form button {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .modal-overlay {
+        padding: 0.75rem;
+    }
+
+    .modal-card,
+    .detailed-modal-card {
+        width: 100%;
+        max-width: 100%;
+        max-height: 94svh;
+    }
+
+    .modal-card img {
+        height: 170px;
+    }
+
+    .modal-content,
+    .detailed-modal-content {
+        padding: 1.25rem;
+    }
+
+    .modal-content h2,
+    .detailed-modal-content h2,
+    .tech-item,
+    .tech-label,
+    .tech-value {
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .tech-item {
+        gap: 0.75rem;
+        align-items: flex-start;
+    }
+
+    .tech-value {
+        text-align: right;
+    }
+
+    .close-btn {
+        top: 0.65rem;
+        right: 0.65rem;
+    }
+
+    #back-to-top {
+        right: 1rem;
+        bottom: 1rem;
+        width: 44px;
+        height: 44px;
+    }
+}
+
+@media (max-width: 480px) {
+    .glass-nav {
+        padding-inline: 0.75rem;
+    }
+
+    .logo-mark {
+        width: 34px;
+        height: 34px;
+        font-size: 0.76rem;
+    }
+
+    .hero {
+        padding-top: 88px;
+    }
+
+    .hero h1 {
+        font-size: clamp(3rem, 15vw, 4.1rem);
+        letter-spacing: -0.025em;
+    }
+
+    .gradient-text {
+        font-size: clamp(1.12rem, 5.6vw, 1.55rem);
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        line-height: 1.65;
+    }
+
+    .btn-primary,
+    .btn-glass,
+    .btn-action {
+        max-width: 100%;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .portrait-frame {
+        width: min(100%, 310px);
+    }
+
+    .section {
+        padding-block: 5rem;
+    }
+
+    .editorial-section-heading {
+        margin-bottom: 2.5rem;
+    }
+
+    .editorial-section-heading h2,
+    .section-title-group h2,
+    .contact-left h2 {
+        font-size: clamp(2.35rem, 11.5vw, 3.6rem);
+        line-height: 0.96;
+        letter-spacing: -0.035em;
+    }
+
+    #experience .editorial-section-heading h2 {
+        font-size: clamp(1.9rem, 8.6vw, 2.8rem);
+        letter-spacing: -0.025em;
+    }
+
+    .profile-lead {
+        font-size: clamp(2.15rem, 10vw, 3.25rem);
+    }
+
+    .timeline-card {
+        min-width: 0;
+        padding-inline: 0;
+    }
+
+    .timeline-card h4 {
+        font-size: clamp(1.25rem, 6.6vw, 1.75rem);
+    }
+
+    .project-img {
+        min-height: 190px !important;
+    }
+
+    .project-content {
+        padding: 1.35rem 0.25rem 2.25rem !important;
+    }
+
+    .project-content h3 {
+        font-size: clamp(1.65rem, 8.5vw, 2.25rem);
+    }
+
+    .lang-card,
+    .interest-card,
+    #references .timeline-card {
+        min-height: 220px;
+        padding: 1.5rem;
+    }
+
+    .contact-left h2 {
+        font-size: clamp(2.8rem, 14vw, 4rem);
+    }
+
+    .contact-box {
+        padding-top: 2.25rem;
+    }
+
+    .info-item {
+        gap: 0.7rem;
+        align-items: flex-start;
+    }
+
+    #contact .btn-small {
+        max-width: 100%;
+        white-space: normal;
+        text-align: left;
+    }
+
+    .links-row {
+        flex-direction: column;
+    }
+
+    .btn-link {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .tech-section,
+    .features-section {
+        padding: 1rem;
+    }
+
+    .tech-item {
+        flex-direction: column;
+    }
+
+    .tech-value {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+@media (max-width: 360px) {
+    .container,
+    #experience,
+    #contact {
+        padding-inline: 0.85rem;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.8rem, 14.5vw, 3.35rem);
+    }
+
+    .gradient-text {
+        font-size: 1rem;
+    }
+
+    .badge-glass {
+        font-size: 0.76rem;
+    }
+
+    .lang-option {
+        min-width: 31px;
+        padding-inline: 0.4rem;
+    }
+
+    .hamburger {
+        width: 31px;
+        font-size: 1.3rem;
+    }
+
+    .editorial-section-heading h2,
+    .section-title-group h2 {
+        font-size: 2.15rem;
+    }
+
+    #experience .editorial-section-heading h2 {
+        font-size: 1.72rem;
     }
 }
 
