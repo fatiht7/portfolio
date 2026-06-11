@@ -1674,9 +1674,14 @@ body.lang-fr .skill-info i {
 .interest-card:last-child,
 #references .timeline-card:last-child { border-right: 0; }
 .lang-card .flag {
-    font-size: 2rem;
-    filter: grayscale(1);
-    opacity: 0.6;
+    display: block;
+    width: 42px;
+    height: 28px;
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+    border: 1px solid rgba(239,238,230,0.2);
+    border-radius: 2px;
+    opacity: 1;
 }
 .lang-card h3,
 .interest-card h3 {
