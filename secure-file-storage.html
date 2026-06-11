@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Secure File Storage, un Drive web sécurisé développé par Fatih TÜRK avec PHP, PostgreSQL, AES-256-GCM et RSA-2048.">
+    <meta property="og:title" content="Secure File Storage - Fatih TÜRK">
+    <meta property="og:description" content="Étude de cas d'une application web de stockage et de partage de fichiers chiffrés.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/previews/previewSecureDrive.png">
+    <title>Secure File Storage - Fatih TÜRK</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/project-page.css">
+</head>
+<body class="project-page">
+    <div id="scroll-progress"></div>
+    <div class="background"><div class="data-grid"></div></div>
+
+    <nav class="glass-nav project-nav">
+        <a href="index.html#projects" class="logo" aria-label="Retour au portfolio">
+            <span class="logo-mark">FT</span>
+            <span class="logo-copy">Fatih TÜRK<small>Data portfolio</small></span>
+        </a>
+
+        <a href="index.html#projects" class="project-back-link">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span class="lang-copy" data-language="fr">Tous les projets</span>
+            <span class="lang-copy" data-language="en">All projects</span>
+        </a>
+
+        <div class="language-switch" aria-label="Sélecteur de langue">
+            <button type="button" class="lang-option active" data-set-lang="fr" aria-pressed="true">FR</button>
+            <button type="button" class="lang-option" data-set-lang="en" aria-pressed="false">EN</button>
+        </div>
+    </nav>
+
+    <main>
+        <header class="case-hero">
+            <div class="case-shell case-hero-grid">
+                <div class="case-hero-copy">
+                    <a href="index.html#projects" class="case-breadcrumb">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <span>Portfolio / 02</span>
+                    </a>
+
+                    <div class="case-overline">
+                        <span class="status-dot"></span>
+                        <span class="lang-copy" data-language="fr">Projet universitaire · Mars 2026</span>
+                        <span class="lang-copy" data-language="en">University project · March 2026</span>
+                    </div>
+
+                    <h1>Secure File<br>Storage</h1>
+
+                    <p class="case-lead lang-copy" data-language="fr">
+                        Un Drive web conçu pour stocker et partager des fichiers chiffrés, en combinant cryptographie symétrique, clés publiques et contrôle d'accès.
+                    </p>
+                    <p class="case-lead lang-copy" data-language="en">
+                        A web Drive built to store and share encrypted files by combining symmetric cryptography, public keys and access control.
+                    </p>
+
+                    <div class="case-actions">
+                        <a href="https://turkf.alwaysdata.net/login.php" target="_blank" rel="noopener" class="btn-primary">
+                            <span class="lang-copy" data-language="fr">Tester le projet</span>
+                            <span class="lang-copy" data-language="en">View live project</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                        <a href="https://github.com/fatiht7/secure-file-storage" target="_blank" rel="noopener" class="case-secondary-link">
+                            <i class="fa-brands fa-github"></i>
+                            <span class="lang-copy" data-language="fr">Voir le code</span>
+                            <span class="lang-copy" data-language="en">View code</span>
+                        </a>
+                    </div>
+                </div>
+
+                <dl class="case-facts">
+                    <div>
+                        <dt class="lang-copy" data-language="fr">Rôle</dt>
+                        <dt class="lang-copy" data-language="en">Role</dt>
+                        <dd>Full-stack & sécurité</dd>
+                    </div>
+                    <div>
+                        <dt class="lang-copy" data-language="fr">Contexte</dt>
+                        <dt class="lang-copy" data-language="en">Context</dt>
+                        <dd class="lang-copy" data-language="fr">Cours de cryptographie</dd>
+                        <dd class="lang-copy" data-language="en">Cryptography course</dd>
+                    </div>
+                    <div>
+                        <dt>Stack</dt>
+                        <dd>PHP · PostgreSQL</dd>
+                    </div>
+                    <div>
+                        <dt class="lang-copy" data-language="fr">Sécurité</dt>
+                        <dt class="lang-copy" data-language="en">Security</dt>
+                        <dd>AES-256-GCM · RSA-2048</dd>
+                    </div>
+                </dl>
+            </div>
+        </header>
+
+        <section class="case-showcase" aria-label="Aperçu du projet">
+            <div class="case-shell">
+                <figure class="case-main-visual">
+                    <img src="assets/previews/previewSecureDrive.png" alt="Tableau de bord de Secure File Storage">
+                    <figcaption>
+                        <span class="lang-copy" data-language="fr">Tableau de bord principal</span>
+                        <span class="lang-copy" data-language="en">Main dashboard</span>
+                        <strong>01 / 01</strong>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="case-section">
+            <div class="case-shell case-editorial-grid">
+                <div class="case-section-heading">
+                    <span>01</span>
+                    <h2 class="lang-copy" data-language="fr">Le défi</h2>
+                    <h2 class="lang-copy" data-language="en">The challenge</h2>
+                </div>
+                <div class="case-copy-large">
+                    <p class="lang-copy" data-language="fr">
+                        Concevoir un espace de stockage utilisable comme un Drive classique, sans conserver les fichiers en clair ni rendre leur partage dépendant d'une clé secrète commune.
+                    </p>
+                    <p class="lang-copy" data-language="en">
+                        Design a storage space that feels like a regular Drive without keeping files in plain text or relying on one shared secret key for file sharing.
+                    </p>
+                    <div class="case-copy-columns">
+                        <p class="lang-copy" data-language="fr">
+                            L'application devait couvrir toute la chaîne : création de compte, dépôt, chiffrement, téléchargement, partage entre utilisateurs, vérification d'intégrité et suppression.
+                        </p>
+                        <p class="lang-copy" data-language="fr">
+                            L'enjeu principal était de séparer le chiffrement rapide du fichier de la distribution sécurisée de sa clé aux utilisateurs autorisés.
+                        </p>
+                        <p class="lang-copy" data-language="en">
+                            The application had to cover the complete flow: account creation, upload, encryption, download, user-to-user sharing, integrity verification and deletion.
+                        </p>
+                        <p class="lang-copy" data-language="en">
+                            The key challenge was separating efficient file encryption from the secure distribution of its key to authorized users.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section architecture-section">
+            <div class="case-shell">
+                <div class="case-section-heading horizontal">
+                    <span>02</span>
+                    <h2 class="lang-copy" data-language="fr">Architecture de sécurité</h2>
+                    <h2 class="lang-copy" data-language="en">Security architecture</h2>
+                </div>
+
+                <div class="security-flow">
+                    <article class="flow-step">
+                        <span class="flow-number">01</span>
+                        <i class="fa-solid fa-file-arrow-up"></i>
+                        <h3 class="lang-copy" data-language="fr">Dépôt</h3>
+                        <h3 class="lang-copy" data-language="en">Upload</h3>
+                        <p class="lang-copy" data-language="fr">Le serveur reçoit le fichier et génère une clé AES unique et aléatoire.</p>
+                        <p class="lang-copy" data-language="en">The server receives the file and generates a unique random AES key.</p>
+                    </article>
+                    <article class="flow-step">
+                        <span class="flow-number">02</span>
+                        <i class="fa-solid fa-lock"></i>
+                        <h3>AES-256-GCM</h3>
+                        <p class="lang-copy" data-language="fr">Le contenu, le nom et le type MIME sont chiffrés avec authentification.</p>
+                        <p class="lang-copy" data-language="en">Content, filename and MIME type are encrypted with authentication.</p>
+                    </article>
+                    <article class="flow-step">
+                        <span class="flow-number">03</span>
+                        <i class="fa-solid fa-key"></i>
+                        <h3>RSA-2048 OAEP</h3>
+                        <p class="lang-copy" data-language="fr">La clé AES est chiffrée avec la clé publique de chaque utilisateur autorisé.</p>
+                        <p class="lang-copy" data-language="en">The AES key is encrypted with each authorized user's public key.</p>
+                    </article>
+                    <article class="flow-step">
+                        <span class="flow-number">04</span>
+                        <i class="fa-solid fa-database"></i>
+                        <h3>PostgreSQL</h3>
+                        <p class="lang-copy" data-language="fr">Les métadonnées et les droits d'accès sont conservés séparément du fichier chiffré.</p>
+                        <p class="lang-copy" data-language="en">Metadata and access rights are stored separately from the encrypted file.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section case-features">
+            <div class="case-shell case-editorial-grid">
+                <div class="case-section-heading">
+                    <span>03</span>
+                    <h2 class="lang-copy" data-language="fr">Fonctionnalités</h2>
+                    <h2 class="lang-copy" data-language="en">Features</h2>
+                </div>
+                <div class="feature-list">
+                    <article>
+                        <span>01</span>
+                        <h3 class="lang-copy" data-language="fr">Authentification sécurisée</h3>
+                        <h3 class="lang-copy" data-language="en">Secure authentication</h3>
+                        <p class="lang-copy" data-language="fr">Création de compte, mots de passe protégés avec Argon2id et gestion des clés utilisateur.</p>
+                        <p class="lang-copy" data-language="en">Account creation, Argon2id password protection and user key management.</p>
+                    </article>
+                    <article>
+                        <span>02</span>
+                        <h3 class="lang-copy" data-language="fr">Stockage chiffré</h3>
+                        <h3 class="lang-copy" data-language="en">Encrypted storage</h3>
+                        <p class="lang-copy" data-language="fr">Aucun fichier n'est stocké en clair ; son intégrité est contrôlée avant le téléchargement.</p>
+                        <p class="lang-copy" data-language="en">No file is stored in plain text; its integrity is checked before download.</p>
+                    </article>
+                    <article>
+                        <span>03</span>
+                        <h3 class="lang-copy" data-language="fr">Partage ciblé</h3>
+                        <h3 class="lang-copy" data-language="en">Targeted sharing</h3>
+                        <p class="lang-copy" data-language="fr">Un fichier peut être partagé sans dupliquer son contenu ni transmettre sa clé AES en clair.</p>
+                        <p class="lang-copy" data-language="en">A file can be shared without duplicating its content or exposing its AES key.</p>
+                    </article>
+                    <article>
+                        <span>04</span>
+                        <h3 class="lang-copy" data-language="fr">Contrôle d'accès</h3>
+                        <h3 class="lang-copy" data-language="en">Access control</h3>
+                        <p class="lang-copy" data-language="fr">Les autorisations sont vérifiées pour chaque téléchargement, partage et suppression.</p>
+                        <p class="lang-copy" data-language="en">Permissions are checked for every download, share and deletion request.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section case-result">
+            <div class="case-shell case-result-grid">
+                <div>
+                    <span class="case-result-label">04 / RESULT</span>
+                    <h2 class="lang-copy" data-language="fr">Un prototype complet, déployé et accessible en ligne.</h2>
+                    <h2 class="lang-copy" data-language="en">A complete prototype, deployed and available online.</h2>
+                </div>
+                <div>
+                    <p class="lang-copy" data-language="fr">
+                        Ce projet m'a permis de passer de concepts cryptographiques théoriques à une application concrète, avec une attention particulière portée à la gestion des clés, aux droits d'accès et à l'expérience utilisateur.
+                    </p>
+                    <p class="lang-copy" data-language="en">
+                        This project helped me turn theoretical cryptography concepts into a practical application, with particular attention to key management, access rights and user experience.
+                    </p>
+                    <div class="case-actions">
+                        <a href="https://turkf.alwaysdata.net/login.php" target="_blank" rel="noopener" class="btn-primary">
+                            <span class="lang-copy" data-language="fr">Ouvrir l'application</span>
+                            <span class="lang-copy" data-language="en">Open application</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                        <a href="https://github.com/fatiht7/secure-file-storage" target="_blank" rel="noopener" class="case-secondary-link">
+                            <i class="fa-brands fa-github"></i>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <nav class="case-next">
+            <div class="case-shell">
+                <a href="index.html#projects">
+                    <span class="lang-copy" data-language="fr">Retour à la sélection</span>
+                    <span class="lang-copy" data-language="en">Back to selected work</span>
+                    <strong class="lang-copy" data-language="fr">Voir tous les projets</strong>
+                    <strong class="lang-copy" data-language="en">View all projects</strong>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </nav>
+    </main>
+
+    <footer class="project-footer">
+        <p class="lang-copy" data-language="fr">© 2026 Fatih TÜRK. Tous droits réservés.</p>
+        <p class="lang-copy" data-language="en">© 2026 Fatih TÜRK. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
+    <script src="js/project-page.js"></script>
+</body>
+</html>

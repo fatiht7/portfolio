@@ -10,6 +10,7 @@ const projectsData = [
         image: "assets/open-food-facts/ventespage1.jpg",
         techs: ["PostgreSQL", "Power BI", "Knime", "Star Schema", "Merise"],
         category: ["BI", "Analysis"],
+        pageUrl: "open-food-facts.html",
         actionBtn: { text: "View Dashboards", icon: "fa-chart-line" },
         hasDetailedModal: true,
         fr: {
@@ -111,6 +112,7 @@ const projectsData = [
         image: "assets/previews/previewSecureDrive.png",
         techs: ["PHP", "PostgreSQL", "AES-256-GCM", "RSA-2048", "SHA-256"],
         category: ["Web"],
+        pageUrl: "secure-file-storage.html",
         actionBtn: { text: "View App", icon: "fa-shield-halved" },
         hasDetailedModal: true,
         fr: {
@@ -204,6 +206,7 @@ const projectsData = [
         image: "assets/previews/previewLeboncoin.png",
         techs: ["PHP", "Laravel", "SQL", "Merise", "BPMN"],
         category: ["Web", "Analysis"],
+        pageUrl: "leboncoin.html",
         actionBtn: { text: "View Modeling", icon: "fa-diagram-project" },
         hasDetailedModal: true,
         fr: { 
@@ -275,6 +278,7 @@ const projectsData = [
         image: "assets/leboncoin/powerbi-1.png",
         techs: ["Power BI", "DAX", "PostgreSQL", "Star Schema"],
         category: ["BI", "Analysis"],
+        pageUrl: "leboncoin.html",
         actionBtn: { text: "View Dashboard", icon: "fa-chart-line" },
         hasDetailedModal: true,
         fr: { 
@@ -381,6 +385,7 @@ const projectsData = [
         image: "assets/previews/previewSIBILIA.png", 
         techs: ["C#", ".NET", "WPF", "XAML", "MVVM"],
         category: ["Desktop"],
+        pageUrl: "sibilia.html",
         actionBtn: { text: "View App", icon: "fa-desktop" },
         hasDetailedModal: true,
         fr: { 
@@ -823,7 +828,14 @@ function renderProjects(filter) {
             const displayTitle = content.title || p.title;
             
             let actionBtnHtml = '';
-            if (p.actionBtn) {
+                if (p.pageUrl) {
+                    actionBtnHtml = `
+                        <a class="btn-action" href="${p.pageUrl}" onclick="event.stopPropagation()">
+                            ${currentLang === 'fr' ? 'Voir l’étude de cas' : 'View case study'}
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    `;
+                } else if (p.actionBtn) {
                 let btnText = p.actionBtn.text;
                 if (currentLang === 'fr') {
                     if (p.actionBtn.text === 'View Modeling') btnText = 'Voir Modélisation';
@@ -846,7 +858,7 @@ function renderProjects(filter) {
             }
 
             const html = `
-                <div class="glass-card project-card" onclick="openModal(${p.id})">
+                <div class="glass-card project-card" onclick="${p.pageUrl ? `window.location.href='${p.pageUrl}'` : `openModal(${p.id})`}">
                     <span class="project-index">${String(visibleProjectIndex).padStart(2, '0')} / ${String(projectsData.length).padStart(2, '0')}</span>
                     <div class="project-img" style="background-image: url('${p.image}')"></div>
                     <div class="project-content">
