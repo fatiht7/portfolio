@@ -101,6 +101,99 @@ const projectsData = [
         links: []
     },
     {
+        id: 8,
+        title: "Secure File Storage",
+        date: {
+            fr: "Mars 2026",
+            en: "March 2026"
+        },
+        status: "completed",
+        image: "assets/previews/previewSecureDrive.png",
+        techs: ["PHP", "PostgreSQL", "AES-256-GCM", "RSA-2048", "SHA-256"],
+        category: ["Web"],
+        actionBtn: { text: "View App", icon: "fa-shield-halved" },
+        hasDetailedModal: true,
+        fr: {
+            title: "Drive sécurisé - Stockage & Partage de Fichiers",
+            type: "Projet universitaire",
+            desc: "Application web de stockage et de partage de fichiers chiffrés. Chaque fichier est protégé par AES-256-GCM, tandis que sa clé est distribuée aux utilisateurs autorisés avec RSA-2048.",
+            modalTitle: "Secure File Storage - Cryptographie & Sécurité",
+            modalDesc: "Ce projet universitaire met en œuvre un stockage de fichiers chiffré côté serveur. Il combine chiffrement symétrique et asymétrique, contrôle d'accès, vérification d'intégrité et partage entre utilisateurs au sein d'une application PHP connectée à PostgreSQL.",
+            techSection: {
+                title: "Architecture de sécurité",
+                items: [
+                    { label: "Fichiers", value: "AES-256-GCM" },
+                    { label: "Clés de partage", value: "RSA-2048 OAEP" },
+                    { label: "Mots de passe", value: "Argon2id" },
+                    { label: "Intégrité", value: "SHA-256" },
+                    { label: "Backend", value: "PHP 8 / OpenSSL" },
+                    { label: "Base de données", value: "PostgreSQL" }
+                ]
+            },
+            features: [
+                "Création de compte et authentification sécurisée",
+                "Chiffrement du contenu, du nom et du type MIME des fichiers",
+                "Partage d'un fichier par rechiffrement de sa clé AES avec la clé publique du destinataire",
+                "Vérification de l'intégrité du fichier avant téléchargement",
+                "Protection CSRF des formulaires et contrôle des autorisations",
+                "Suppression des fichiers et des comptes avec nettoyage des données associées"
+            ],
+            diagrams: [
+                {
+                    image: "assets/previews/previewSecureDrive.png",
+                    title: "Tableau de bord du Drive",
+                    desc: "Interface de dépôt, téléchargement, partage et suppression des fichiers chiffrés."
+                }
+            ]
+        },
+        en: {
+            title: "Secure Drive - Encrypted File Storage & Sharing",
+            type: "University project",
+            desc: "Web application for encrypted file storage and sharing. Each file is protected with AES-256-GCM, while its key is distributed to authorized users using RSA-2048.",
+            modalTitle: "Secure File Storage - Cryptography & Security",
+            modalDesc: "This university project implements server-side encrypted file storage. It combines symmetric and asymmetric encryption, access control, integrity verification and user-to-user sharing in a PHP application backed by PostgreSQL.",
+            techSection: {
+                title: "Security Architecture",
+                items: [
+                    { label: "Files", value: "AES-256-GCM" },
+                    { label: "Shared keys", value: "RSA-2048 OAEP" },
+                    { label: "Passwords", value: "Argon2id" },
+                    { label: "Integrity", value: "SHA-256" },
+                    { label: "Backend", value: "PHP 8 / OpenSSL" },
+                    { label: "Database", value: "PostgreSQL" }
+                ]
+            },
+            features: [
+                "Account creation and secure authentication",
+                "Encryption of file contents, names and MIME types",
+                "File sharing by encrypting its AES key with the recipient's public key",
+                "File integrity verification before download",
+                "CSRF protection and authorization checks",
+                "File and account deletion with associated data cleanup"
+            ],
+            diagrams: [
+                {
+                    image: "assets/previews/previewSecureDrive.png",
+                    title: "Secure Drive Dashboard",
+                    desc: "Interface for uploading, downloading, sharing and deleting encrypted files."
+                }
+            ]
+        },
+        links: [
+            {
+                text: "View Live Project",
+                url: "https://turkf.alwaysdata.net/login.php",
+                icon: "fa-arrow-up-right-from-square",
+                iconStyle: "fa-solid"
+            },
+            {
+                text: "View Code",
+                url: "https://github.com/fatiht7/secure-file-storage",
+                icon: "fa-github"
+            }
+        ]
+    },
+    {
         id: 1,
         title: "SAÉ Leboncoin Vacation Rental - Web App",
         date: {
@@ -797,12 +890,16 @@ function openModal(id) {
     
     document.querySelector('#modal-techs').innerHTML = p.techs.map(t => `<span>${t}</span>`).join('');
     document.querySelector('#modal-links').innerHTML = p.links.map(l => {
-        const linkText = currentLang === 'fr' && l.text === 'View Code' ? 'Voir le code' : l.text;
+        let linkText = l.text;
+        if (currentLang === 'fr') {
+            if (l.text === 'View Code') linkText = 'Voir le code';
+            else if (l.text === 'View Live Project') linkText = 'Voir le projet en ligne';
+        }
         return `
-        <a href="${l.url}" target="_blank" class="btn-link">
-            <i class="fa-brands ${l.icon || 'fa-github'}"></i> ${linkText}
-        </a>
-    `;
+          <a href="${l.url}" target="_blank" class="btn-link">
+              <i class="${l.iconStyle || 'fa-brands'} ${l.icon || 'fa-github'}"></i> ${linkText}
+          </a>
+      `;
     }).join('');
     
     document.querySelector('#project-modal').classList.add('active');
@@ -846,7 +943,7 @@ function openDetailedModal(id) {
     
 
     let diagramsTitle;
-    if (p.id === 4) {
+    if (p.id === 4 || p.id === 8) {
         diagramsTitle = translations[currentLang]['previews-title'];
     } else {
         diagramsTitle = translations[currentLang]['diagrams-title'];
@@ -867,12 +964,16 @@ function openDetailedModal(id) {
     const linksContainer = modal.querySelector('#detailed-links');
     if (p.links && p.links.length > 0) {
         linksContainer.innerHTML = p.links.map(l => {
-            const linkText = currentLang === 'fr' && l.text === 'View Code' ? 'Voir le code' : l.text;
+            let linkText = l.text;
+            if (currentLang === 'fr') {
+                if (l.text === 'View Code') linkText = 'Voir le code';
+                else if (l.text === 'View Live Project') linkText = 'Voir le projet en ligne';
+            }
             return `
-            <a href="${l.url}" target="_blank" class="btn-link">
-                <i class="fa-brands ${l.icon || 'fa-github'}"></i> ${linkText}
-            </a>
-        `;
+              <a href="${l.url}" target="_blank" class="btn-link">
+                  <i class="${l.iconStyle || 'fa-brands'} ${l.icon || 'fa-github'}"></i> ${linkText}
+              </a>
+          `;
         }).join('');
         linksContainer.style.display = 'flex';
     } else {
