@@ -172,7 +172,7 @@ function buildCaseStudy(project) {
 
     const gallery = project.gallery.map((item, index) => `
         <figure class="case-gallery-item${index === 0 ? " featured" : ""}">
-            <div class="case-gallery-image"><img src="${item[0]}" alt="${item[1]}"></div>
+            <div class="case-gallery-image"><img src="${item[0]}" alt="${item[1]}" loading="lazy" decoding="async"></div>
             <figcaption>
                 <div>${bilingual(item[1], item[2], "strong")}</div>
                 <span>${String(index + 1).padStart(2, "0")} / ${String(project.gallery.length).padStart(2, "0")}</span>
