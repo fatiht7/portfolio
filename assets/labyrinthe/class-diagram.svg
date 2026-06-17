@@ -1,0 +1,150 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1240 820" width="1240" height="820" font-family="'DM Sans','Segoe UI',sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1,1 L10,5 L1,9" fill="none" stroke="#8398a8" stroke-width="1.6"/>
+    </marker>
+    <marker id="diamond" markerWidth="18" markerHeight="14" refX="16" refY="7" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1,7 L8,2 L15,7 L8,12 Z" fill="#1f9d57" stroke="#1f9d57"/>
+    </marker>
+  </defs>
+
+  <style>
+    .cls-name { font-weight:700; font-size:16px; fill:#ffffff; }
+    .stereo   { font-size:12px; font-style:italic; fill:#d8f3e4; }
+    .mem      { font-family:'Consolas','SF Mono',monospace; font-size:13px; fill:#36485a; }
+    .pub      { fill:#1f9d57; }
+    .title    { font-weight:700; font-size:27px; fill:#1f2d38; }
+    .sub      { font-size:14px; fill:#5f7585; }
+    .leg      { font-size:13px; fill:#46586a; }
+    .legt     { font-weight:700; font-size:13px; fill:#1f2d38; }
+    .mult     { font-family:'Consolas',monospace; font-size:13px; fill:#5f7585; }
+    .relt     { font-family:'Consolas',monospace; font-size:12px; fill:#5f7585; }
+  </style>
+
+  <!-- Title -->
+  <text x="40" y="50" class="title">Diagramme de classes</text>
+  <text x="40" y="78" class="sub">Labyrinthe · C# / WPF — architecture du projet</text>
+  <rect x="42" y="92" width="62" height="4" rx="2" fill="#1f9d57"/>
+
+  <!-- ===== Relationships (drawn first, behind boxes) ===== -->
+  <!-- Composition MainWindow to Luttin -->
+  <line x1="890" y1="250" x2="836" y2="250" stroke="#1f9d57" stroke-width="1.8" marker-end="url(#diamond)"/>
+  <text x="863" y="240" text-anchor="middle" class="relt">List&lt;Luttin&gt;</text>
+  <text x="845" y="270" class="mult">1</text>
+  <text x="876" y="270" class="mult">*</text>
+
+  <!-- create: MainWindow ..> Menu_Acceuil -->
+  <line x1="370" y1="214" x2="314" y2="238" stroke="#8398a8" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+  <!-- create: MainWindow ..> dialogue_Pause -->
+  <line x1="370" y1="558" x2="314" y2="636" stroke="#8398a8" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+  <!-- create: Menu_Acceuil ..> Menu_Options -->
+  <line x1="170" y1="310" x2="170" y2="346" stroke="#8398a8" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+  <!-- create: dialogue_Pause ..> Menu_Options -->
+  <line x1="205" y1="560" x2="205" y2="524" stroke="#8398a8" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+
+  <!-- ===== MainWindow (engine) ===== -->
+  <g>
+    <rect x="370" y="150" width="460" height="470" rx="8" fill="#ffffff" stroke="#cfdae3" stroke-width="1.5"/>
+    <path d="M370,158 a8,8 0 0 1 8,-8 h444 a8,8 0 0 1 8,8 v30 h-460 Z" fill="#1f9d57"/>
+    <text x="390" y="180" class="cls-name">MainWindow</text>
+    <text x="810" y="180" text-anchor="end" class="stereo">«Window»</text>
+    <!-- attributes -->
+    <text x="386" y="212" class="mem">− luttins : List&lt;Luttin&gt;</text>
+    <text x="386" y="231" class="mem">− musique : MediaPlayer  {static}</text>
+    <text x="386" y="250" class="mem">− minuterie, tempsRestant : DispatcherTimer</text>
+    <text x="386" y="269" class="mem">− objectifCadeaux : int</text>
+    <text x="386" y="288" class="mem">− nbCadeaux, cadeauxRamene : int</text>
+    <text x="386" y="307" class="mem">− vitesse, vitesseDesLutins : double</text>
+    <text x="386" y="326" class="mem">− modeIllimite : bool</text>
+    <text x="386" y="345" class="mem">− secondesRestantes : int</text>
+    <line x1="370" y1="358" x2="830" y2="358" stroke="#e6ecf1" stroke-width="1.2"/>
+    <!-- methods -->
+    <text x="386" y="382" class="mem"><tspan class="pub">+ </tspan>Jeu() : void</text>
+    <text x="386" y="401" class="mem">− Deplacement() / Diagonale()</text>
+    <text x="386" y="420" class="mem">− Collision() : murs / vitesse</text>
+    <text x="386" y="439" class="mem">− CollisionCadeaux() / CollisionSapin()</text>
+    <text x="386" y="458" class="mem">− Lutin() / ApparitionLuttins()</text>
+    <text x="386" y="477" class="mem">− RotationImageLutin() / LutinImage()</text>
+    <text x="386" y="496" class="mem">− Attaque() / CoupAttaque()</text>
+    <text x="386" y="515" class="mem">− AnimationJoueur() / AnimationPorte()</text>
+    <text x="386" y="534" class="mem">− SelectionDifficulte()</text>
+    <text x="386" y="553" class="mem">− FinDePartie() / RelanceJeu()</text>
+    <text x="386" y="572" class="mem">− ConditionsVictoire()</text>
+    <text x="386" y="591" class="mem"><tspan class="pub">+ </tspan>InitMusique() / InitSon()  {static}</text>
+  </g>
+
+  <!-- ===== Luttin ===== -->
+  <g>
+    <rect x="890" y="150" width="310" height="220" rx="8" fill="#ffffff" stroke="#cfdae3" stroke-width="1.5"/>
+    <path d="M890,158 a8,8 0 0 1 8,-8 h294 a8,8 0 0 1 8,8 v30 h-310 Z" fill="#2b3a47"/>
+    <text x="910" y="180" class="cls-name">Luttin</text>
+    <text x="1180" y="180" text-anchor="end" class="stereo">«entity»</text>
+    <text x="906" y="212" class="mem">+ x, y : double</text>
+    <text x="906" y="231" class="mem">+ longueur, largeur : double</text>
+    <text x="906" y="250" class="mem">+ vitesse : double</text>
+    <text x="906" y="269" class="mem">+ vitesseLutin : int</text>
+    <text x="906" y="288" class="mem">+ sprite : Rectangle</text>
+    <line x1="890" y1="300" x2="1200" y2="300" stroke="#e6ecf1" stroke-width="1.2"/>
+    <text x="906" y="324" class="mem"><tspan class="pub">+ </tspan>Luttin(sprite, x, y, l, w, v)</text>
+  </g>
+
+  <!-- ===== Menu_Acceuil ===== -->
+  <g>
+    <rect x="40" y="150" width="270" height="160" rx="8" fill="#ffffff" stroke="#cfdae3" stroke-width="1.5"/>
+    <path d="M40,158 a8,8 0 0 1 8,-8 h254 a8,8 0 0 1 8,8 v30 h-270 Z" fill="#1f9d57"/>
+    <text x="60" y="180" class="cls-name">Menu_Acceuil</text>
+    <text x="290" y="180" text-anchor="end" class="stereo">«Window»</text>
+    <text x="56" y="212" class="mem">− JouerButton_Click()</text>
+    <text x="56" y="231" class="mem">− Options()</text>
+    <text x="56" y="250" class="mem">− Bouton_Click_Quitter()</text>
+    <text x="56" y="269" class="mem">− Window_Closing()</text>
+    <text x="56" y="290" class="mem"><tspan class="pub">+ </tspan>InitMusique()  {static}</text>
+  </g>
+
+  <!-- ===== Menu_Options ===== -->
+  <g>
+    <rect x="40" y="350" width="270" height="170" rx="8" fill="#ffffff" stroke="#cfdae3" stroke-width="1.5"/>
+    <path d="M40,358 a8,8 0 0 1 8,-8 h254 a8,8 0 0 1 8,8 v30 h-270 Z" fill="#1f9d57"/>
+    <text x="60" y="380" class="cls-name">Menu_Options</text>
+    <text x="290" y="380" text-anchor="end" class="stereo">«Window»</text>
+    <text x="56" y="412" class="mem">− VolumeSlider_ValueChanged()</text>
+    <text x="56" y="431" class="mem">− CloseButton_Click()</text>
+    <text x="56" y="456" class="mem" fill="#7c8c99">Règle le volume de</text>
+    <text x="56" y="474" class="mem" fill="#7c8c99">MainWindow.musique</text>
+  </g>
+
+  <!-- ===== dialogue_Pause ===== -->
+  <g>
+    <rect x="40" y="560" width="270" height="200" rx="8" fill="#ffffff" stroke="#cfdae3" stroke-width="1.5"/>
+    <path d="M40,568 a8,8 0 0 1 8,-8 h254 a8,8 0 0 1 8,8 v30 h-270 Z" fill="#1f9d57"/>
+    <text x="60" y="590" class="cls-name">dialogue_Pause</text>
+    <text x="290" y="590" text-anchor="end" class="stereo">«Window»</text>
+    <text x="56" y="622" class="mem"><tspan class="pub">+ </tspan>RetourAccueil : bool</text>
+    <line x1="40" y1="634" x2="310" y2="634" stroke="#e6ecf1" stroke-width="1.2"/>
+    <text x="56" y="658" class="mem">− buttRepre_Click()</text>
+    <text x="56" y="677" class="mem">− buttAccueil_Click()</text>
+    <text x="56" y="696" class="mem">− buttOption_pause_Click()</text>
+    <text x="56" y="715" class="mem">− butQuitt_Click()</text>
+  </g>
+
+  <!-- ===== App ===== -->
+  <g>
+    <rect x="890" y="560" width="270" height="95" rx="8" fill="#ffffff" stroke="#cfdae3" stroke-width="1.5"/>
+    <path d="M890,568 a8,8 0 0 1 8,-8 h254 a8,8 0 0 1 8,8 v30 h-270 Z" fill="#2b3a47"/>
+    <text x="910" y="590" class="cls-name">App</text>
+    <text x="1140" y="590" text-anchor="end" class="stereo">«Application»</text>
+    <text x="906" y="622" class="mem" fill="#7c8c99">Point d'entrée WPF (App.xaml)</text>
+    <text x="906" y="641" class="mem" fill="#7c8c99">StartupUri → MainWindow</text>
+  </g>
+
+  <!-- ===== Legend ===== -->
+  <g>
+    <rect x="890" y="690" width="310" height="110" rx="8" fill="#f3f7fa" stroke="#dbe4ea" stroke-width="1.2"/>
+    <text x="908" y="714" class="legt">Légende</text>
+    <path d="M908,734 h34" stroke="#1f9d57" stroke-width="1.8" marker-end="url(#diamond)"/>
+    <text x="958" y="738" class="leg">Composition (possède)</text>
+    <line x1="908" y1="760" x2="946" y2="760" stroke="#8398a8" stroke-width="1.5" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+    <text x="958" y="764" class="leg">«create» — instancie</text>
+    <text x="908" y="788" class="leg"><tspan font-style="italic" fill="#7c8c99">«Window»</tspan>  hérite de System.Windows.Window</text>
+  </g>
+</svg>

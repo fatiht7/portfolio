@@ -139,6 +139,54 @@ const caseStudies = {
             textFr: "Sibilia m'a permis de consolider C#, WPF et la conception d'interfaces, tout en découvrant l'intérêt d'une architecture claire pour faire évoluer une application.",
             textEn: "Sibilia helped me consolidate C#, WPF and interface design while discovering the value of a clear architecture for evolving an application."
         }
+    },
+    labyrinthe: {
+        accent: "#5fce8f",
+        number: "04",
+        date: { fr: "Projet universitaire (SAÉ) · 2024", en: "University project (SAÉ) · 2024" },
+        title: "Labyrinthe",
+        lead: {
+            fr: "Un jeu d'arcade 2D développé entièrement en C# et WPF : un Père Noël récolte des cadeaux et les rapporte au sapin avant la fin du temps, tout en évitant les lutins voleurs.",
+            en: "A 2D arcade game built entirely in C# and WPF: Santa collects gifts and brings them back to the tree before time runs out, while dodging gift-stealing elves."
+        },
+        facts: [
+            ["Rôle", "Role", "Développement & game design", "Development & game design"],
+            ["Contexte", "Context", "Projet en équipe (SAÉ)", "Team project (SAÉ)"],
+            ["Stack", "Stack", "C# · WPF · XAML", "C# · WPF · XAML"],
+            ["Cœur technique", "Technical core", "Game loop · collisions · IA", "Game loop · collisions · AI"]
+        ],
+        challenge: {
+            fr: "Concevoir un moteur de jeu temps réel sans moteur dédié, uniquement avec C# et le Canvas de WPF.",
+            en: "Build a real-time game engine without any dedicated engine, using only C# and the WPF Canvas.",
+            detailsFr: [
+                "Tout repose sur une boucle de jeu (DispatcherTimer ~60 images/s) qui orchestre déplacements, animations, collisions et apparition des ennemis à chaque frame.",
+                "Le plus délicat : des collisions fiables (murs, cadeaux, sapin, zone d'attaque) et des lutins qui poursuivent le joueur tout en restant dans la carte."
+            ],
+            detailsEn: [
+                "Everything relies on a game loop (DispatcherTimer ~60 fps) orchestrating movement, animations, collisions and enemy spawning on every frame.",
+                "The tricky part: reliable collisions (walls, gifts, tree, attack zone) and elves that chase the player while staying inside the map."
+            ]
+        },
+        methods: [
+            ["fa-arrows-rotate", "Boucle de jeu", "Game loop", "DispatcherTimer ~60 FPS pilotant déplacements, collisions et animations à chaque frame.", "DispatcherTimer ~60 FPS driving movement, collisions and animations every frame."],
+            ["fa-vector-square", "Collisions", "Collisions", "Détection par hitbox (Rect.IntersectsWith) pour murs, cadeaux, sapin et attaque.", "Hitbox detection (Rect.IntersectsWith) for walls, gifts, tree and attack."],
+            ["fa-ghost", "IA des lutins", "Enemy AI", "Les lutins poursuivent le joueur, se réorientent et sont ralentis dans les buissons.", "Elves chase the player, reorient themselves and slow down in the bushes."],
+            ["fa-gauge-high", "Difficulté & modes", "Difficulty & modes", "Quatre niveaux (Facile à Difficile) plus un mode Illimité avec record de session.", "Four levels (Easy to Hard) plus an Endless mode with a session high score."]
+        ],
+        gallery: [
+            ["assets/labyrinthe/gameplay.png", "Aperçu du jeu", "Gameplay", "Le Père Noël récolte les cadeaux disséminés dans le labyrinthe de buissons et les rapporte au sapin avant la fin du temps.", "Santa collects the gifts scattered across the bush maze and brings them back to the tree before time runs out."],
+            ["assets/labyrinthe/menu-accueil.png", "Menu d'accueil", "Home menu", "Écran d'accueil avec les règles du jeu et l'ambiance de Noël.", "Home screen with the game rules and the Christmas atmosphere."],
+            ["assets/labyrinthe/difficulte.png", "Choix de la difficulté", "Difficulty selection", "Quatre niveaux (Facile, Moyen, Difficile) plus un mode Illimité pour battre son record.", "Four levels (Easy, Medium, Hard) plus an Endless mode to beat your high score."],
+            ["assets/labyrinthe/class-diagram.svg", "Diagramme de classes", "Class diagram", "Architecture du projet : MainWindow (moteur de jeu), l'entité Luttin et les fenêtres de menus.", "Project architecture: MainWindow (game engine), the Luttin entity and the menu windows."]
+        ],
+        github: "https://github.com/xX-Proplayer-Xx/Labyrinthe",
+        download: "https://github.com/xX-Proplayer-Xx/Labyrinthe/releases/latest",
+        result: {
+            fr: "Un projet ludique qui m'a fait toucher du doigt la logique d'un moteur de jeu.",
+            en: "A playful project that introduced me to the logic of a game engine.",
+            textFr: "Au-delà du jeu, ce projet m'a appris à structurer du code temps réel, à gérer des états (menus, pause, fin de partie) et à déboguer des comportements visuels image par image.",
+            textEn: "Beyond the game itself, this project taught me to structure real-time code, manage states (menus, pause, game over) and debug visual behavior frame by frame."
+        }
     }
 };
 
@@ -191,6 +239,18 @@ function buildCaseStudy(project) {
             <i class="fa-brands fa-github"></i> GitHub
         </a>` : "";
 
+    const downloadTop = project.download ? `
+        <a href="${project.download}" target="_blank" rel="noopener" class="case-secondary-link">
+            <i class="fa-solid fa-download"></i>${bilingual("Télécharger (.zip)", "Download (.zip)")}
+        </a>` : "";
+
+    const downloadBottom = project.download ? `
+        <a href="${project.download}" target="_blank" rel="noopener" class="case-secondary-link">
+            <i class="fa-solid fa-download"></i>${bilingual("Télécharger", "Download")}
+        </a>` : "";
+
+    const hasActions = project.github || project.download;
+
     return `
         <header class="case-hero">
             <div class="case-shell case-hero-grid">
@@ -199,7 +259,7 @@ function buildCaseStudy(project) {
                     <div class="case-overline"><span class="status-dot"></span>${bilingual(project.date.fr, project.date.en)}</div>
                     <h1>${project.title}</h1>
                     ${bilingual(project.lead.fr, project.lead.en, "p", "case-lead lang-copy")}
-                    ${project.github ? `<div class="case-actions">${githubTop}</div>` : ""}
+                    ${hasActions ? `<div class="case-actions">${githubTop}${downloadTop}</div>` : ""}
                 </div>
                 <dl class="case-facts">${facts}</dl>
             </div>
@@ -234,7 +294,7 @@ function buildCaseStudy(project) {
                 <div><span class="case-result-label">03 / RESULT</span>${bilingual(project.result.fr, project.result.en, "h2")}</div>
                 <div>
                     ${bilingual(project.result.textFr, project.result.textEn, "p")}
-                    ${project.github ? `<div class="case-actions">${githubBottom}</div>` : ""}
+                    ${hasActions ? `<div class="case-actions">${githubBottom}${downloadBottom}</div>` : ""}
                 </div>
             </div>
         </section>

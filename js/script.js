@@ -476,20 +476,21 @@ const projectsData = [
             en: "2024"
         },
         status: "completed",
-        image: "assets/previews/previewLabyrinthe.png",
-        techs: ["C#", ".NET"],
+        image: "assets/labyrinthe/gameplay.png",
+        techs: ["C#", "WPF", "Game Design"],
         category: ["Desktop"],
+        pageUrl: "labyrinthe.html",
         actionBtn: null,
         hasDetailedModal: false,
         fr: {
             title: "Labyrinthe - Jeu vidéo 2D",
             type: "Projet universitaire (SAÉ)",
-            desc: "Développement d'un moteur de jeu et gestion physique en C# pur."
+            desc: "Moteur de jeu d'arcade 2D en C# / WPF : boucle de jeu, collisions et IA des ennemis."
         },
         en: {
             title: "Labyrinth - 2D Video Game",
             type: "University project (SAÉ)",
-            desc: "Game engine development and physics management written in pure C#."
+            desc: "2D arcade game engine in C# / WPF: game loop, collisions and enemy AI."
         },
         links: [{ text: "View Code", url: "https://github.com/xX-Proplayer-Xx/Labyrinthe.git", icon: "fa-github" }]
     }
