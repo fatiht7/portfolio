@@ -807,6 +807,7 @@ function initTyped(lang) {
         backSpeed: 26,
         backDelay: 2400,
         smartBackspace: false,
+        contentType: null,
         loop: true
     });
 }
