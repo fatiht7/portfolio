@@ -33,11 +33,11 @@ const caseStudies = {
             ["fa-chart-column", "Power BI", "Power BI", "Mesures, filtres et visualisations pour explorer ventes, Nutri-Score et classification NOVA.", "Measures, filters and visuals to explore sales, Nutri-Score and NOVA classification."]
         ],
         gallery: [
-            ["assets/open-food-facts/ventespage1.jpg", "Dashboard ventes", "Sales dashboard", "Vue de la saisonnalité, du chiffre d'affaires et de l'évolution par enseigne.", "Seasonality, revenue and retailer evolution overview."],
-            ["assets/open-food-facts/compositionpage1.jpg", "Composition des produits", "Product composition", "Analyse de 605 674 produits par catégorie, Nutri-Score et NOVA.", "Analysis of 605,674 products by category, Nutri-Score and NOVA."],
-            ["assets/open-food-facts/mldBaseOLTP.jpg", "Modèle OLTP", "OLTP model", "Structure relationnelle de la base opérationnelle.", "Relational structure of the operational database."],
-            ["assets/open-food-facts/mldBaseOLAP.jpg", "Modèle OLAP", "OLAP model", "Schéma en étoile utilisé par les rapports analytiques.", "Star schema used by the analytical reports."],
-            ["assets/open-food-facts/ETLKnime_InsertionDonnée.jpg", "Pipeline ETL", "ETL pipeline", "Workflow Knime d'insertion et de transformation des données.", "Knime data insertion and transformation workflow."]
+            ["assets/open-food-facts/ventespage1.webp", "Dashboard ventes", "Sales dashboard", "Vue de la saisonnalité, du chiffre d'affaires et de l'évolution par enseigne.", "Seasonality, revenue and retailer evolution overview."],
+            ["assets/open-food-facts/compositionpage1.webp", "Composition des produits", "Product composition", "Analyse de 605 674 produits par catégorie, Nutri-Score et NOVA.", "Analysis of 605,674 products by category, Nutri-Score and NOVA."],
+            ["assets/open-food-facts/mldBaseOLTP.webp", "Modèle OLTP", "OLTP model", "Structure relationnelle de la base opérationnelle.", "Relational structure of the operational database."],
+            ["assets/open-food-facts/mldBaseOLAP.webp", "Modèle OLAP", "OLAP model", "Schéma en étoile utilisé par les rapports analytiques.", "Star schema used by the analytical reports."],
+            ["assets/open-food-facts/etl-knime-insertion.webp", "Pipeline ETL", "ETL pipeline", "Workflow Knime d'insertion et de transformation des données.", "Knime data insertion and transformation workflow."]
         ],
         result: {
             fr: "Une chaîne Data cohérente, de la donnée brute à la décision.",
@@ -80,11 +80,11 @@ const caseStudies = {
             ["fa-chart-line", "Analyse BI", "BI analysis", "Schéma en étoile, mesures DAX et analyse du chiffre d'affaires.", "Star schema, DAX measures and revenue analysis."]
         ],
         gallery: [
-            ["assets/previews/previewLeboncoin.png", "Application web", "Web application", "Interface de la plateforme de location développée avec Laravel.", "Vacation rental platform interface developed with Laravel."],
-            ["assets/leboncoin/mpd.png", "Modèle physique", "Physical data model", "Structure PostgreSQL détaillée avec clés et contraintes.", "Detailed PostgreSQL structure with keys and constraints."],
-            ["assets/leboncoin/bpmn.png", "Processus BPMN", "BPMN process", "Gestion d'un incident et d'un remboursement.", "Incident and refund management."],
-            ["assets/leboncoin/powerbi-1.png", "Dashboard revenus", "Revenue dashboard", "Suivi du chiffre d'affaires par hébergement et propriétaire.", "Revenue tracking by accommodation and owner."],
-            ["assets/leboncoin/powerbi-2.png", "Analyse géographique", "Geographic analysis", "Répartition du chiffre d'affaires par région et ville.", "Revenue distribution by region and city."]
+            ["assets/previews/previewLeboncoin.webp", "Application web", "Web application", "Interface de la plateforme de location développée avec Laravel.", "Vacation rental platform interface developed with Laravel."],
+            ["assets/leboncoin/mpd.webp", "Modèle physique", "Physical data model", "Structure PostgreSQL détaillée avec clés et contraintes.", "Detailed PostgreSQL structure with keys and constraints."],
+            ["assets/leboncoin/bpmn.webp", "Processus BPMN", "BPMN process", "Gestion d'un incident et d'un remboursement.", "Incident and refund management."],
+            ["assets/leboncoin/powerbi-1.webp", "Dashboard revenus", "Revenue dashboard", "Suivi du chiffre d'affaires par hébergement et propriétaire.", "Revenue tracking by accommodation and owner."],
+            ["assets/leboncoin/powerbi-2.webp", "Analyse géographique", "Geographic analysis", "Répartition du chiffre d'affaires par région et ville.", "Revenue distribution by region and city."]
         ],
         github: "https://github.com/BazeOnigiri/SAE_Leboncoin.git",
         result: {
@@ -128,9 +128,9 @@ const caseStudies = {
             ["fa-magnifying-glass", "Recherche", "Search", "Filtrage en temps réel pour accélérer les opérations.", "Real-time filtering to speed up operations."]
         ],
         gallery: [
-            ["assets/sibilia/order.png", "Création d'une commande", "Order creation", "Sélection du client et des plats avec calcul automatique du total.", "Customer and dish selection with automatic total calculation."],
-            ["assets/sibilia/dashboard.png", "Menu principal", "Main menu", "Accès aux modules Commandes, Plats et Clients.", "Access to Orders, Dishes and Customers modules."],
-            ["assets/sibilia/login.png", "Connexion", "Login", "Écran d'authentification de l'application.", "Application authentication screen."]
+            ["assets/sibilia/order.webp", "Création d'une commande", "Order creation", "Sélection du client et des plats avec calcul automatique du total.", "Customer and dish selection with automatic total calculation."],
+            ["assets/sibilia/dashboard.webp", "Menu principal", "Main menu", "Accès aux modules Commandes, Plats et Clients.", "Access to Orders, Dishes and Customers modules."],
+            ["assets/sibilia/login.webp", "Connexion", "Login", "Écran d'authentification de l'application.", "Application authentication screen."]
         ],
         github: "https://github.com/yanis381/SAE201.git",
         result: {
@@ -174,9 +174,9 @@ const caseStudies = {
             ["fa-gauge-high", "Difficulté & modes", "Difficulty & modes", "Quatre niveaux (Facile à Difficile) plus un mode Illimité avec record de session.", "Four levels (Easy to Hard) plus an Endless mode with a session high score."]
         ],
         gallery: [
-            ["assets/labyrinthe/gameplay.png", "Aperçu du jeu", "Gameplay", "Le Père Noël récolte les cadeaux disséminés dans le labyrinthe de buissons et les rapporte au sapin avant la fin du temps.", "Santa collects the gifts scattered across the bush maze and brings them back to the tree before time runs out."],
-            ["assets/labyrinthe/menu-accueil.png", "Menu d'accueil", "Home menu", "Écran d'accueil avec les règles du jeu et l'ambiance de Noël.", "Home screen with the game rules and the Christmas atmosphere."],
-            ["assets/labyrinthe/difficulte.png", "Choix de la difficulté", "Difficulty selection", "Quatre niveaux (Facile, Moyen, Difficile) plus un mode Illimité pour battre son record.", "Four levels (Easy, Medium, Hard) plus an Endless mode to beat your high score."],
+            ["assets/labyrinthe/gameplay.webp", "Aperçu du jeu", "Gameplay", "Le Père Noël récolte les cadeaux disséminés dans le labyrinthe de buissons et les rapporte au sapin avant la fin du temps.", "Santa collects the gifts scattered across the bush maze and brings them back to the tree before time runs out."],
+            ["assets/labyrinthe/menu-accueil.webp", "Menu d'accueil", "Home menu", "Écran d'accueil avec les règles du jeu et l'ambiance de Noël.", "Home screen with the game rules and the Christmas atmosphere."],
+            ["assets/labyrinthe/difficulte.webp", "Choix de la difficulté", "Difficulty selection", "Quatre niveaux (Facile, Moyen, Difficile) plus un mode Illimité pour battre son record.", "Four levels (Easy, Medium, Hard) plus an Endless mode to beat your high score."],
             ["assets/labyrinthe/class-diagram.svg", "Diagramme de classes", "Class diagram", "Architecture du projet : MainWindow (moteur de jeu), l'entité Luttin et les fenêtres de menus.", "Project architecture: MainWindow (game engine), the Luttin entity and the menu windows."]
         ],
         github: "https://github.com/xX-Proplayer-Xx/Labyrinthe",

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" style="--case-color:#f0cc61">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Étude de cas Open Food Facts : PostgreSQL, ETL Knime, modèle en étoile et tableaux de bord Power BI.">
     <meta property="og:title" content="Open Food Facts - Fatih TÜRK">
-    <meta property="og:image" content="assets/open-food-facts/ventespage1.jpg">
+    <meta property="og:image" content="assets/og/og-open-food-facts.jpg">
     <title>Open Food Facts - Fatih TÜRK</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,145 @@
         <a href="index.html#projects" class="project-back-link"><i class="fa-solid fa-arrow-left"></i><span class="lang-copy" data-language="fr">Tous les projets</span><span class="lang-copy" data-language="en">All projects</span></a>
         <div class="language-switch"><button type="button" class="lang-option active" data-set-lang="fr">FR</button><button type="button" class="lang-option" data-set-lang="en">EN</button></div>
     </nav>
-    <main id="case-study-root"></main>
+    <main id="case-study-root" class="generated-case">
+        <header class="case-hero">
+            <div class="case-shell case-hero-grid">
+                <div class="case-hero-copy">
+                    <a href="index.html#projects" class="case-breadcrumb"><i class="fa-solid fa-arrow-left"></i><span>Portfolio / 01</span></a>
+                    <div class="case-overline"><span class="status-dot"></span><span class="lang-copy" data-language="fr">Projet universitaire (SAÉ) · Mars - Avril 2026</span><span class="lang-copy" data-language="en">University project (SAÉ) · March - April 2026</span></div>
+                    <h1>Open Food Facts</h1>
+                    <p class="case-lead lang-copy" data-language="fr">Transformer plus de 600 000 produits alimentaires en une chaîne Data complète, de la base opérationnelle aux tableaux de bord Power BI.</p><p class="case-lead lang-copy" data-language="en">Turn more than 600,000 food products into a complete data pipeline, from the operational database to Power BI dashboards.</p>
+                    
+                </div>
+                <dl class="case-facts">
+        <div><dt class="lang-copy" data-language="fr">Rôle</dt><dt class="lang-copy" data-language="en">Role</dt><dd class="lang-copy" data-language="fr">Data, BI & modélisation</dd><dd class="lang-copy" data-language="en">Data, BI & modeling</dd></div>
+    
+        <div><dt class="lang-copy" data-language="fr">Contexte</dt><dt class="lang-copy" data-language="en">Context</dt><dd class="lang-copy" data-language="fr">Projet en équipe</dd><dd class="lang-copy" data-language="en">Team project</dd></div>
+    
+        <div><dt class="lang-copy" data-language="fr">Stack</dt><dt class="lang-copy" data-language="en">Stack</dt><dd class="lang-copy" data-language="fr">PostgreSQL · Knime · Power BI</dd><dd class="lang-copy" data-language="en">PostgreSQL · Knime · Power BI</dd></div>
+    
+        <div><dt class="lang-copy" data-language="fr">Périmètre</dt><dt class="lang-copy" data-language="en">Scope</dt><dd class="lang-copy" data-language="fr">OLTP · ETL · OLAP · Reporting</dd><dd class="lang-copy" data-language="en">OLTP · ETL · OLAP · Reporting</dd></div>
+    </dl>
+            </div>
+        </header>
+
+        <section class="case-gallery">
+            <div class="case-shell"><div class="case-gallery-grid">
+        <figure class="case-gallery-item featured">
+            <div class="case-gallery-image"><img src="assets/open-food-facts/ventespage1.webp" alt="Dashboard ventes" loading="lazy" decoding="async"></div>
+            <figcaption>
+                <div><strong class="lang-copy" data-language="fr">Dashboard ventes</strong><strong class="lang-copy" data-language="en">Sales dashboard</strong></div>
+                <span>01 / 05</span>
+                <p class="lang-copy" data-language="fr">Vue de la saisonnalité, du chiffre d'affaires et de l'évolution par enseigne.</p><p class="lang-copy" data-language="en">Seasonality, revenue and retailer evolution overview.</p>
+            </figcaption>
+        </figure>
+    
+        <figure class="case-gallery-item">
+            <div class="case-gallery-image"><img src="assets/open-food-facts/compositionpage1.webp" alt="Composition des produits" loading="lazy" decoding="async"></div>
+            <figcaption>
+                <div><strong class="lang-copy" data-language="fr">Composition des produits</strong><strong class="lang-copy" data-language="en">Product composition</strong></div>
+                <span>02 / 05</span>
+                <p class="lang-copy" data-language="fr">Analyse de 605 674 produits par catégorie, Nutri-Score et NOVA.</p><p class="lang-copy" data-language="en">Analysis of 605,674 products by category, Nutri-Score and NOVA.</p>
+            </figcaption>
+        </figure>
+    
+        <figure class="case-gallery-item">
+            <div class="case-gallery-image"><img src="assets/open-food-facts/mldBaseOLTP.webp" alt="Modèle OLTP" loading="lazy" decoding="async"></div>
+            <figcaption>
+                <div><strong class="lang-copy" data-language="fr">Modèle OLTP</strong><strong class="lang-copy" data-language="en">OLTP model</strong></div>
+                <span>03 / 05</span>
+                <p class="lang-copy" data-language="fr">Structure relationnelle de la base opérationnelle.</p><p class="lang-copy" data-language="en">Relational structure of the operational database.</p>
+            </figcaption>
+        </figure>
+    
+        <figure class="case-gallery-item">
+            <div class="case-gallery-image"><img src="assets/open-food-facts/mldBaseOLAP.webp" alt="Modèle OLAP" loading="lazy" decoding="async"></div>
+            <figcaption>
+                <div><strong class="lang-copy" data-language="fr">Modèle OLAP</strong><strong class="lang-copy" data-language="en">OLAP model</strong></div>
+                <span>04 / 05</span>
+                <p class="lang-copy" data-language="fr">Schéma en étoile utilisé par les rapports analytiques.</p><p class="lang-copy" data-language="en">Star schema used by the analytical reports.</p>
+            </figcaption>
+        </figure>
+    
+        <figure class="case-gallery-item">
+            <div class="case-gallery-image"><img src="assets/open-food-facts/etl-knime-insertion.webp" alt="Pipeline ETL" loading="lazy" decoding="async"></div>
+            <figcaption>
+                <div><strong class="lang-copy" data-language="fr">Pipeline ETL</strong><strong class="lang-copy" data-language="en">ETL pipeline</strong></div>
+                <span>05 / 05</span>
+                <p class="lang-copy" data-language="fr">Workflow Knime d'insertion et de transformation des données.</p><p class="lang-copy" data-language="en">Knime data insertion and transformation workflow.</p>
+            </figcaption>
+        </figure>
+    </div></div>
+        </section>
+
+        <section class="case-section">
+            <div class="case-shell case-editorial-grid">
+                <div class="case-section-heading"><span>01</span><h2 class="lang-copy" data-language="fr">Le défi</h2><h2 class="lang-copy" data-language="en">The challenge</h2></div>
+                <div class="case-copy-large">
+                    <p class="lang-copy" data-language="fr">Construire une architecture capable d'exploiter un jeu de données volumineux et hétérogène, puis le rendre compréhensible à travers des indicateurs métier.</p><p class="lang-copy" data-language="en">Build an architecture able to process a large, heterogeneous dataset and make it understandable through business indicators.</p>
+                    <div class="case-copy-columns">
+                        <p class="lang-copy" data-language="fr">Les données Open Food Facts devaient être nettoyées, structurées et chargées dans une base PostgreSQL cohérente.</p><p class="lang-copy" data-language="en">Open Food Facts data had to be cleaned, structured and loaded into a consistent PostgreSQL database.</p>
+                        <p class="lang-copy" data-language="fr">Une seconde modélisation orientée analyse devait ensuite alimenter deux rapports : ventes simulées et composition nutritionnelle.</p><p class="lang-copy" data-language="en">A second analytics-oriented model then had to feed two reports: simulated sales and nutritional composition.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section architecture-section">
+            <div class="case-shell">
+                <div class="case-section-heading horizontal"><span>02</span><h2 class="lang-copy" data-language="fr">Méthode & réalisation</h2><h2 class="lang-copy" data-language="en">Method & delivery</h2></div>
+                <div class="case-method-grid">
+        <article class="case-method-card">
+            <span>01</span>
+            <i class="fa-solid fa-database"></i>
+            <h3 class="lang-copy" data-language="fr">Base OLTP</h3><h3 class="lang-copy" data-language="en">OLTP database</h3>
+            <p class="lang-copy" data-language="fr">Modèle relationnel Merise pour les produits, ingrédients, distributeurs et ventes.</p><p class="lang-copy" data-language="en">Merise relational model for products, ingredients, retailers and sales.</p>
+        </article>
+    
+        <article class="case-method-card">
+            <span>02</span>
+            <i class="fa-solid fa-diagram-project"></i>
+            <h3 class="lang-copy" data-language="fr">ETL Knime</h3><h3 class="lang-copy" data-language="en">Knime ETL</h3>
+            <p class="lang-copy" data-language="fr">Workflows de nettoyage, transformation et insertion automatisée dans PostgreSQL.</p><p class="lang-copy" data-language="en">Automated cleaning, transformation and insertion workflows into PostgreSQL.</p>
+        </article>
+    
+        <article class="case-method-card">
+            <span>03</span>
+            <i class="fa-solid fa-star"></i>
+            <h3 class="lang-copy" data-language="fr">Modèle en étoile</h3><h3 class="lang-copy" data-language="en">Star schema</h3>
+            <p class="lang-copy" data-language="fr">Tables de faits et dimensions conçues pour simplifier et accélérer l'analyse.</p><p class="lang-copy" data-language="en">Fact and dimension tables designed to simplify and accelerate analysis.</p>
+        </article>
+    
+        <article class="case-method-card">
+            <span>04</span>
+            <i class="fa-solid fa-chart-column"></i>
+            <h3 class="lang-copy" data-language="fr">Power BI</h3><h3 class="lang-copy" data-language="en">Power BI</h3>
+            <p class="lang-copy" data-language="fr">Mesures, filtres et visualisations pour explorer ventes, Nutri-Score et classification NOVA.</p><p class="lang-copy" data-language="en">Measures, filters and visuals to explore sales, Nutri-Score and NOVA classification.</p>
+        </article>
+    </div>
+            </div>
+        </section>
+
+        <section class="case-section case-result">
+            <div class="case-shell case-result-grid">
+                <div><span class="case-result-label">03 / RESULT</span><h2 class="lang-copy" data-language="fr">Une chaîne Data cohérente, de la donnée brute à la décision.</h2><h2 class="lang-copy" data-language="en">A consistent data pipeline, from raw data to decision-making.</h2></div>
+                <div>
+                    <p class="lang-copy" data-language="fr">Ce projet m'a permis de relier conception de bases, qualité des données, automatisation ETL et restitution visuelle dans un même cas d'usage.</p><p class="lang-copy" data-language="en">This project allowed me to connect database design, data quality, ETL automation and visual reporting in one use case.</p>
+                    
+                </div>
+            </div>
+        </section>
+
+        <nav class="case-next">
+            <div class="case-shell">
+                <a href="index.html#projects">
+                    <span class="lang-copy" data-language="fr">Retour à la sélection</span><span class="lang-copy" data-language="en">Back to selected work</span>
+                    <strong class="lang-copy" data-language="fr">Voir tous les projets</strong><strong class="lang-copy" data-language="en">View all projects</strong>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </nav>
+    </main>
     <footer class="project-footer"><p class="lang-copy" data-language="fr">© 2026 Fatih TÜRK. Tous droits réservés.</p><p class="lang-copy" data-language="en">© 2026 Fatih TÜRK. All rights reserved.</p></footer>
     <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
     <script src="js/case-study.js"></script>

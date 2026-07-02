@@ -7,7 +7,7 @@ const projectsData = [
             en: "March 2026 - April 2026"
         },
         status: "completed",
-        image: "assets/open-food-facts/ventespage1.jpg",
+        image: "assets/open-food-facts/ventespage1.webp",
         techs: ["PostgreSQL", "Power BI", "Knime", "Star Schema", "Merise"],
         category: ["BI", "Analysis"],
         pageUrl: "open-food-facts.html",
@@ -30,27 +30,27 @@ const projectsData = [
             },
             diagrams: [
                 {
-                    image: "assets/open-food-facts/ventespage1.jpg",
+                    image: "assets/open-food-facts/ventespage1.webp",
                     title: "Dashboard Ventes — Saisonnalité",
                     desc: "Vue macroéconomique des ventes simulées : 1,24 Md€ de CA, évolution N-1, saisonnalité mensuelle par enseigne (Aldi, Lidl, Carrefour…)."
                 },
                 {
-                    image: "assets/open-food-facts/compositionpage1.jpg",
+                    image: "assets/open-food-facts/compositionpage1.webp",
                     title: "Dashboard Composition — Vue Marché",
                     desc: "605 674 produits analysés par catégorie, Nutri-Score (A à E) et classification NOVA. Treemap interactif filtrable par pays et catégorie."
                 },
                 {
-                    image: "assets/open-food-facts/mldBaseOLTP.jpg",
+                    image: "assets/open-food-facts/mldBaseOLTP.webp",
                     title: "MLD Base OLTP",
                     desc: "Modèle relationnel opérationnel (OLTP) conçu avec Merise. Gère les produits, ingrédients, distributeurs et historique de ventes."
                 },
                 {
-                    image: "assets/open-food-facts/mldBaseOLAP.jpg",
+                    image: "assets/open-food-facts/mldBaseOLAP.webp",
                     title: "Modèle en Étoile (OLAP)",
                     desc: "Data Warehouse avec tables de faits (ventes, composition) et dimensions (temps, distributeur, produit, ingrédient) pour l'analyse Power BI."
                 },
                 {
-                    image: "assets/open-food-facts/ETLKnime_InsertionDonnée.jpg",
+                    image: "assets/open-food-facts/etl-knime-insertion.webp",
                     title: "Workflow ETL Knime",
                     desc: "Pipeline d'extraction et d'insertion des données Open Food Facts vers PostgreSQL. Nettoyage, transformation et chargement automatisé."
                 }
@@ -73,27 +73,27 @@ const projectsData = [
             },
             diagrams: [
                 {
-                    image: "assets/open-food-facts/ventespage1.jpg",
+                    image: "assets/open-food-facts/ventespage1.webp",
                     title: "Sales Dashboard — Seasonality",
                     desc: "Macroeconomic overview of simulated sales: 1.24B€ revenue, year-over-year growth (+49.9%), monthly seasonality by retailer (Aldi, Lidl, Carrefour…)."
                 },
                 {
-                    image: "assets/open-food-facts/compositionpage1.jpg",
+                    image: "assets/open-food-facts/compositionpage1.webp",
                     title: "Composition Dashboard — Market Overview",
                     desc: "605,674 products analyzed by category, Nutri-Score (A to E) and NOVA classification. Interactive treemap filterable by country and category."
                 },
                 {
-                    image: "assets/open-food-facts/mldBaseOLTP.jpg",
+                    image: "assets/open-food-facts/mldBaseOLTP.webp",
                     title: "OLTP Logical Data Model",
                     desc: "Operational relational model (OLTP) designed with Merise. Covers products, ingredients, distributors and sales history."
                 },
                 {
-                    image: "assets/open-food-facts/mldBaseOLAP.jpg",
+                    image: "assets/open-food-facts/mldBaseOLAP.webp",
                     title: "Star Schema (OLAP)",
                     desc: "Data Warehouse with fact tables (sales, composition) and dimensions (time, distributor, product, ingredient) for Power BI analysis."
                 },
                 {
-                    image: "assets/open-food-facts/ETLKnime_InsertionDonnée.jpg",
+                    image: "assets/open-food-facts/etl-knime-insertion.webp",
                     title: "Knime ETL Workflow",
                     desc: "Data extraction and insertion pipeline from Open Food Facts into PostgreSQL. Automated cleaning, transformation and loading."
                 }
@@ -109,7 +109,7 @@ const projectsData = [
             en: "March 2026"
         },
         status: "completed",
-        image: "assets/previews/previewSecureDrive.png",
+        image: "assets/previews/previewSecureDrive.webp",
         techs: ["PHP", "PostgreSQL", "AES-256-GCM", "RSA-2048", "SHA-256"],
         category: ["Web"],
         pageUrl: "secure-file-storage.html",
@@ -142,7 +142,7 @@ const projectsData = [
             ],
             diagrams: [
                 {
-                    image: "assets/previews/previewSecureDrive.png",
+                    image: "assets/previews/previewSecureDrive.webp",
                     title: "Tableau de bord du Drive",
                     desc: "Interface de dépôt, téléchargement, partage et suppression des fichiers chiffrés."
                 }
@@ -175,7 +175,7 @@ const projectsData = [
             ],
             diagrams: [
                 {
-                    image: "assets/previews/previewSecureDrive.png",
+                    image: "assets/previews/previewSecureDrive.webp",
                     title: "Secure Drive Dashboard",
                     desc: "Interface for uploading, downloading, sharing and deleting encrypted files."
                 }
@@ -203,7 +203,7 @@ const projectsData = [
             en: "October 2025 - January 2026"
         },
         status: "completed",
-        image: "assets/previews/previewLeboncoin.png",
+        image: "assets/previews/previewLeboncoin.webp",
         techs: ["PHP", "Laravel", "SQL", "Merise", "BPMN"],
         category: ["Web", "Analysis"],
         pageUrl: "leboncoin.html",
@@ -226,12 +226,12 @@ const projectsData = [
             },
             diagrams: [
                 { 
-                    image: "assets/leboncoin/mpd.png", 
+                    image: "assets/leboncoin/mpd.webp", 
                     title: "MPD (Modèle Physique)", 
                     desc: "Le MPD définit la structure physique de la base de données avec 30+ tables, clés primaires/étrangères et contraintes d'intégrité." 
                 },
                 { 
-                    image: "assets/leboncoin/bpmn.png", 
+                    image: "assets/leboncoin/bpmn.webp", 
                     title: "Diagramme BPMN", 
                     desc: "Modélisation du processus de gestion des incidents et remboursements entre locataires, propriétaires et services." 
                 }
@@ -254,12 +254,12 @@ const projectsData = [
             },
             diagrams: [
                 { 
-                    image: "assets/leboncoin/mpd.png", 
+                    image: "assets/leboncoin/mpd.webp", 
                     title: "PDM (Physical Data Model)", 
                     desc: "The PDM defines the physical database structure with 30+ tables, primary/foreign keys and integrity constraints." 
                 },
                 { 
-                    image: "assets/leboncoin/bpmn.png", 
+                    image: "assets/leboncoin/bpmn.webp", 
                     title: "BPMN Diagram", 
                     desc: "Modeling of the incident and refund management process between tenants, owners and services." 
                 }
@@ -275,7 +275,7 @@ const projectsData = [
             en: "October 2025 - January 2026"
         },
         status: "completed",
-        image: "assets/leboncoin/powerbi-1.png",
+        image: "assets/leboncoin/powerbi-1.webp",
         techs: ["Power BI", "DAX", "PostgreSQL", "Star Schema"],
         category: ["BI", "Analysis"],
         pageUrl: "leboncoin.html",
@@ -298,17 +298,17 @@ const projectsData = [
             },
             diagrams: [
                 { 
-                    image: "assets/leboncoin/star-schema.png", 
+                    image: "assets/leboncoin/star-schema.webp", 
                     title: "Schéma en Étoile", 
                     desc: "Architecture Data Warehouse avec table de faits (Reservations) et dimensions (Client, Hébergement, Temps) pour optimiser les requêtes analytiques." 
                 },
                 { 
-                    image: "assets/leboncoin/powerbi-1.png", 
+                    image: "assets/leboncoin/powerbi-1.webp", 
                     title: "Dashboard CA par Hébergement", 
                     desc: "Vue d'ensemble du chiffre d'affaires (5,11K€) avec répartition par type d'hébergement, évolution mensuelle et analyse par propriétaire." 
                 },
                 { 
-                    image: "assets/leboncoin/powerbi-2.png", 
+                    image: "assets/leboncoin/powerbi-2.webp", 
                     title: "Dashboard Géographique", 
                     desc: "Analyse spatiale du CA par région de résidence des clients avec carte interactive et détail par ville." 
                 }
@@ -331,17 +331,17 @@ const projectsData = [
             },
             diagrams: [
                 { 
-                    image: "assets/leboncoin/star-schema.png", 
+                    image: "assets/leboncoin/star-schema.webp", 
                     title: "Star Schema", 
                     desc: "Data Warehouse architecture with fact table (Reservations) and dimensions (Client, Accommodation, Time) to optimize analytical queries." 
                 },
                 { 
-                    image: "assets/leboncoin/powerbi-1.png", 
+                    image: "assets/leboncoin/powerbi-1.webp", 
                     title: "Revenue by Accommodation Dashboard", 
                     desc: "Revenue overview (5.11K€) with breakdown by accommodation type, monthly evolution and analysis by owner." 
                 },
                 { 
-                    image: "assets/leboncoin/powerbi-2.png", 
+                    image: "assets/leboncoin/powerbi-2.webp", 
                     title: "Geographic Dashboard", 
                     desc: "Spatial analysis of revenue by client residence region with interactive map and city-level detail." 
                 }
@@ -357,7 +357,7 @@ const projectsData = [
             en: "October 2025 - Present"
         },
         status: "ongoing",
-        image: "assets/previews/previewPortfolio.png",
+        image: "assets/previews/previewPortfolio.webp",
         techs: ["JavaScript", "HTML", "CSS"],
         category: ["Web"],
         actionBtn: null,
@@ -382,7 +382,7 @@ const projectsData = [
             en: "June 2025"
         },
         status: "completed",
-        image: "assets/previews/previewSIBILIA.png", 
+        image: "assets/previews/previewSIBILIA.webp", 
         techs: ["C#", ".NET", "WPF", "XAML", "MVVM"],
         category: ["Desktop"],
         pageUrl: "sibilia.html",
@@ -411,17 +411,17 @@ const projectsData = [
             ],
             diagrams: [
                 { 
-                    image: "assets/sibilia/login.png", 
+                    image: "assets/sibilia/login.webp", 
                     title: "Connexion", 
                     desc: "Interface d'authentification utilisateur sécurisée." 
                 },
                 { 
-                    image: "assets/sibilia/dashboard.png", 
+                    image: "assets/sibilia/dashboard.webp", 
                     title: "Menu Principal", 
                     desc: "Navigation vers les différents modules : Commandes, Plats, Clients." 
                 },
                 { 
-                    image: "assets/sibilia/order.png", 
+                    image: "assets/sibilia/order.webp", 
                     title: "Création Commande", 
                     desc: "Interface complète de création de commande avec sélection client, plats et calcul automatique du total." 
                 }
@@ -450,17 +450,17 @@ const projectsData = [
             ],
             diagrams: [
                 { 
-                    image: "assets/sibilia/login.png", 
+                    image: "assets/sibilia/login.webp", 
                     title: "Login", 
                     desc: "Secure user authentication interface." 
                 },
                 { 
-                    image: "assets/sibilia/dashboard.png", 
+                    image: "assets/sibilia/dashboard.webp", 
                     title: "Main Menu", 
                     desc: "Navigation to different modules: Orders, Dishes, Clients." 
                 },
                 { 
-                    image: "assets/sibilia/order.png", 
+                    image: "assets/sibilia/order.webp", 
                     title: "Order Creation", 
                     desc: "Complete order creation interface with client selection, dishes and automatic total calculation." 
                 }
@@ -476,7 +476,7 @@ const projectsData = [
             en: "2024"
         },
         status: "completed",
-        image: "assets/labyrinthe/gameplay.png",
+        image: "assets/labyrinthe/gameplay.webp",
         techs: ["C#", "WPF", "Game Design"],
         category: ["Desktop"],
         pageUrl: "labyrinthe.html",
@@ -619,10 +619,10 @@ const translations = {
         
         typed_strings: [
             "Analyste de Données.",
-            "Développeur BI.", 
-            "Bases de Données.",
-            "Développement Backend.",
-            "Étudiant.",
+            "Développeur BI.",
+            "Agents IA & LLM.",
+            "Automatisation & API.",
+            "Intégration de Données.",
             "SQL et Bases de Données."
         ]
     },
@@ -747,10 +747,10 @@ const translations = {
         
         typed_strings: [
             "Data Analyst.",
-            "BI Developer.", 
-            "Databases.",
-            "Backend Development.",
-            "Student.",
+            "BI Developer.",
+            "AI Agents & LLMs.",
+            "Automation & APIs.",
+            "Data Integration.",
             "SQL and Databases."
         ]
     }

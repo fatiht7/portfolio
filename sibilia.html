@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" style="--case-color:#e7ba6b">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Étude de cas Sibilia : application desktop de gestion de commandes développée en C#, WPF et architecture MVVM.">
     <meta property="og:title" content="Sibilia - Fatih TÜRK">
-    <meta property="og:image" content="assets/sibilia/order.png">
+    <meta property="og:image" content="assets/og/og-sibilia.jpg">
     <title>Sibilia - Fatih TÜRK</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,133 @@
         <a href="index.html#projects" class="project-back-link"><i class="fa-solid fa-arrow-left"></i><span class="lang-copy" data-language="fr">Tous les projets</span><span class="lang-copy" data-language="en">All projects</span></a>
         <div class="language-switch"><button type="button" class="lang-option active" data-set-lang="fr">FR</button><button type="button" class="lang-option" data-set-lang="en">EN</button></div>
     </nav>
-    <main id="case-study-root"></main>
+    <main id="case-study-root" class="generated-case">
+        <header class="case-hero">
+            <div class="case-shell case-hero-grid">
+                <div class="case-hero-copy">
+                    <a href="index.html#projects" class="case-breadcrumb"><i class="fa-solid fa-arrow-left"></i><span>Portfolio / 03</span></a>
+                    <div class="case-overline"><span class="status-dot"></span><span class="lang-copy" data-language="fr">Projet universitaire (SAÉ) · Juin 2025</span><span class="lang-copy" data-language="en">University project (SAÉ) · June 2025</span></div>
+                    <h1>Sibilia</h1>
+                    <p class="case-lead lang-copy" data-language="fr">Une application desktop de gestion commerciale pour centraliser clients, plats, stocks et commandes d'un service traiteur.</p><p class="case-lead lang-copy" data-language="en">A desktop business management application centralizing customers, dishes, inventory and orders for a catering service.</p>
+                    <div class="case-actions">
+        <a href="https://github.com/yanis381/SAE201.git" target="_blank" rel="noopener" class="case-secondary-link">
+            <i class="fa-brands fa-github"></i><span class="lang-copy" data-language="fr">Voir le code</span><span class="lang-copy" data-language="en">View code</span>
+        </a></div>
+                </div>
+                <dl class="case-facts">
+        <div><dt class="lang-copy" data-language="fr">Rôle</dt><dt class="lang-copy" data-language="en">Role</dt><dd class="lang-copy" data-language="fr">Développement logiciel</dd><dd class="lang-copy" data-language="en">Software development</dd></div>
+    
+        <div><dt class="lang-copy" data-language="fr">Contexte</dt><dt class="lang-copy" data-language="en">Context</dt><dd class="lang-copy" data-language="fr">Projet en équipe</dd><dd class="lang-copy" data-language="en">Team project</dd></div>
+    
+        <div><dt class="lang-copy" data-language="fr">Stack</dt><dt class="lang-copy" data-language="en">Stack</dt><dd class="lang-copy" data-language="fr">C# · WPF · XAML</dd><dd class="lang-copy" data-language="en">C# · WPF · XAML</dd></div>
+    
+        <div><dt class="lang-copy" data-language="fr">Architecture</dt><dt class="lang-copy" data-language="en">Architecture</dt><dd class="lang-copy" data-language="fr">MVVM · MySQL</dd><dd class="lang-copy" data-language="en">MVVM · MySQL</dd></div>
+    </dl>
+            </div>
+        </header>
+
+        <section class="case-gallery">
+            <div class="case-shell"><div class="case-gallery-grid">
+        <figure class="case-gallery-item featured">
+            <div class="case-gallery-image"><img src="assets/sibilia/order.webp" alt="Création d'une commande" loading="lazy" decoding="async"></div>
+            <figcaption>
+                <div><strong class="lang-copy" data-language="fr">Création d'une commande</strong><strong class="lang-copy" data-language="en">Order creation</strong></div>
+                <span>01 / 03</span>
+                <p class="lang-copy" data-language="fr">Sélection du client et des plats avec calcul automatique du total.</p><p class="lang-copy" data-language="en">Customer and dish selection with automatic total calculation.</p>
+            </figcaption>
+        </figure>
+    
+        <figure class="case-gallery-item">
+            <div class="case-gallery-image"><img src="assets/sibilia/dashboard.webp" alt="Menu principal" loading="lazy" decoding="async"></div>
+            <figcaption>
+                <div><strong class="lang-copy" data-language="fr">Menu principal</strong><strong class="lang-copy" data-language="en">Main menu</strong></div>
+                <span>02 / 03</span>
+                <p class="lang-copy" data-language="fr">Accès aux modules Commandes, Plats et Clients.</p><p class="lang-copy" data-language="en">Access to Orders, Dishes and Customers modules.</p>
+            </figcaption>
+        </figure>
+    
+        <figure class="case-gallery-item">
+            <div class="case-gallery-image"><img src="assets/sibilia/login.webp" alt="Connexion" loading="lazy" decoding="async"></div>
+            <figcaption>
+                <div><strong class="lang-copy" data-language="fr">Connexion</strong><strong class="lang-copy" data-language="en">Login</strong></div>
+                <span>03 / 03</span>
+                <p class="lang-copy" data-language="fr">Écran d'authentification de l'application.</p><p class="lang-copy" data-language="en">Application authentication screen.</p>
+            </figcaption>
+        </figure>
+    </div></div>
+        </section>
+
+        <section class="case-section">
+            <div class="case-shell case-editorial-grid">
+                <div class="case-section-heading"><span>01</span><h2 class="lang-copy" data-language="fr">Le défi</h2><h2 class="lang-copy" data-language="en">The challenge</h2></div>
+                <div class="case-copy-large">
+                    <p class="lang-copy" data-language="fr">Créer une interface desktop claire pour remplacer une gestion dispersée des commandes et fiabiliser les opérations quotidiennes d'un traiteur.</p><p class="lang-copy" data-language="en">Create a clear desktop interface to replace scattered order management and make a caterer's daily operations more reliable.</p>
+                    <div class="case-copy-columns">
+                        <p class="lang-copy" data-language="fr">L'application devait permettre de retrouver rapidement clients et produits, puis de composer une commande sans erreur de calcul.</p><p class="lang-copy" data-language="en">The application had to quickly retrieve customers and products, then build an order without calculation errors.</p>
+                        <p class="lang-copy" data-language="fr">Le code devait rester structuré malgré plusieurs écrans et opérations CRUD, d'où l'utilisation de l'architecture MVVM.</p><p class="lang-copy" data-language="en">The code had to remain structured across multiple screens and CRUD operations, leading to the use of MVVM.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="case-section architecture-section">
+            <div class="case-shell">
+                <div class="case-section-heading horizontal"><span>02</span><h2 class="lang-copy" data-language="fr">Méthode & réalisation</h2><h2 class="lang-copy" data-language="en">Method & delivery</h2></div>
+                <div class="case-method-grid">
+        <article class="case-method-card">
+            <span>01</span>
+            <i class="fa-solid fa-user-shield"></i>
+            <h3 class="lang-copy" data-language="fr">Authentification</h3><h3 class="lang-copy" data-language="en">Authentication</h3>
+            <p class="lang-copy" data-language="fr">Connexion sécurisée et gestion des rôles utilisateur.</p><p class="lang-copy" data-language="en">Secure login and user role management.</p>
+        </article>
+    
+        <article class="case-method-card">
+            <span>02</span>
+            <i class="fa-solid fa-boxes-stacked"></i>
+            <h3 class="lang-copy" data-language="fr">Gestion métier</h3><h3 class="lang-copy" data-language="en">Business management</h3>
+            <p class="lang-copy" data-language="fr">CRUD pour les clients, plats, stocks et commandes.</p><p class="lang-copy" data-language="en">CRUD for customers, dishes, inventory and orders.</p>
+        </article>
+    
+        <article class="case-method-card">
+            <span>03</span>
+            <i class="fa-solid fa-layer-group"></i>
+            <h3 class="lang-copy" data-language="fr">Architecture MVVM</h3><h3 class="lang-copy" data-language="en">MVVM architecture</h3>
+            <p class="lang-copy" data-language="fr">Séparation de l'interface, de la logique et des données.</p><p class="lang-copy" data-language="en">Separation of interface, logic and data.</p>
+        </article>
+    
+        <article class="case-method-card">
+            <span>04</span>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <h3 class="lang-copy" data-language="fr">Recherche</h3><h3 class="lang-copy" data-language="en">Search</h3>
+            <p class="lang-copy" data-language="fr">Filtrage en temps réel pour accélérer les opérations.</p><p class="lang-copy" data-language="en">Real-time filtering to speed up operations.</p>
+        </article>
+    </div>
+            </div>
+        </section>
+
+        <section class="case-section case-result">
+            <div class="case-shell case-result-grid">
+                <div><span class="case-result-label">03 / RESULT</span><h2 class="lang-copy" data-language="fr">Une première application métier structurée et utilisable.</h2><h2 class="lang-copy" data-language="en">A first structured and usable business application.</h2></div>
+                <div>
+                    <p class="lang-copy" data-language="fr">Sibilia m'a permis de consolider C#, WPF et la conception d'interfaces, tout en découvrant l'intérêt d'une architecture claire pour faire évoluer une application.</p><p class="lang-copy" data-language="en">Sibilia helped me consolidate C#, WPF and interface design while discovering the value of a clear architecture for evolving an application.</p>
+                    <div class="case-actions">
+        <a href="https://github.com/yanis381/SAE201.git" target="_blank" rel="noopener" class="case-secondary-link">
+            <i class="fa-brands fa-github"></i> GitHub
+        </a></div>
+                </div>
+            </div>
+        </section>
+
+        <nav class="case-next">
+            <div class="case-shell">
+                <a href="index.html#projects">
+                    <span class="lang-copy" data-language="fr">Retour à la sélection</span><span class="lang-copy" data-language="en">Back to selected work</span>
+                    <strong class="lang-copy" data-language="fr">Voir tous les projets</strong><strong class="lang-copy" data-language="en">View all projects</strong>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </nav>
+    </main>
     <footer class="project-footer"><p class="lang-copy" data-language="fr">© 2026 Fatih TÜRK. Tous droits réservés.</p><p class="lang-copy" data-language="en">© 2026 Fatih TÜRK. All rights reserved.</p></footer>
     <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
     <script src="js/case-study.js"></script>
