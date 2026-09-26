@@ -507,8 +507,8 @@ const translations = {
         nav_cv_fr: "CV français",
         nav_cv_intl: "CV international",
         
-        hero_badge: "🔍 Alternance Data / BI / Bases de données - Sept. 2026",
-        "profil-p": "Étudiant en BUT Informatique, spécialisé en administration, gestion et exploitation des données. Je conçois des tableaux de bord et des outils d'aide à la décision à partir de données fiables.",
+        hero_badge: "💼 Alternant Python – Automatisation & IA chez Cats Power Design",
+        "profil-p": "Étudiant en 3e année de BUT Informatique en alternance, spécialisé en administration, gestion et exploitation des données. Je développe des automatisations, des connecteurs API et des agents IA, et je conçois des tableaux de bord à partir de données fiables.",
         "profil-btn-cv": "Télécharger mon CV",
         "profil-btn-cv-fr": "Télécharger CV français",
         "profil-btn-cv-intl": "Télécharger CV international",
@@ -516,7 +516,7 @@ const translations = {
         "titre_profil": "Profil",
         "profile-lead": "Je transforme des données brutes en analyses claires et en outils utiles à la prise de décision.",
         "profile-discover": "Découvrir mon parcours",
-        "bio_profil": "Étudiant en deuxième année de BUT Informatique, parcours administration, gestion et exploitation des données à l'IUT d'Annecy, j'ai acquis une première expérience en Data Analysis et Business Intelligence. Je recherche une alternance à partir de septembre 2026 en Data, BI ou bases de données afin de contribuer à la préparation des données, à leur analyse et à la création de tableaux de bord.",
+        "bio_profil": "Étudiant en troisième année de BUT Informatique, parcours administration, gestion et exploitation des données à l'IUT d'Annecy, je suis alternant chez Cats Power Design depuis août 2026. J'y développe en Python des connecteurs API (ERP, CRM, Zoho…) et des agents IA qui automatisent le traitement des demandes métier, en m'appuyant sur une première expérience en Data Analysis et Business Intelligence.",
 
         "competences-titre": "Compétences techniques",
         "skills-frontend-title": "Frontend",
@@ -542,8 +542,13 @@ const translations = {
         "date_oct_jan": "Octobre 2025 - Janvier 2026",
         "date_june_25": "Juin 2025",
         "date_ete_24": "Été 2024",
+        "date_aout_26": "Août 2026 - Septembre 2027",
         "date_avr_juin_26": "Avril 2026 - Juin 2026",
         "date_mars_avr_26": "Mars 2026 - Avril 2026",
+
+        "job_cats": "Alternant Développeur Python – Automatisation & IA",
+        "lieu_cats": "Cats Power Design - Seynod, France",
+        "desc_cats": "Cartographie des besoins des différents services, documentation des flux entre outils et priorisation des automatisations à fort impact. Développement Python et maintenance de connecteurs API vers l'ERP, le CRM et Zoho Projects. Conception d'agents IA (serveur MCP connecté à Claude) qui analysent les demandes métier et orchestrent automatiquement les actions entre systèmes.",
 
         "job_lbdp": "Stagiaire Data Analyst & Business Intelligence",
         "lieu_lbdp": "La Boutique du Pro (LBDP) - Méry, France",
@@ -563,7 +568,7 @@ const translations = {
         
         "titre_but": "BUT Informatique", 
         "lieu_but": "Université de Savoie / IUT Annecy, France",
-        "desc_but": "Bachelor Universitaire de Technologie en informatique. Deuxième année en cours.",
+        "desc_but": "Bachelor Universitaire de Technologie en informatique. Troisième année en alternance chez Cats Power Design.",
         
         "titre_bac": "Baccalauréat Français", 
         "lieu_bac": "Lycée Louis Lachenal - Argonay, France",
@@ -574,7 +579,7 @@ const translations = {
         
         "projets-titre": "Projets", 
         "contact-titre": "Contactez-moi",
-        "contact-p": "Disponible pour échanger sur une alternance en Data, Business Intelligence ou bases de données.",
+        "contact-p": "Disponible pour échanger autour de la data, de l'automatisation ou de l'IA.",
         "form-send": "Envoyer",
         "form-name": "Nom",
         "form-email": "Email",
@@ -636,8 +641,8 @@ const translations = {
         nav_cv_fr: "French CV",
         nav_cv_intl: "International CV",
         
-        hero_badge: "🔍 Seeking a Data / BI / Database apprenticeship - September 2026",
-        "profil-p": "Second-year BUT Informatique student specializing in data management and analytics. I build reliable dashboards and decision-support tools from structured data.",
+        hero_badge: "💼 Python Automation & AI Apprentice at Cats Power Design",
+        "profil-p": "Third-year BUT Informatique apprentice specializing in data management and analytics. I build automations, API connectors and AI agents, and design reliable dashboards from structured data.",
         "profil-btn-cv": "Download CV",
         "profil-btn-cv-fr": "Download French CV",
         "profil-btn-cv-intl": "Download International CV",
@@ -645,7 +650,7 @@ const translations = {
         "titre_profil": "Profile",
         "profile-lead": "I turn raw data into clear analysis and practical decision-support tools.",
         "profile-discover": "Discover my journey",
-        "bio_profil": "I am a second-year BUT Informatique student specializing in data management and analytics at IUT Annecy. After gaining initial experience in Data Analysis and Business Intelligence, I am seeking an apprenticeship starting in September 2026 in Data, BI or databases, where I can contribute to data preparation, analysis and dashboard development.",
+        "bio_profil": "I am a third-year BUT Informatique student specializing in data management and analytics at IUT Annecy, working as an apprentice at Cats Power Design since August 2026. There, I develop Python API connectors (ERP, CRM, Zoho…) and AI agents that automate the handling of business requests, building on my earlier experience in Data Analysis and Business Intelligence.",
 
         "competences-titre": "Technical Skills", 
         "skills-frontend-title": "Frontend",
@@ -670,8 +675,13 @@ const translations = {
         "date_oct_jan": "October 2025 - January 2026",
         "date_june_25": "June 2025",
         "date_ete_24": "Summer 2024",
+        "date_aout_26": "August 2026 - September 2027",
         "date_avr_juin_26": "April 2026 - June 2026",
         "date_mars_avr_26": "March 2026 - April 2026",
+
+        "job_cats": "Python Developer Apprentice – Automation & AI",
+        "lieu_cats": "Cats Power Design - Seynod, France",
+        "desc_cats": "Met with teams to map their needs, documented data flows between tools and prioritized high-impact automations. Developed and maintained Python API connectors to the ERP, CRM and Zoho Projects. Designed AI agents (an MCP server connected to Claude) that analyze business requests and automatically orchestrate actions across systems.",
 
         "job_lbdp": "Data Analyst & Business Intelligence Intern",
         "lieu_lbdp": "La Boutique du Pro (LBDP) - Méry, France",
@@ -691,7 +701,7 @@ const translations = {
         
         "titre_but": "CS Bachelor (BUT Informatique)", 
         "lieu_but": "University of Savoy / IUT Annecy, France",
-        "desc_but": "Technical Bachelor's Degree in computer science. Second year in progress.",
+        "desc_but": "Technical Bachelor's Degree in computer science. Third year as an apprentice at Cats Power Design.",
         
         "titre_bac": "French Baccalaureate", 
         "lieu_bac": "Louis Lachenal High School - Argonay, France",
@@ -702,7 +712,7 @@ const translations = {
         
         "projets-titre": "Projects", 
         "contact-titre": "Contact Me",
-        "contact-p": "Available to discuss apprenticeship opportunities in Data, Business Intelligence or databases.",
+        "contact-p": "Happy to talk about data, automation or AI.",
         "form-send": "Send",
         "form-name": "Name",
         "form-email": "Email",
