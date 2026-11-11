@@ -16,6 +16,28 @@ html[lang="en"] .project-page [data-language="fr"] {
     justify-self: end;
 }
 
+.project-nav-actions {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+@media (min-width: 601px) {
+    .project-nav .theme-toggle {
+        width: auto;
+        padding: 0 0.95rem;
+    }
+
+    .project-nav .theme-toggle span span {
+        position: static;
+        width: auto;
+        height: auto;
+        overflow: visible;
+        clip: auto;
+    }
+}
+
 .project-back-link {
     display: inline-flex;
     align-items: center;
@@ -241,7 +263,7 @@ html[lang="en"] .project-page [data-language="fr"] {
 .case-copy-large > p {
     max-width: 900px;
     color: var(--text);
-    font-family: "Instrument Serif", serif;
+    font-family: "Times New Roman", Times, serif;
     font-size: clamp(2rem, 4vw, 4.2rem);
     line-height: 1.08;
 }

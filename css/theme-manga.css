@@ -1,0 +1,939 @@
+/* ==========================================================================
+   Thème "manga / encre", chargé par js/theme-loader.js quand ce thème est actif
+   Toutes les règles sont préfixées par html.theme-manga.
+   ========================================================================== */
+
+html.theme-manga {
+    --ink: #0d0b0a;
+    --paper: #f1ece1;
+    --red: #d7261e;
+    --red-deep: #9e170f;
+    --yellow: #f3c623;
+    --halftone: radial-gradient(rgba(13,11,10,0.17) 1.2px, transparent 1.8px) 0 0 / 9px 9px;
+
+    --bg: var(--ink);
+    --surface: #161210;
+    --surface-2: #1d1815;
+    --text: var(--paper);
+    --text-mute: #b9afa2;
+    --accent: var(--red);
+    --accent-light: #ff5b4b;
+    --accent-blue: var(--red);
+    --accent-warm: var(--yellow);
+    --gradient: linear-gradient(105deg, var(--red) 0%, var(--yellow) 100%);
+    --success: var(--yellow);
+}
+
+/* ---------- Fond : encre + grain papier + trame ---------- */
+.theme-manga body {
+    background: var(--ink);
+}
+.theme-manga body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 9998;
+    pointer-events: none;
+    opacity: 0.16;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1.4 -0.2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.theme-manga .data-grid {
+    background-image: radial-gradient(rgba(241,236,225,0.07) 1px, transparent 1.6px);
+    background-size: 7px 7px;
+    mask-image: linear-gradient(to bottom, transparent 0%, black 30%, black 70%, transparent 100%);
+}
+.theme-manga #cursor-glow { display: none; }
+.theme-manga #scroll-progress { height: 4px; background: var(--red); }
+.theme-manga ::selection { background: var(--red); color: var(--paper); }
+
+/* ---------- Typo ---------- */
+.theme-manga .hero h1,
+.theme-manga .editorial-section-heading h2,
+.theme-manga .section-title-group h2,
+.theme-manga .contact-left h2,
+.theme-manga .project-content h3,
+.theme-manga .timeline-card h4,
+.theme-manga .lang-card h3,
+.theme-manga .interest-card h3,
+.theme-manga .skill-column h3 {
+    font-family: 'Anton', 'Space Grotesk', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+}
+
+/* ---------- Navigation ---------- */
+.theme-manga .glass-nav,
+.theme-manga .glass-nav.scrolled {
+    background: var(--ink);
+    border-bottom: 3px solid var(--red);
+    backdrop-filter: none;
+}
+.theme-manga .logo-mark {
+    border: 2px solid var(--paper);
+    border-radius: 0;
+    background: var(--red);
+    color: var(--ink);
+    font-family: 'Anton', sans-serif;
+    font-style: normal;
+    transform: rotate(-4deg);
+}
+.theme-manga .nav-menu a,
+.theme-manga .glass-nav .btn-cv-primary { white-space: nowrap; }
+/* Le bouton CV manga est plus large : on le masque un peu plus longtemps que le thème classique (1160px) */
+@media (min-width: 991px) and (max-width: 1240px) {
+    .theme-manga .glass-nav .btn-cv-primary.desktop-only { display: none; }
+}
+.theme-manga .nav-menu a.active {
+    color: var(--ink);
+    background: var(--paper);
+    padding: 0.15rem 0.4rem;
+}
+.theme-manga .btn-cv-primary,
+.theme-manga .btn-primary {
+    border-radius: 0;
+    background: var(--paper);
+    color: var(--ink);
+    border: 3px solid var(--ink);
+    box-shadow: 5px 5px 0 var(--red);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+.theme-manga .btn-cv-primary:hover,
+.theme-manga .btn-primary:hover {
+    background: var(--red);
+    color: var(--paper);
+    border-color: var(--ink);
+    box-shadow: 2px 2px 0 var(--ink);
+    transform: translate(3px, 3px);
+}
+.theme-manga .language-switch,
+.theme-manga .lang-option { border-radius: 0; }
+.theme-manga .theme-toggle {
+    border: 2px solid var(--paper);
+    border-radius: 0;
+    color: var(--paper);
+}
+.theme-manga .theme-toggle:hover {
+    background: var(--paper);
+    border-color: var(--paper);
+    color: var(--ink);
+}
+.theme-manga .lang-option.active {
+    background: var(--red);
+    border-color: var(--red);
+    color: var(--paper);
+    box-shadow: none;
+}
+
+/* ---------- Hero : planche rouge gravée ---------- */
+.theme-manga .hero::before {
+    content: "データアナリスト";
+    top: 120px;
+    left: auto;
+    right: calc(50% - 50vw + 1.2rem);
+    color: var(--ink);
+    font-family: 'Dela Gothic One', sans-serif;
+    font-size: clamp(1rem, 1.6vw, 1.5rem);
+    letter-spacing: 0.2em;
+    writing-mode: vertical-rl;
+    z-index: 3;
+}
+/* Fond rouge affiché tout de suite, avant que js/theme-manga.js dessine la gravure par-dessus */
+.theme-manga .hero::after {
+    top: 0;
+    left: calc(50% - 50vw);
+    right: auto;
+    width: 100vw;
+    height: auto;
+    z-index: -2;
+    background: #c8221a;
+}
+.manga-woodgrain {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(50% - 50vw);
+    width: 100vw;
+    z-index: -1;
+    pointer-events: none;
+    background: var(--red);
+}
+.manga-woodgrain canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.theme-manga .hero-kicker {
+    display: inline-block;
+    padding: 0.35rem 0.7rem;
+    background: var(--ink);
+    color: var(--paper);
+    font-size: 0.7rem;
+}
+.theme-manga .badge-glass {
+    display: table;
+    padding: 0.45rem 0.8rem;
+    background: var(--paper);
+    color: var(--ink);
+    border: 2px solid var(--ink);
+    font-weight: 700;
+}
+.theme-manga .hero h1 {
+    color: var(--paper);
+    line-height: 0.92;
+    font-size: clamp(5rem, 10vw, 10.5rem);
+    text-shadow: 0.05em 0.05em 0 var(--ink);
+    -webkit-text-stroke: 3px var(--ink);
+    paint-order: stroke fill;
+}
+.theme-manga .hero-name::before { display: none; }
+.theme-manga .gradient-text {
+    display: inline-block;
+    margin-top: 1.4rem;
+    padding: 0.1rem 0.9rem 0.25rem;
+    background: var(--ink);
+    -webkit-text-fill-color: var(--yellow);
+    color: var(--yellow);
+    transform: rotate(-1.5deg);
+}
+.theme-manga .subtitle {
+    max-width: 620px;
+    padding: 1.1rem 1.3rem;
+    background: var(--paper);
+    color: var(--ink);
+    border: 3px solid var(--ink);
+    box-shadow: 8px 8px 0 var(--ink);
+}
+.theme-manga .hero-text-link {
+    padding: 0.5rem 0.8rem;
+    background: var(--ink);
+    color: var(--paper);
+    font-weight: 700;
+}
+.theme-manga .hero-text-link i { color: var(--red); }
+.theme-manga .hero-scroll-cue { color: var(--ink); font-weight: 700; }
+.theme-manga .hero-scroll-cue i { background: rgba(13,11,10,0.3); }
+
+.theme-manga .hero-visual-editorial { mask-image: none; }
+.theme-manga .visual-rail { opacity: 1; }
+.theme-manga .visual-track img,
+.theme-manga .visual-rail:hover img {
+    filter: none;
+    border: 3px solid var(--ink);
+    background: var(--paper);
+}
+.theme-manga .portrait-frame {
+    background: var(--paper);
+    border: 4px solid var(--ink);
+    box-shadow: 12px 12px 0 var(--ink);
+    transform: rotate(-1.5deg);
+}
+.theme-manga .portrait-frame::after {
+    z-index: 2;
+    background: linear-gradient(to top, rgba(13,11,10,0.75), transparent 30%);
+}
+.theme-manga .portrait-frame > img,
+.theme-manga .portrait-frame:hover > img {
+    filter: contrast(1.05);
+    transform: none;
+}
+.theme-manga .portrait-caption { z-index: 3; color: var(--paper); }
+.theme-manga .portrait-caption span {
+    padding: 0.15rem 0.45rem;
+    background: var(--red);
+    color: var(--paper);
+}
+
+/* Calque "gravure" posé sur une image, retiré au survol pour révéler l'original */
+.ink-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    transition: opacity 0.45s steps(4, end);
+}
+img.ink-layer {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.theme-manga .portrait-frame > img.ink-layer { object-position: 55% center; }
+div.ink-layer {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.theme-manga .portrait-frame:hover .ink-layer,
+.theme-manga .project-card:hover .ink-layer { opacity: 0; }
+
+/* ---------- Coulures d'encre entre les sections ---------- */
+.ink-drip {
+    position: absolute;
+    top: -1px;
+    left: calc(50% - 50vw);
+    width: 100vw;
+    height: clamp(70px, 10vw, 150px);
+    z-index: 4;
+    pointer-events: none;
+    transform-origin: top center;
+}
+.ink-drip svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* ---------- Bandeau ---------- */
+.theme-manga .expertise-marquee {
+    position: relative;
+    z-index: 5;
+    background: var(--ink);
+    color: var(--paper);
+    border-top: 3px solid var(--paper);
+    border-bottom: 3px solid var(--paper);
+    transform: rotate(-1.2deg) scale(1.02);
+}
+.theme-manga .expertise-track span {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    font-size: clamp(1rem, 1.8vw, 1.5rem);
+}
+.theme-manga .expertise-track i {
+    width: 14px;
+    height: 14px;
+    border-radius: 0;
+    background: var(--red);
+    clip-path: polygon(50% 0, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+/* ---------- Titres de sections ---------- */
+.theme-manga .section { position: relative; }
+.theme-manga .editorial-section-heading .section-index,
+.theme-manga .section-title-group .section-index,
+.theme-manga .contact-heading .section-index {
+    padding: 0.3rem 0.6rem;
+    background: var(--red);
+    color: var(--paper);
+    font-weight: 700;
+    transform: rotate(-3deg);
+}
+.theme-manga .editorial-section-heading h2,
+.theme-manga .section-title-group h2 {
+    position: relative;
+    letter-spacing: 0.01em;
+    line-height: 0.95;
+    background: linear-gradient(transparent 68%, var(--red) 68%, var(--red) 94%, transparent 94%) no-repeat;
+    background-size: 0% 100%;
+    transition: background-size 0.7s cubic-bezier(.7,0,.2,1) 0.35s, clip-path 0.6s cubic-bezier(.7,0,.2,1);
+    clip-path: inset(0 0 0 0);
+}
+.theme-manga .editorial-section-heading.reveal h2 { clip-path: inset(0 100% 0 0); }
+.theme-manga .editorial-section-heading.reveal.visible h2 {
+    clip-path: inset(0 0 0 0);
+    background-size: 100% 100%;
+}
+.theme-manga .section-title-group h2 { background-size: 100% 100%; }
+.theme-manga .editorial-section-heading > p { color: rgba(241,236,225,0.6); }
+
+/* Onomatopées */
+.manga-sfx {
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    font-family: 'Dela Gothic One', 'Anton', sans-serif;
+    font-size: clamp(5rem, 13vw, 13rem);
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(215,38,30,0.65);
+    white-space: nowrap;
+    user-select: none;
+}
+
+/* ---------- Profil ---------- */
+.theme-manga .profile-lead { font-family: 'Times New Roman', Times, serif; }
+.theme-manga .editorial-link { border-bottom: 3px solid var(--red); }
+
+/* ---------- Compétences ---------- */
+.theme-manga .skill-column h3 i,
+.theme-manga .accent-icon { color: var(--red); }
+.theme-manga .progress-container {
+    height: 10px;
+    background: transparent;
+    border: 1.5px solid rgba(241,236,225,0.55);
+}
+.theme-manga .progress-fill {
+    background: repeating-linear-gradient(-45deg, var(--red) 0 6px, var(--ink) 6px 8px);
+}
+.theme-manga .tag-glass {
+    border-radius: 0;
+    border: 2px solid var(--paper);
+    background: transparent;
+    transition: transform 0.2s, background 0.2s, color 0.2s;
+}
+.theme-manga .tag-glass:hover {
+    background: var(--paper);
+    color: var(--ink);
+    transform: rotate(-2deg) scale(1.05);
+}
+
+/* ---------- Formation ---------- */
+.theme-manga .timeline-card .date { color: var(--red); }
+.theme-manga .timeline-card h5 { color: var(--yellow); }
+
+/* ---------- Expériences : page papier tramée ---------- */
+.theme-manga #experience {
+    background:
+        var(--halftone),
+        var(--paper);
+    background-blend-mode: normal;
+    color: var(--ink);
+}
+.theme-manga #experience .editorial-section-heading h2 { color: var(--ink); }
+.theme-manga #experience .editorial-section-heading > p { color: rgba(13,11,10,0.7); }
+.theme-manga #experience .education-grid { border-top: 3px solid var(--ink); }
+.theme-manga #experience .timeline-card {
+    padding-inline: clamp(1.5rem, 3vw, 3rem);
+    margin: 1.5rem 0;
+    background: var(--paper);
+    border: 3px solid var(--ink);
+    box-shadow: 8px 8px 0 var(--ink);
+}
+.theme-manga #experience .timeline-card:nth-child(odd) { transform: rotate(-0.6deg); }
+.theme-manga #experience .timeline-card:nth-child(even) { transform: rotate(0.6deg); }
+.theme-manga #experience .timeline-card.highlight { box-shadow: 8px 8px 0 var(--red); }
+.theme-manga #experience .timeline-card .date { color: var(--red); }
+.theme-manga #experience .timeline-card h4 { color: var(--ink); }
+.theme-manga #experience .timeline-card h5 { color: var(--red-deep); }
+.theme-manga #experience .timeline-card p { color: rgba(13,11,10,0.75); }
+
+/* ---------- Projets : cases de BD ---------- */
+.theme-manga .tech-filters button {
+    border-radius: 0;
+    border: 2px solid var(--paper);
+    color: var(--paper);
+    font-weight: 700;
+}
+.theme-manga .tech-filters button.active {
+    background: var(--red);
+    border-color: var(--red);
+    color: var(--paper);
+}
+.theme-manga .projects-grid { gap: clamp(2.5rem, 5vw, 4.5rem); }
+.theme-manga .project-card {
+    background: var(--paper);
+    color: var(--ink);
+    border: 4px solid var(--ink);
+    box-shadow: 12px 12px 0 var(--red);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    animation: none;
+}
+.theme-manga .project-card:nth-child(odd) { transform: rotate(-0.5deg); }
+.theme-manga .project-card:nth-child(even) { transform: rotate(0.5deg); }
+.theme-manga .project-card:hover {
+    transform: translate(-4px, -4px) rotate(0deg);
+    box-shadow: 18px 18px 0 var(--red);
+    border-color: var(--ink);
+}
+.theme-manga .project-img {
+    background-color: #e6dfd1;
+    border-right: 4px solid var(--ink);
+}
+.theme-manga .project-card:nth-child(even) .project-img {
+    border-right: 0;
+    border-left: 4px solid var(--ink);
+}
+.theme-manga .project-img::before {
+    z-index: 2;
+    background: repeating-conic-gradient(from 0deg at 50% 50%, rgba(13,11,10,0.9) 0 0.8deg, transparent 0.8deg 6deg);
+    -webkit-mask-image: radial-gradient(circle at center, transparent 48%, black 82%);
+    mask-image: radial-gradient(circle at center, transparent 48%, black 82%);
+    opacity: 0;
+    transition: opacity 0.3s steps(3, end);
+}
+.theme-manga .project-card:hover .project-img::before {
+    background: repeating-conic-gradient(from 0deg at 50% 50%, rgba(13,11,10,0.9) 0 0.8deg, transparent 0.8deg 6deg);
+    opacity: 0.55;
+}
+.theme-manga .project-img::after { display: none; }
+.theme-manga .project-index {
+    padding: 0.25rem 0.55rem;
+    background: var(--ink);
+    color: var(--paper);
+    text-shadow: none;
+}
+.theme-manga .project-content h3 { color: var(--ink); line-height: 0.98; }
+.theme-manga .project-content p { color: rgba(13,11,10,0.75); }
+.theme-manga .project-case-label {
+    padding: 0.2rem 0.5rem;
+    background: var(--red);
+    color: var(--paper);
+}
+.theme-manga .meta-type { color: var(--red-deep); font-weight: 700; }
+.theme-manga .meta-date { color: rgba(13,11,10,0.6); }
+.theme-manga .project-tags span {
+    background: transparent;
+    color: var(--ink);
+    border: 1.5px solid var(--ink);
+    border-radius: 0;
+    padding: 0.2rem 0.5rem;
+}
+.theme-manga .project-badge {
+    border-radius: 0;
+    background: var(--ink);
+    color: var(--yellow);
+    border: 0;
+}
+.theme-manga .btn-action,
+.theme-manga .project-open-label {
+    border-radius: 0;
+    border: 3px solid var(--ink);
+    color: var(--ink);
+    font-weight: 700;
+}
+.theme-manga .btn-action:hover {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+}
+
+/* Révélation des cases au scroll (balayage d'encre) */
+.theme-manga .project-card.ink-pending .project-img { clip-path: inset(0 0 100% 0); }
+.theme-manga .project-card.ink-in .project-img {
+    clip-path: inset(0 0 0 0);
+    transition: clip-path 0.9s cubic-bezier(.7,0,.2,1) 0.1s;
+}
+
+/* ---------- Langues / intérêts / références ---------- */
+.theme-manga .lang-card,
+.theme-manga .interest-card,
+.theme-manga #references .timeline-card {
+    transition: background 0.25s, color 0.25s;
+}
+.theme-manga .lang-card:hover,
+.theme-manga .interest-card:hover {
+    background: var(--red);
+    color: var(--paper);
+}
+.theme-manga .lang-card:hover p,
+.theme-manga .interest-card:hover p,
+.theme-manga .interest-card:hover .icon-box { color: var(--paper); }
+.theme-manga .lang-card .flag { border: 2px solid var(--paper); }
+
+/* ---------- Contact : planche rouge ---------- */
+.theme-manga #contact {
+    background:
+        var(--halftone),
+        var(--red);
+    color: var(--ink);
+}
+.theme-manga .contact-left h2 { color: var(--ink); }
+.theme-manga .contact-heading .section-index { background: var(--ink); color: var(--paper); }
+.theme-manga .contact-left > p,
+.theme-manga .info-item,
+.theme-manga .info-item i { color: var(--ink); }
+.theme-manga #contact .btn-cv-primary,
+.theme-manga #contact .btn-primary {
+    background: var(--ink);
+    color: var(--paper);
+    border-color: var(--ink);
+    box-shadow: 5px 5px 0 var(--paper);
+}
+.theme-manga #contact .btn-social { border-radius: 0; border: 2px solid var(--ink); color: var(--ink); }
+.theme-manga #contact .btn-social:hover { background: var(--ink); color: var(--red); }
+.theme-manga .glass-form {
+    padding: clamp(1.25rem, 2.5vw, 2rem);
+    background: var(--paper);
+    border: 3px solid var(--ink);
+    box-shadow: 10px 10px 0 var(--ink);
+}
+.theme-manga .glass-form input,
+.theme-manga .glass-form textarea {
+    color: var(--ink);
+    border-bottom: 2px solid rgba(13,11,10,0.35);
+}
+.theme-manga .glass-form input:focus,
+.theme-manga .glass-form textarea:focus { border-color: var(--red); }
+.theme-manga footer {
+    background: var(--ink);
+    color: rgba(241,236,225,0.7);
+    border-top: 3px solid var(--red);
+}
+.theme-manga #back-to-top {
+    border-radius: 0;
+    background: var(--red);
+    color: var(--paper);
+    border: 3px solid var(--ink);
+    box-shadow: 4px 4px 0 var(--ink);
+}
+
+/* ==========================================================================
+   Pages projets (études de cas)
+   ========================================================================== */
+
+.theme-manga .project-page { background: var(--ink); }
+.theme-manga .project-back-link:hover { color: var(--red); }
+.theme-manga .case-hero,
+.theme-manga .case-gallery,
+.theme-manga .case-showcase,
+.theme-manga .case-section,
+.theme-manga .case-next {
+    position: relative;
+    border-bottom: 0;
+}
+.theme-manga .case-hero {
+    isolation: isolate;
+    background: #c8221a;
+}
+.theme-manga .case-section { overflow-x: clip; }
+/* Les blocs des études de cas sont déjà pleine largeur */
+.project-page .manga-woodgrain,
+.project-page .ink-drip {
+    left: 0;
+    width: 100%;
+}
+
+/* Hero */
+.theme-manga .case-breadcrumb,
+.theme-manga .case-overline {
+    padding: 0.35rem 0.7rem;
+    background: var(--ink);
+    color: var(--paper);
+}
+.theme-manga .case-breadcrumb:hover { color: var(--red); }
+.theme-manga .status-dot { background: var(--yellow); box-shadow: none; }
+.theme-manga .case-hero h1 {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 0.95;
+    color: var(--paper);
+    text-shadow: 0.05em 0.05em 0 var(--ink);
+    -webkit-text-stroke: 3px var(--ink);
+    paint-order: stroke fill;
+}
+.theme-manga .case-lead {
+    padding: 1.1rem 1.3rem;
+    background: var(--paper);
+    color: var(--ink);
+    border: 3px solid var(--ink);
+    box-shadow: 8px 8px 0 var(--ink);
+}
+.theme-manga .case-hero .case-secondary-link,
+.theme-manga .case-hero .btn-primary {
+    padding: 0.6rem 1rem;
+    background: var(--ink);
+    color: var(--paper);
+    border: 0;
+    box-shadow: 5px 5px 0 var(--paper);
+}
+.theme-manga .case-hero .case-secondary-link:hover { background: var(--paper); color: var(--ink); }
+.theme-manga .case-facts {
+    padding: 0.4rem 1.4rem;
+    background: var(--paper);
+    border: 4px solid var(--ink);
+    box-shadow: 10px 10px 0 var(--ink);
+    transform: rotate(1.2deg);
+}
+.theme-manga .case-facts div { border-bottom: 2px solid var(--ink); }
+.theme-manga .case-facts div:last-child { border-bottom: 0; }
+.theme-manga .case-facts dt { color: var(--red); font-weight: 700; }
+.theme-manga .case-facts dd { color: var(--ink); }
+
+/* Galerie et visuel principal : cases de BD sur papier tramé */
+.theme-manga .case-gallery,
+.theme-manga .case-showcase,
+.theme-manga .architecture-section {
+    background:
+        var(--halftone),
+        var(--paper);
+    color: var(--ink);
+}
+.theme-manga .case-gallery-grid { gap: clamp(1.5rem, 3vw, 2.5rem); }
+.theme-manga .case-gallery-item,
+.theme-manga .case-main-visual {
+    background: var(--paper);
+    color: var(--ink);
+    border: 4px solid var(--ink);
+    box-shadow: 10px 10px 0 var(--red);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.theme-manga .case-gallery-item:nth-child(even) { transform: rotate(0.6deg); }
+.theme-manga .case-gallery-item:nth-child(odd) { transform: rotate(-0.4deg); }
+.theme-manga .case-gallery-item:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 16px 16px 0 var(--red);
+}
+.theme-manga .case-gallery-image {
+    position: relative;
+    background: #e6dfd1;
+    border-bottom: 4px solid var(--ink);
+}
+.theme-manga .case-gallery-image > img.ink-layer {
+    inset: 1.25rem;
+    width: calc(100% - 2.5rem);
+    height: calc(100% - 2.5rem);
+    max-height: none;
+    object-fit: contain;
+}
+.theme-manga .case-main-visual { position: relative; }
+.theme-manga .case-main-visual > img.ink-layer {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: initial;
+}
+.theme-manga .case-gallery-item:hover .ink-layer,
+.theme-manga .case-main-visual:hover .ink-layer,
+.theme-manga .ink-off .ink-layer { opacity: 0; }
+.theme-manga .case-gallery-item,
+.theme-manga .case-main-visual { cursor: pointer; }
+.theme-manga .case-gallery-item figcaption,
+.theme-manga .case-main-visual figcaption { border-top: 0; color: var(--ink); }
+.theme-manga .case-gallery-item figcaption strong {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    font-size: 1.15rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+.theme-manga .case-gallery-item figcaption p { color: rgba(13,11,10,0.72); }
+.theme-manga .case-gallery-item figcaption span {
+    align-self: start;
+    padding: 0.2rem 0.5rem;
+    background: var(--ink);
+    color: var(--paper);
+}
+.theme-manga .case-gallery-item.ink-pending .case-gallery-image,
+.theme-manga .case-main-visual.ink-pending img { clip-path: inset(0 0 100% 0); }
+.theme-manga .case-gallery-item.ink-in .case-gallery-image,
+.theme-manga .case-main-visual.ink-in img {
+    clip-path: inset(0 0 0 0);
+    transition: clip-path 0.9s cubic-bezier(.7,0,.2,1) 0.1s;
+}
+
+/* Titres de sections */
+.theme-manga .case-section-heading > span,
+.theme-manga .case-result-label {
+    padding: 0.3rem 0.6rem;
+    background: var(--red);
+    color: var(--paper);
+    font-weight: 700;
+    transform: rotate(-3deg);
+}
+.theme-manga .case-section-heading h2,
+.theme-manga .case-result h2,
+.theme-manga .case-next strong {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+}
+.theme-manga .case-section-heading h2 {
+    background: linear-gradient(transparent 68%, var(--red) 68%, var(--red) 94%, transparent 94%) no-repeat;
+}
+.theme-manga .case-copy-large > p { color: var(--paper); }
+.theme-manga .case-copy-columns { color: rgba(241,236,225,0.68); }
+
+/* Méthode : cases papier */
+.theme-manga .architecture-section .case-section-heading h2 { color: var(--ink); }
+.theme-manga .case-method-grid,
+.theme-manga .security-flow {
+    gap: 1.25rem;
+    border: 0;
+}
+.theme-manga .case-method-card,
+.theme-manga .flow-step {
+    background: var(--paper);
+    border: 3px solid var(--ink);
+    box-shadow: 7px 7px 0 var(--ink);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.theme-manga .case-method-card:last-child,
+.theme-manga .flow-step:last-child { border-right: 3px solid var(--ink); }
+.theme-manga .case-method-card:hover,
+.theme-manga .flow-step:hover {
+    transform: translate(-3px, -3px) rotate(-1deg);
+    box-shadow: 10px 10px 0 var(--red);
+}
+.theme-manga .case-method-card > span,
+.theme-manga .flow-number {
+    padding: 0.15rem 0.45rem;
+    background: var(--ink);
+    color: var(--paper);
+}
+.theme-manga .case-method-card i,
+.theme-manga .flow-step > i { color: var(--red); }
+.theme-manga .case-method-card h3,
+.theme-manga .flow-step h3 {
+    color: var(--ink);
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    font-size: 1.35rem;
+    text-transform: uppercase;
+}
+.theme-manga .case-method-card p,
+.theme-manga .flow-step p { color: rgba(13,11,10,0.72); }
+
+/* Fonctionnalités (Drive sécurisé) */
+.theme-manga .feature-list { border-top: 3px solid var(--paper); }
+.theme-manga .feature-list article { border-bottom: 2px solid rgba(241,236,225,0.18); }
+.theme-manga .feature-list article > span { color: var(--red); font-weight: 700; }
+
+/* Résultat : planche rouge */
+.theme-manga .case-result,
+.theme-manga .generated-case .case-result {
+    background:
+        var(--halftone),
+        var(--red);
+    color: var(--ink);
+}
+.theme-manga .case-result-label { background: var(--ink); }
+.theme-manga .case-result .btn-primary {
+    background: var(--ink);
+    color: var(--paper);
+    box-shadow: 5px 5px 0 var(--paper);
+}
+.theme-manga .case-result .case-secondary-link {
+    padding: 0.6rem 1rem;
+    background: var(--ink);
+    color: var(--paper);
+    border: 0;
+}
+
+/* Suite */
+.theme-manga .case-next strong { color: var(--paper); }
+.theme-manga .case-next i { color: var(--red); }
+.theme-manga .case-next a:hover strong { color: var(--red); }
+.theme-manga .project-footer {
+    border-top: 3px solid var(--red);
+    color: rgba(241,236,225,0.7);
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+    .theme-manga .hero::before { display: none; }
+    .theme-manga .hero h1 { -webkit-text-stroke: 2px var(--ink); }
+    .theme-manga .subtitle { box-shadow: 5px 5px 0 var(--ink); }
+    .theme-manga .portrait-frame { box-shadow: 7px 7px 0 var(--ink); }
+    .theme-manga .project-card,
+    .theme-manga .project-card:nth-child(odd),
+    .theme-manga .project-card:nth-child(even) {
+        transform: none;
+        box-shadow: 7px 7px 0 var(--red);
+    }
+    .theme-manga .project-img,
+    .theme-manga .project-card:nth-child(even) .project-img {
+        border: 0;
+        border-bottom: 4px solid var(--ink);
+    }
+    .theme-manga #experience .timeline-card,
+    .theme-manga #experience .timeline-card:nth-child(odd),
+    .theme-manga #experience .timeline-card:nth-child(even) {
+        width: 100%;
+        transform: none;
+        box-shadow: 5px 5px 0 var(--ink);
+    }
+    .manga-sfx { font-size: 4.5rem; }
+    .theme-manga .case-hero h1 { -webkit-text-stroke: 2px var(--ink); }
+    .theme-manga .case-lead { box-shadow: 5px 5px 0 var(--ink); }
+    .theme-manga .case-facts { transform: none; box-shadow: 6px 6px 0 var(--ink); }
+    .theme-manga .case-gallery-item,
+    .theme-manga .case-gallery-item:nth-child(odd),
+    .theme-manga .case-gallery-item:nth-child(even),
+    .theme-manga .case-main-visual {
+        transform: none;
+        box-shadow: 6px 6px 0 var(--red);
+    }
+}
+
+@media (max-width: 600px) {
+    .theme-manga .case-gallery-image > img.ink-layer {
+        inset: 0.75rem;
+        width: calc(100% - 1.5rem);
+        height: calc(100% - 1.5rem);
+    }
+    .theme-manga .case-main-visual > img.ink-layer { width: 760px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .theme-manga .editorial-section-heading.reveal h2 { clip-path: none; background-size: 100% 100%; }
+    .theme-manga .project-card.ink-pending .project-img { clip-path: none; }
+}
+
+/* ---------- Assistant (js/chatbot.js) : bulles de BD ---------- */
+.theme-manga .chatbot { font-family: 'Space Grotesk', sans-serif; }
+.theme-manga .chatbot-launcher,
+.theme-manga .chatbot-avatar,
+.theme-manga .chatbot-send {
+    border-radius: 0;
+    background: var(--red);
+    color: var(--paper);
+    border: 3px solid var(--ink);
+}
+.theme-manga .chatbot-launcher { box-shadow: 5px 5px 0 var(--ink); transform: rotate(-3deg); }
+.theme-manga .chatbot-launcher:hover { transform: rotate(0deg) translate(-2px, -2px); }
+.theme-manga .chatbot-panel {
+    background: var(--halftone), var(--paper);
+    color: var(--ink);
+    border: 4px solid var(--ink);
+    border-radius: 0;
+    box-shadow: 10px 10px 0 var(--red);
+}
+.theme-manga .chatbot-header {
+    background: var(--ink);
+    color: var(--paper);
+    border-bottom: 0;
+}
+.theme-manga .chatbot-title {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    font-size: 1.15rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+}
+.theme-manga .chatbot-subtitle { color: var(--yellow); }
+.theme-manga .chatbot-close { color: var(--paper); border-radius: 0; }
+.theme-manga .chatbot-close:hover { background: var(--red); color: var(--paper); }
+.theme-manga .chatbot-message {
+    position: relative;
+    border-radius: 0;
+    border: 2.5px solid var(--ink);
+    box-shadow: 3px 3px 0 var(--ink);
+}
+.theme-manga .chatbot-message.from-bot {
+    background: var(--paper);
+    color: var(--ink);
+    border-radius: 18px;
+}
+.theme-manga .chatbot-message.from-user {
+    background: var(--red);
+    color: var(--paper);
+}
+.theme-manga .chatbot-message.is-typing span { background: var(--ink); }
+.theme-manga .chatbot-links a {
+    border: 2px solid var(--ink);
+    border-radius: 0;
+    color: var(--ink);
+}
+.theme-manga .chatbot-links a:hover { background: var(--ink); color: var(--paper); }
+.theme-manga .chatbot-chip {
+    border: 2px solid var(--ink);
+    border-radius: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-weight: 700;
+}
+.theme-manga .chatbot-chip:hover { background: var(--yellow); color: var(--ink); border-color: var(--ink); }
+.theme-manga .chatbot-form { border-top: 3px solid var(--ink); background: var(--paper); }
+.theme-manga .chatbot-input {
+    border: 2px solid var(--ink);
+    border-radius: 0;
+    color: var(--ink);
+    background: #fff;
+}
+.theme-manga .chatbot-input::placeholder { color: rgba(13,11,10,0.5); }
+.theme-manga .chatbot-input:focus { border-color: var(--red); }

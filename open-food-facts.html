@@ -9,11 +9,13 @@
     <title>Open Food Facts - Fatih TÜRK</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/project-page.css">
     <link rel="stylesheet" href="css/case-study.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+    <script src="js/theme-loader.js"></script>
 </head>
 <body class="project-page" data-project="openFoodFacts">
     <div id="scroll-progress"></div>
@@ -21,7 +23,7 @@
     <nav class="glass-nav project-nav">
         <a href="index.html#projects" class="logo"><span class="logo-mark">FT</span><span class="logo-copy">Fatih TÜRK<small>Data portfolio</small></span></a>
         <a href="index.html#projects" class="project-back-link"><i class="fa-solid fa-arrow-left"></i><span class="lang-copy" data-language="fr">Tous les projets</span><span class="lang-copy" data-language="en">All projects</span></a>
-        <div class="language-switch"><button type="button" class="lang-option active" data-set-lang="fr">FR</button><button type="button" class="lang-option" data-set-lang="en">EN</button></div>
+        <div class="project-nav-actions"><button type="button" class="theme-toggle" data-theme-toggle><span class="theme-toggle-to-manga"><i class="fa-solid fa-book-open"></i><span class="lang-copy" data-language="fr">Mode manga</span><span class="lang-copy" data-language="en">Manga mode</span></span><span class="theme-toggle-to-classic"><i class="fa-solid fa-chart-simple"></i><span class="lang-copy" data-language="fr">Mode classique</span><span class="lang-copy" data-language="en">Classic mode</span></span></button><div class="language-switch"><button type="button" class="lang-option active" data-set-lang="fr">FR</button><button type="button" class="lang-option" data-set-lang="en">EN</button></div></div>
     </nav>
     <main id="case-study-root" class="generated-case">
         <header class="case-hero">
@@ -166,5 +168,7 @@
     <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
     <script src="js/case-study.js"></script>
     <script src="js/project-page.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script>window.writeThemeScripts && writeThemeScripts();</script>
 </body>
 </html>

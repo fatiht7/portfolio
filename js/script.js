@@ -504,10 +504,12 @@ const translations = {
         nav_projects: "Projets", 
         nav_projects_btn: "Voir mes projets",
         nav_cv_download: "Télécharger CV",
+        theme_to_manga: "Mode manga",
+        theme_to_classic: "Mode classique",
         nav_cv_fr: "CV français",
         nav_cv_intl: "CV international",
         
-        hero_badge: "💼 Alternant Python – Automatisation & IA chez Cats Power Design",
+        hero_badge: "Alternant Python – Automatisation & IA chez Cats Power Design",
         "profil-p": "Étudiant en 3e année de BUT Informatique en alternance, spécialisé en administration, gestion et exploitation des données. Je développe des automatisations, des connecteurs API et des agents IA, et je conçois des tableaux de bord à partir de données fiables.",
         "profil-btn-cv": "Télécharger mon CV",
         "profil-btn-cv-fr": "Télécharger CV français",
@@ -603,7 +605,9 @@ const translations = {
         "interets-titre": "Centres d'intérêt", 
         "hobby-games": "Jeux Vidéo", 
         "hobby_games_desc": "FPS, Jeux de construction",
-        "hobby_manga_desc": "One Piece, Chainsaw Man",
+        "hobby_manga_desc": "Lecture et culture japonaise",
+        "hobby-travel": "Voyages",
+        "hobby-travel-desc": "Découverte de nouvelles cultures",
         "hobby-fitness": "Fitness",
         "hobby-fitness-desc": "Musculation",
         
@@ -638,10 +642,12 @@ const translations = {
         nav_projects: "Projects", 
         nav_projects_btn: "View my projects",
         nav_cv_download: "Download CV",
+        theme_to_manga: "Manga mode",
+        theme_to_classic: "Classic mode",
         nav_cv_fr: "French CV",
         nav_cv_intl: "International CV",
         
-        hero_badge: "💼 Python Automation & AI Apprentice at Cats Power Design",
+        hero_badge: "Python Automation & AI Apprentice at Cats Power Design",
         "profil-p": "Third-year BUT Informatique apprentice specializing in data management and analytics. I build automations, API connectors and AI agents, and design reliable dashboards from structured data.",
         "profil-btn-cv": "Download CV",
         "profil-btn-cv-fr": "Download French CV",
@@ -736,7 +742,9 @@ const translations = {
         "interets-titre": "Interests", 
         "hobby-games": "Video Games", 
         "hobby_games_desc": "FPS, Construction games",
-        "hobby_manga_desc": "One Piece, Chainsaw Man",
+        "hobby_manga_desc": "Reading and Japanese culture",
+        "hobby-travel": "Travel",
+        "hobby-travel-desc": "Discovering new cultures",
         "hobby-fitness": "Fitness",
         "hobby-fitness-desc": "Weight training",
         
@@ -783,7 +791,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothNavigation();
     initHeroParallax();
     initHeroVisualAlignment();
-    
+
     document.querySelectorAll('.tech-filters button').forEach(btn => {
         btn.addEventListener('click', () => {
             document.querySelector('.tech-filters .active').classList.remove('active');

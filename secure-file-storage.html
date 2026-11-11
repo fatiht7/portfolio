@@ -12,10 +12,12 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/project-page.css">
+    <link rel="stylesheet" href="css/chatbot.css">
+    <script src="js/theme-loader.js"></script>
 </head>
 <body class="project-page">
     <div id="scroll-progress"></div>
@@ -33,10 +35,10 @@
             <span class="lang-copy" data-language="en">All projects</span>
         </a>
 
-        <div class="language-switch" aria-label="Sélecteur de langue">
+        <div class="project-nav-actions"><button type="button" class="theme-toggle" data-theme-toggle><span class="theme-toggle-to-manga"><i class="fa-solid fa-book-open"></i><span class="lang-copy" data-language="fr">Mode manga</span><span class="lang-copy" data-language="en">Manga mode</span></span><span class="theme-toggle-to-classic"><i class="fa-solid fa-chart-simple"></i><span class="lang-copy" data-language="fr">Mode classique</span><span class="lang-copy" data-language="en">Classic mode</span></span></button><div class="language-switch" aria-label="Sélecteur de langue">
             <button type="button" class="lang-option active" data-set-lang="fr" aria-pressed="true">FR</button>
             <button type="button" class="lang-option" data-set-lang="en" aria-pressed="false">EN</button>
-        </div>
+        </div></div>
     </nav>
 
     <main>
@@ -278,5 +280,7 @@
 
     <script src="https://unpkg.com/lenis@1.3.17/dist/lenis.min.js"></script>
     <script src="js/project-page.js"></script>
+    <script src="js/chatbot.js"></script>
+    <script>window.writeThemeScripts && writeThemeScripts();</script>
 </body>
 </html>
